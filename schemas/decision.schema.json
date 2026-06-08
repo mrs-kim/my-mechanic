@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "decision.schema.json",
+  "title": "Decision",
+  "description": "A resolved conflict or explicit exclusion. First-class record, not a footnote. Includes a revisit condition so it doesn't become invisible folklore.",
+  "type": "object",
+  "required": ["id", "type", "title", "domain", "outcome", "rationale", "revisit-when", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^dec_[a-z0-9]{6,12}$"
+    },
+    "type": {
+      "type": "string",
+      "const": "decision"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120,
+      "description": "What was decided. Written as a statement, not a question."
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^dom_[a-z0-9]{6,12}$"
+    },
+    "context": {
+      "type": "string",
+      "description": "What situation or conflict prompted this decision."
+    },
+    "outcome": {
+      "type": "string",
+      "enum": ["excluded", "deferred", "resolved", "superseded"],
+      "description": "excluded = we are not doing this. deferred = not now, revisit later. resolved = conflict settled. superseded = this decision was itself overturned."
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Why this outcome was chosen. The thing future team members need to understand."
+    },
+    "alternatives-considered": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["option", "reason-rejected"],
+        "additionalProperties": false,
+        "properties": {
+          "option": { "type": "string" },
+          "reason-rejected": { "type": "string" }
+        }
+      }
+    },
+    "revisit-when": {
+      "type": "string",
+      "minLength": 10,
+      "description": "The condition or trigger that should prompt reconsideration. Required. Prevents decisions from becoming invisible folklore."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Team or role responsible for this decision. Not an individual."
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "resolves": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|job|dec)_[a-z0-9]{6,12}$" },
+          "description": "Requirements or conflicts this decision resolves."
+        },
+        "constrains": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|job|dp|ds)_[a-z0-9]{6,12}$" },
+          "description": "Records this decision places constraints on."
+        },
+        "supersedes": {
+          "type": "string",
+          "pattern": "^dec_[a-z0-9]{6,12}$"
+        },
+        "related": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec|job|dom|dp|ds)_[a-z0-9]{6,12}$" }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["legitimacy", "lifecycle"],
+      "additionalProperties": false,
+      "properties": {
+        "legitimacy": {
+          "type": "string",
+          "enum": ["proposed", "approved", "superseded"]
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["active", "historical"]
+        },
+        "superseded-by": {
+          "type": "string",
+          "pattern": "^dec_[a-z0-9]{6,12}$"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "authored-by": { "type": "string" },
+        "approved-by": { "type": "string" },
+        "approved-date": { "type": "string", "format": "date" },
+        "github-issue": { "type": "integer" },
+        "ingestion-confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "ingestion-source": { "type": "string" },
+        "ingestion-note": { "type": "string" }
+      }
+    }
+  }
+}

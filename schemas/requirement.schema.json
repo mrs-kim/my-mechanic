@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "requirement.schema.json",
+  "title": "Requirement",
+  "description": "A specific behavioral truth within a domain. Small by design. Directly testable. The complexity lives in the graph, not in individual records.",
+  "type": "object",
+  "required": ["id", "type", "title", "domain", "job", "behavior", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^req_[a-z0-9]{6,12}$"
+    },
+    "type": {
+      "type": "string",
+      "const": "requirement"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120,
+      "description": "One sentence. What the system does. Not how."
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^dom_[a-z0-9]{6,12}$"
+    },
+    "job": {
+      "type": "string",
+      "pattern": "^job_[a-z0-9]{6,12}$",
+      "description": "The job this requirement serves. Every requirement must trace to a job."
+    },
+    "behavior": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What the system does, written from the outside. No implementation details. Precise enough to be testable."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Why this behavior exists. Optional but strongly encouraged. The thing new team members need to know."
+    },
+    "acceptance-criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["given", "when", "then"],
+        "additionalProperties": false,
+        "properties": {
+          "given": { "type": "string" },
+          "when": { "type": "string" },
+          "then": { "type": "string" }
+        }
+      },
+      "description": "Given/when/then criteria. Authored by the test agent, reviewed by humans."
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parent": {
+          "type": "string",
+          "pattern": "^req_[a-z0-9]{6,12}$",
+          "description": "This requirement is a more specific version of the parent."
+        },
+        "depends_on": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec|job|dom)_[a-z0-9]{6,12}$" }
+        },
+        "conflicts_with": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec)_[a-z0-9]{6,12}$" },
+          "description": "Cannot both be canonical simultaneously. Decision agent escalates these."
+        },
+        "supersedes": {
+          "type": "string",
+          "pattern": "^req_[a-z0-9]{6,12}$"
+        },
+        "informs": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dp|ds)_[a-z0-9]{6,12}$" }
+        },
+        "related": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec|job|dom|dp|ds)_[a-z0-9]{6,12}$" }
+        }
+      }
+    },
+    "traces": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Code paths traced to this requirement. Maintained by the trace agent."
+    },
+    "tests": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Test file paths or test IDs that prove this requirement. Maintained by the test agent."
+    },
+    "status": {
+      "type": "object",
+      "required": ["legitimacy", "lifecycle", "implementation"],
+      "additionalProperties": false,
+      "properties": {
+        "legitimacy": {
+          "type": "string",
+          "enum": ["proposed", "approved", "superseded"],
+          "description": "Only a human merge can flip to approved. Agents propose, never approve."
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["active", "historical"]
+        },
+        "implementation": {
+          "type": "string",
+          "enum": ["unbuilt", "partial", "complete"],
+          "description": "Maintained by the trace agent. Does not affect legitimacy."
+        },
+        "superseded-by": {
+          "type": "string",
+          "pattern": "^req_[a-z0-9]{6,12}$"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "authored-by": { "type": "string" },
+        "approved-by": { "type": "string" },
+        "approved-date": { "type": "string", "format": "date" },
+        "github-issue": { "type": "integer" },
+        "ingestion-confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "ingestion-source": { "type": "string" },
+        "ingestion-note": { "type": "string" }
+      }
+    }
+  }
+}

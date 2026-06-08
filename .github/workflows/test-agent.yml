@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -49,8 +49,8 @@ jobs:
         if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'all')
         run: node scripts/agents/test-agent.js --mode=all
         env:
-          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.MY_MECHANIC_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           INTENT_ROOT: ${{ github.workspace }}
 
@@ -61,7 +61,7 @@ jobs:
             --mode=single \
             --req=${{ github.event.inputs.req_id }}
         env:
-          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.MY_MECHANIC_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           INTENT_ROOT: ${{ github.workspace }}

@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "job.schema.json",
+  "title": "Job",
+  "description": "A human need or business goal the product exists to serve. Outside-in. Not directly testable.",
+  "type": "object",
+  "required": ["id", "type", "title", "domain", "narrative", "success-looks-like", "out-of-scope", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^job_[a-z0-9]{6,12}$",
+      "description": "Permanent opaque identifier. Never changes. Never reused."
+    },
+    "type": {
+      "type": "string",
+      "const": "job"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120,
+      "description": "Human readable name. Mutable. Written from the user or business perspective."
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^dom_[a-z0-9]{6,12}$",
+      "description": "The domain this job belongs to."
+    },
+    "narrative": {
+      "type": "string",
+      "minLength": 20,
+      "description": "When [situation], I need [goal] so that [outcome]. Written from the user or business perspective."
+    },
+    "success-looks-like": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What observable outcome tells us this job is being served well."
+    },
+    "out-of-scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Explicit list of related needs this job does not cover. Prevents scope creep."
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parent": {
+          "type": "string",
+          "pattern": "^job_[a-z0-9]{6,12}$",
+          "description": "Parent job this is a more specific version of."
+        },
+        "depends_on": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(job|dom|req|dec|dp|ds)_[a-z0-9]{6,12}$" }
+        },
+        "related": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(job|dom|req|dec|dp|ds)_[a-z0-9]{6,12}$" }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["legitimacy", "lifecycle"],
+      "additionalProperties": false,
+      "properties": {
+        "legitimacy": {
+          "type": "string",
+          "enum": ["proposed", "approved", "superseded"],
+          "description": "proposed = drafted, not yet human-approved. approved = canonical product truth. superseded = replaced by another record."
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["active", "historical"],
+          "description": "active = currently enforced. historical = no longer enforced but preserved for traceability."
+        },
+        "superseded-by": {
+          "type": "string",
+          "pattern": "^job_[a-z0-9]{6,12}$",
+          "description": "Required when legitimacy is superseded."
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "authored-by": { "type": "string" },
+        "approved-by": { "type": "string" },
+        "approved-date": { "type": "string", "format": "date" },
+        "github-issue": { "type": "integer" },
+        "ingestion-confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "ingestion-source": { "type": "string" },
+        "ingestion-note": { "type": "string" }
+      }
+    }
+  }
+}

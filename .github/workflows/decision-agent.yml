@@ -48,7 +48,7 @@ jobs:
       - name: Run conflict check
         run: node scripts/agents/decision-agent.js --check=conflicts
         env:
-          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           INTENT_ROOT: ${{ github.workspace }}
 
@@ -68,7 +68,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -84,7 +84,7 @@ jobs:
         run: |
           node scripts/agents/decision-agent.js --check=${{ github.event.inputs.check || 'all' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           INTENT_ROOT: ${{ github.workspace }}
 

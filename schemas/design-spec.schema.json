@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "design-spec.schema.json",
+  "title": "Design Spec",
+  "description": "A pointer to the actual design artifact plus structured metadata for the harness. Screen or component level. Owned by design. Implementation-facing.",
+  "type": "object",
+  "required": ["id", "type", "title", "domain", "requirement", "figma", "figma-version", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ds_[a-z0-9]{6,12}$"
+    },
+    "type": {
+      "type": "string",
+      "const": "design-spec"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^dom_[a-z0-9]{6,12}$"
+    },
+    "requirement": {
+      "type": "string",
+      "pattern": "^req_[a-z0-9]{6,12}$",
+      "description": "The behavioral requirement this spec implements the visual/interaction layer for."
+    },
+    "design-principle": {
+      "type": "string",
+      "pattern": "^dp_[a-z0-9]{6,12}$",
+      "description": "The design principle this spec should be evaluated against. Optional but encouraged."
+    },
+    "figma": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://www\\.figma\\.com/",
+      "description": "Direct link to the specific Figma frame. Not the file root."
+    },
+    "figma-version": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the Figma link was last verified current. Update when design changes."
+    },
+    "design-system-ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+@[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Design system component this spec uses. Format: component-name@version. If absent, design-system-gap flag is raised."
+    },
+    "design-system-gap": {
+      "type": "boolean",
+      "description": "True when no design system component match was found. Triggers design-system-gap label on the PR. Does not block approval."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Interaction details the Figma frame doesn't make obvious. Loading states, edge cases, animation behavior."
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "supersedes": {
+          "type": "string",
+          "pattern": "^ds_[a-z0-9]{6,12}$"
+        },
+        "related": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec|job|dom|dp|ds)_[a-z0-9]{6,12}$" }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["legitimacy", "lifecycle", "implementation"],
+      "additionalProperties": false,
+      "properties": {
+        "legitimacy": {
+          "type": "string",
+          "enum": ["proposed", "approved", "superseded"]
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["active", "historical"]
+        },
+        "implementation": {
+          "type": "string",
+          "enum": ["unbuilt", "partial", "complete"]
+        },
+        "superseded-by": {
+          "type": "string",
+          "pattern": "^ds_[a-z0-9]{6,12}$"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "authored-by": { "type": "string" },
+        "approved-by": { "type": "string" },
+        "approved-date": { "type": "string", "format": "date" },
+        "github-issue": { "type": "integer" },
+        "ingestion-confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "ingestion-source": { "type": "string" },
+        "ingestion-note": { "type": "string" }
+      }
+    }
+  }
+}

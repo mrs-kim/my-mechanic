@@ -83,7 +83,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -99,7 +99,7 @@ jobs:
         run: |
           node scripts/agents/trace-agent.js --mode=${{ github.event.inputs.mode || 'full' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_MECHANIC_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           INTENT_ROOT: ${{ github.workspace }}
 

@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "design-principle.schema.json",
+  "title": "Design Principle",
+  "description": "Experiential intent for a domain or job. Informs judgment, never mechanically constrains. Captures the why behind design decisions so it survives team changes.",
+  "type": "object",
+  "required": ["id", "type", "title", "domain", "intent", "anti-patterns", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^dp_[a-z0-9]{6,12}$"
+    },
+    "type": {
+      "type": "string",
+      "const": "design-principle"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120,
+      "description": "A memorable statement of the principle. Not a rule — a quality."
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^dom_[a-z0-9]{6,12}$"
+    },
+    "job": {
+      "type": "string",
+      "pattern": "^job_[a-z0-9]{6,12}$",
+      "description": "The job this principle serves. Optional but encouraged."
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What experience quality this principle is trying to protect. Written as observable user feeling, not design prescription."
+    },
+    "anti-patterns": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Specific things to avoid. More useful than positive prescriptions because they preserve creative space while capturing real failures."
+    },
+    "what-good-looks-like": {
+      "type": "string",
+      "description": "A reference point, not a spec. May point to a Figma frame, a written description, or an existing screen that gets it right."
+    },
+    "owner-team": {
+      "type": "string",
+      "description": "Design team or equivalent. Not an individual."
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "informs": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|ds|dp)_[a-z0-9]{6,12}$" },
+          "description": "Requirements or design specs this principle should be considered alongside."
+        },
+        "related": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^(req|dec|job|dom|dp|ds)_[a-z0-9]{6,12}$" }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["legitimacy", "lifecycle"],
+      "additionalProperties": false,
+      "properties": {
+        "legitimacy": {
+          "type": "string",
+          "enum": ["proposed", "approved", "superseded"],
+          "description": "Design principles require design team approval, not just product owner approval."
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["active", "historical"]
+        },
+        "superseded-by": {
+          "type": "string",
+          "pattern": "^dp_[a-z0-9]{6,12}$"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "authored-by": { "type": "string" },
+        "approved-by": { "type": "string" },
+        "approved-date": { "type": "string", "format": "date" },
+        "github-issue": { "type": "integer" },
+        "ingestion-confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "ingestion-source": { "type": "string" },
+        "ingestion-note": { "type": "string" }
+      }
+    }
+  }
+}

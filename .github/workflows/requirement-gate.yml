@@ -118,7 +118,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.INTENT_BOT_TOKEN }}
+          token: ${{ secrets.MY_MECHANIC_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4

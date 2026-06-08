@@ -1,0 +1,2918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intent Harness — Proposed Records — Review</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 14px; color: #1f2328; background: #f6f8fa; }
+
+    .header { background: #24292f; color: white; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .header h1 { font-size: 16px; font-weight: 600; }
+    .header .subtitle { font-size: 13px; color: #8b949e; margin-top: 2px; }
+
+    .filter-bar { background: white; border-bottom: 1px solid #d0d7de; padding: 10px 32px; display: flex; gap: 8px; align-items: center; position: sticky; top: 57px; z-index: 99; }
+    .filter-btn { padding: 4px 12px; border-radius: 20px; border: 1px solid #d0d7de; background: white; cursor: pointer; font-size: 12px; color: #656d76; }
+    .filter-btn.active { background: #0969da; color: white; border-color: #0969da; }
+    .filter-label { font-size: 12px; color: #656d76; margin-right: 4px; }
+
+    .nav { width: 220px; position: fixed; top: 100px; left: 0; height: calc(100vh - 100px); overflow-y: auto; padding: 16px; background: white; border-right: 1px solid #d0d7de; }
+    .nav-item { display: block; padding: 6px 10px; border-radius: 6px; color: #1f2328; text-decoration: none; font-size: 13px; margin-bottom: 2px; }
+    .nav-item:hover { background: #f6f8fa; }
+    .nav-item .nav-count { float: right; color: #656d76; font-size: 11px; }
+
+    .main { margin-left: 220px; padding: 24px 32px; max-width: 960px; }
+
+    .domain { background: white; border: 1px solid #d0d7de; border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+    .domain-header { padding: 16px 20px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; display: flex; justify-content: space-between; align-items: flex-start; }
+    .domain-title { font-size: 18px; font-weight: 600; color: #1f2328; }
+    .domain-desc { font-size: 13px; color: #656d76; margin-top: 4px; }
+    .domain-stats { text-align: right; }
+    .stat { display: inline-block; font-size: 12px; color: #656d76; margin-left: 12px; }
+    .stat.warn { color: #cf222e; }
+
+    .type-section { padding: 0 20px 16px; }
+    .type-heading { font-size: 13px; font-weight: 600; color: #656d76; text-transform: uppercase; letter-spacing: 0.05em; padding: 16px 0 8px; border-bottom: 1px solid #f0f0f0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .count { background: #e8f0fe; color: #0969da; border-radius: 10px; padding: 1px 7px; font-size: 11px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+    .record { background: #fafafa; border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 10px; padding: 14px 16px; }
+    .record-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 12px; }
+    .record-title { flex: 1; }
+    .record-type { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #656d76; display: block; margin-bottom: 3px; }
+    .record-name { font-size: 14px; font-weight: 600; color: #1f2328; line-height: 1.4; }
+    .record-badges { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .record-id { font-size: 11px; color: #8b949e; font-family: monospace; }
+
+    .field { display: flex; gap: 12px; margin-bottom: 6px; font-size: 13px; }
+    .field.warn { background: #fff8c5; padding: 6px 8px; border-radius: 4px; margin-top: 8px; }
+    .label { color: #656d76; min-width: 120px; flex-shrink: 0; font-weight: 500; }
+    .value { color: #1f2328; line-height: 1.5; }
+    .value.ref { color: #0969da; }
+    .value.source { color: #656d76; font-style: italic; font-size: 12px; }
+    .list { padding-left: 16px; }
+    .list li { margin-bottom: 2px; }
+
+    .empty { text-align: center; padding: 60px; color: #656d76; }
+    .empty h2 { font-size: 20px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>Intent Harness — Proposed Records — Review</h1>
+      <div class="subtitle">124 proposed records awaiting review · June 7, 2026</div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">Show:</span>
+    <button class="filter-btn active" onclick="filterType('all')">All</button>
+    <button class="filter-btn" onclick="filterType('job')">Jobs</button>
+    <button class="filter-btn" onclick="filterType('requirement')">Requirements</button>
+    <button class="filter-btn" onclick="filterType('decision')">Decisions</button>
+    <button class="filter-btn" onclick="filterType('design-principle')">Design Principles</button>
+    <button class="filter-btn" onclick="filterType('low-confidence')" style="margin-left:auto;border-color:#cf222e;color:#cf222e">⚠ Low confidence only</button>
+  </div>
+
+  <nav class="nav">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#656d76;margin-bottom:8px">Domains</div>
+    <a class="nav-item" href="#dom_2pr5dqn8">AI Assistance<span class="nav-count">24</span></a><a class="nav-item" href="#dom_btetyae4">Service History<span class="nav-count">22</span></a><a class="nav-item" href="#dom_fhtdpco8">Vehicle Management<span class="nav-count">59</span></a><a class="nav-item" href="#dom_jznd7ho7">Maintenance Scheduling<span class="nav-count">19</span></a>
+  </nav>
+
+  <div class="main">
+    
+    <div class="domain" id="dom_2pr5dqn8">
+      <div class="domain-header">
+        <div>
+          <h2 class="domain-title">AI Assistance</h2>
+          <p class="domain-desc">Providing personalized mechanic advice through AI chat — car-aware context, maintenance guidance, and repair recommendations.</p>
+        </div>
+        <div class="domain-stats">
+          <span class="stat">24 records</span>
+          
+          
+        </div>
+      </div>
+      
+      <div class="type-section">
+        <h3 class="type-heading">Jobs <span class="count">3</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_acwh6yo0" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Get car-specific maintenance guidance</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_acwh6yo0</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I'm wondering about maintenance for my car, I need manufacturer-specific schedules and known issues so that I can stay on top of maintenance without researching everything myself</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">System generates and displays manufacturer-recommended maintenance schedule specific to my year/make/model with relevant known issues surfaced at appropriate times</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">calls Claude API to generate the manufacturer-recommended maintenance schedule for that specific year/make/model</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_d34mmkjb" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Get personalized mechanic advice for my specific car</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_d34mmkjb</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I have questions about my car's maintenance or problems, I need personalized, warm guidance from an AI that knows my specific vehicle and service history so that I can make informed decisions and get relevant advice without having to explain my situation every time</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">I can ask natural questions and get warm, encouraging advice that considers my exact car model, current mileage, maintenance status, and service history</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">A knowledgeable mechanic who already knows your car, your mileage, what's overdue, and your recent service history</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_efeyyjwl" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Get car-specific reliability insights during setup</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_efeyyjwl</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I'm setting up my car, I need to learn about known issues and common problems specific to my vehicle so that I can be proactive about potential maintenance needs</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">I see relevant reliability tips and common failure points for my specific year/make/model integrated into my maintenance schedule</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">what are the known reliability issues, common failure points, or things mechanics find on a [year] [make] [model] that aren't in the owner's manual?</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Requirements <span class="count">14</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_5dgcgirl" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat maintains car-aware context</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_5dgcgirl</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system rebuilds context for every API call including vehicle details (year, make, model, mileage, VIN, nickname), maintenance status grouped as OVERDUE/DUE SOON/Up to date, and last 5 logged services with mileage</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides personalized advice without user having to re-explain context</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">The system prompt is rebuilt on every message and includes: Vehicle... Maintenance status... Recent services</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_6uzw7go7" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat uses warm, practical tone</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_6uzw7go7</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">AI responds with direct, practical, warm tone like a trusted friend, mentions overdue items naturally when relevant without being preachy, and clearly recommends professionals when repairs are beyond DIY</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Direct, practical, warm. Not overly technical. Like a trusted friend... Recommends professionals clearly when a repair is beyond DIY</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_91hormme" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat provides quick question chips on first load</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_91hormme</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System shows car-specific quick question chips when chat is first opened (e.g. 'CVT fluid interval?' for a Civic)</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Helps users get started with relevant questions for their specific vehicle</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Quick question chips on first load (car-specific, e.g. 'CVT fluid interval?' for a Civic)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_ac4su4td" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Use fallback schedule on API failure</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_ac4su4td</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">If Claude API fails during schedule generation, system uses a generic 10-item schedule silently without user notification</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Ensures users can still access basic functionality when AI service is unavailable</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Fallback: if API fails, uses a generic 10-item schedule silently</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_aqurr5l0" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Surface known issues contextually in maintenance carousel</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_aqurr5l0</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System integrates cached known issues as tappable 💬 tips within relevant milestone cards in the maintenance carousel, showing them as 'ALSO MENTION' sections</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides timing-relevant context rather than overwhelming users with separate issue lists</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Surface in the carousel as 'ALSO MENTION' tips on relevant milestone cards NOT shown as a separate section — integrated into carousel to keep timing context</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_cgzbw7nz" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate manufacturer-specific maintenance schedules</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_cgzbw7nz</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">On first visit after adding a car, system calls Claude API to generate manufacturer-recommended maintenance schedule for that specific year/make/model including actual owner's manual intervals, model-specific items, and relevant notes</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides accurate, car-specific maintenance guidance rather than generic schedules</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">calls Claude API to generate the manufacturer-recommended maintenance schedule for that specific year/make/model</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_csdf9buq" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat context refreshes when tab gains focus</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_csdf9buq</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Context data is loaded fresh from AsyncStorage each time Mechanic tab gains focus</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Ensures AI has most current vehicle and service information</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Loaded fresh from AsyncStorage each time Mechanic tab gains focus</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_io2e6lvm" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate warm AI personality responses for vehicles</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_io2e6lvm</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System calls Claude API to generate one warm, encouraging sentence about the specific make/model/year with tone of 'warm mechanic who loves cars — great car, let's keep it going forever together'</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Creates surprise &amp; delight moment and establishes warm, supportive relationship</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Calls Claude API in parallel: generates one warm, encouraging sentence about the specific make/model/year</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_kl50ucuc" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat allows clearing history</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">medium</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_kl50ucuc</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Interface includes a refresh button that clears chat history</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Refresh button clears chat history</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_l1i1iktg" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat shows car details in header</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_l1i1iktg</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Chat interface displays the car year/make/model in amber color in the header</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides visual confirmation of which car the AI is advising about</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Header shows car year/make/model in amber</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_pmx453q2" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI chat includes typing indicator</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">medium</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_pmx453q2</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System shows three animated dots as typing indicator while AI is generating response</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Typing indicator: three animated dots</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_pw8utiaj" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Provide expandable tip details</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_pw8utiaj</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">When user taps a 💬 tip in the maintenance carousel, system shows detail panel below carousel with icon, tip title, model-specific tag, full explanation paragraph, and 'Ask your mechanic about this' CTA</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Allows users to get detailed information when they want it without cluttering the main interface</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Tip detail panel - Appears below the carousel when a 💬 tip is tapped</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_schloguh" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate model-specific known issues advice</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_schloguh</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System makes second Claude API call asking 'what are the known reliability issues, common failure points, or things mechanics find on a [year] [make] [model] that aren't in the owner's manual?' and caches results</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides proactive heads-up about potential issues specific to the user's vehicle</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Second Claude API call at car setup: what are the known reliability issues, common failure points, or things mechanics find on a [year] [make] [model] that aren't in the owner's manual?</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_y3lfk6gk" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Cache AI-generated maintenance schedules</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_y3lfk6gk</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System caches Claude-generated maintenance schedule in AsyncStorage with key @pitcrew_schedule_{year}_{make}_{model} and never regenerates unless user explicitly requests refresh</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Avoids repeated API calls and maintains consistency</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Get personalized mechanic advice for my specific car</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Cached in AsyncStorage: key = `@pitcrew_schedule_{year}_{make}_{model}` Never regenerated unless user explicitly requests it</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Decisions <span class="count">3</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_1ycozdif" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Known issues not shown as separate section</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_1ycozdif</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Must be integrated into carousel to maintain timing context rather than overwhelming users</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">If users request consolidated known issues view</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">NOT shown as a separate section — integrated into carousel to keep timing context</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_7auxjbx8" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">API key security approach</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_7auxjbx8</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Currently using single API key across all screens, should be extracted to utils/constants.js and excluded from version control, but production requires backend proxy as shipping keys in production app binaries is insecure</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">Before production release</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Production: move to a backend proxy — never ship a key in a production app binary</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_t44ms42g" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">AI tone must not be snarky or ironic</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_t44ms42g</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">AI should be warm and encouraging like a mechanic who loves cars, not snarky or ironic</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">If user feedback suggests tone adjustment needed</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">NOT snarky or ironic</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Design Principles <span class="count">4</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_16g129d9" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Warm mechanic personality</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_16g129d9</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">AI should feel like a warm mechanic who loves cars and wants to help keep the user's car running forever</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Snarky or ironic tone</li><li>Overly technical language</li><li>Dismissive responses</li><li>Corporate or robotic language</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_1byspv2x" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Conversational mechanic experience</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_1byspv2x</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">AI chat should feel like texting a knowledgeable friend who happens to be a mechanic, with warm and practical advice</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>overly technical language</li><li>preachy tone about overdue maintenance</li><li>generic advice that doesn't consider user's specific car</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_8im891oc" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Contextual timing for advice</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_8im891oc</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Present maintenance advice and known issues at the right time in the maintenance timeline rather than as overwhelming lists</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Separate comprehensive lists of all potential issues</li><li>Information dumps without timing context</li><li>Generic maintenance schedules</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_slcmbjoy" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Car-aware contextual AI</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_slcmbjoy</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">AI should provide advice that's specific to the user's exact vehicle make/model/year rather than generic automotive advice</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Generic car advice that applies to all vehicles</li><li>Technical jargon without context</li><li>Cold or impersonal responses</li></ul></div>
+    
+      
+      
+    </div>
+  
+      </div>
+    
+    </div>
+  
+    <div class="domain" id="dom_btetyae4">
+      <div class="domain-header">
+        <div>
+          <h2 class="domain-title">Service History</h2>
+          <p class="domain-desc">Recording and tracking completed services — receipt scanning, manual logging, chronological history, and service reports.</p>
+        </div>
+        <div class="domain-stats">
+          <span class="stat">22 records</span>
+          
+          
+        </div>
+      </div>
+      
+      <div class="type-section">
+        <h3 class="type-heading">Jobs <span class="count">3</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_2ym5frxx" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Log services quickly after shop visits</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_2ym5frxx</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I return from the shop with a receipt, I need to capture service details quickly and accurately so that my maintenance tracking stays current without manual data entry</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Receipt is scanned, services are automatically identified and matched to my schedule, and logged at the correct mileage with minimal user input</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Scan receipt (log services from shop visit) - Opens a sheet with two options: camera or photo library</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_4b4svj8x" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Track completed services for maintenance decisions and verification</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_4b4svj8x</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I need to understand what maintenance has been done on my car, I need a reliable record of completed services so that I can make informed decisions about upcoming maintenance, avoid duplicate work, and have proof for warranty, resale, or future reference</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">A chronological record with dates, mileage, services performed, costs, and source verification that I can share or print, helping me communicate with mechanics and track maintenance history</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Combined from domain description and detailed purpose statements</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_8xgwk5su" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Build comprehensive service history</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_8xgwk5su</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I need to document my vehicle's maintenance history, I need a complete record that shows I've maintained the vehicle properly so that I can maximize resale value or validate warranty claims</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">A professional-looking report with vehicle details, service summary, and full chronological table that can be shared or printed</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Report view - Designed as a shareable document</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Requirements <span class="count">12</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_byto4zta" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Provide haptic feedback on service confirmation</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_byto4zta</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Applying receipt scan results fires Haptics.NotificationFeedbackType.Success</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Confirms successful action completion</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Applying fires Haptics.NotificationFeedbackType.Success</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_dwtaxhxq" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Scan receipts using camera or photo library</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_dwtaxhxq</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Amber 'Just got a service?' button opens sheet with camera or photo library options using expo-image-picker</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides flexible input methods for receipt capture</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Opens a sheet with two options: camera or photo library (expo-image-picker)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_eeiukcgq" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Store service completion data</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_eeiukcgq</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System stores @pitcrew_services as object with service IDs mapped to mileage of last service</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">@pitcrew_services — { 'oil': 47200, 'tires': 47500, ... } (mileage at last service per item)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_ge72qei7" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display history grouped by year</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_ge72qei7</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">History list shows visits grouped by year with dividers, each card showing date, shop name, mileage, services as pills, cost, and source badge</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Visits grouped by year with dividers. Each visit card shows: date, shop name, mileage, services (as pills), cost, source badge</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_l178t3zz" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Distinguish receipt vs manual entries</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_l178t3zz</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System shows 'RECEIPT' badge in amber for scanned invoices and 'MANUAL' badge in muted color for owner-entered data</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides credibility indicators for service records</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">'RECEIPT' badge = verified from scanned invoice (amber). 'MANUAL' badge = owner-entered (muted)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_ne7lr3f0" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Extract service data from receipt images</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_ne7lr3f0</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Sends receipt image to Claude vision API as base64 with car's schedule item IDs so Claude extracts mileage and matches service IDs directly</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Sends image to Claude vision API as base64. Prompt includes the car's actual schedule item IDs so Claude maps directly</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_qimiuhjf" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Mark services as completed manually</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_qimiuhjf</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Manual 'DONE' tap on any carousel item logs it at current mileage with confirmation alert before saving</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Allows users to log services without receipts</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Manual 'DONE' tap on any carousel item logs it at current mileage</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_tijov1oh" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Log services at receipt mileage</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_tijov1oh</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Services are logged at the mileage from the receipt, not current odometer reading</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Maintains accurate historical record based on when service was actually performed</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Services are logged at the mileage from the receipt (not current odometer)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_tt8ctwrc" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Present receipt scan results for review</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_tt8ctwrc</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Results screen shows receipt thumbnail, extracted mileage, and matched services as checkboxes that user can deselect before confirming</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Results screen shows: receipt thumbnail, mileage found, matched services as checkboxes</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_twu785gg" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Show service statistics</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_twu785gg</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">History view displays stats strip with total visits, total spent, and miles tracked</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Stats strip: total visits, total spent, miles tracked</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_uucobmpb" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Provide report sharing options</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_uucobmpb</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Report includes Share (📤) and Print (🖨) buttons for distribution</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Share (📤) and Print (🖨) buttons</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_wmghtbrh" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate shareable service report</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_wmghtbrh</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">Report view includes vehicle details, VIN, current mileage, AI-generated assessment, full service table with totals, and explains badge distinctions</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Track completed services for maintenance decisions and verification</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Header: vehicle details, VIN, current mileage, record period. Summary box: AI-generated one-line assessment</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Decisions <span class="count">3</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_29u3k7yv" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Full service history data structure</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_29u3k7yv</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Current storage only records last service mileage per item. History tab requires expanding to a full log with timestamps, shop names, costs</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">v2 development phase</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Data needed (v2 — not yet built). Current storage only records last service mileage per item</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_55xbd5cl" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Past service record entry</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">medium</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_55xbd5cl</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Add a past service record functionality mentioned but not yet built</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">v2 when full history system is implemented</span></div>
+    
+      <div class="field warn"><span class="label">⚠ Agent note</span><span class="value">Mentioned as 'Add a past service record' at bottom but no implementation details provided</span></div>
+      <div class="field"><span class="label">Source</span><span class="value source">'Add a past service record' at bottom for pre-app history</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_z7mybmbs" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">History tab implementation</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_z7mybmbs</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">History tab is currently mockup only, not backed by real data</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">When full service log data structure is implemented</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">History tab backed by real data (currently mockup only)</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Design Principles <span class="count">4</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_aja17dds" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Maintain historical accuracy</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_aja17dds</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Record services at the actual time and mileage they occurred, not when they were logged</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Using current mileage for past services</li><li>Losing chronological context</li><li>Approximating service dates</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_igkjujtr" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Focus on status over items</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_igkjujtr</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Casual drivers think 'am I good, or do I need to go to the shop?' rather than in individual line items. The interface should reflect this mental model of overall car health rather than detailed checklists.</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Showing detailed maintenance checklists</li><li>Making users think about individual service items</li><li>Presenting information as a mechanic would see it</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_rc6owsc9" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Build credible service records</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_rc6owsc9</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Service history should provide trustworthy documentation that increases resale value and validates maintenance</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Unverifiable claims</li><li>Missing source attribution</li><li>Incomplete service details</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_ttveqof1" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Minimize manual data entry</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_ttveqof1</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Capture service information automatically from receipts to reduce user effort and improve accuracy</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Requiring users to type all service details</li><li>Missing receipt scanning capability</li><li>No validation of extracted data</li></ul></div>
+    
+      
+      
+    </div>
+  
+      </div>
+    
+    </div>
+  
+    <div class="domain" id="dom_fhtdpco8">
+      <div class="domain-header">
+        <div>
+          <h2 class="domain-title">Vehicle Management</h2>
+          <p class="domain-desc">Managing vehicle profiles — VIN scanning/decoding, car specs storage, mileage tracking, and manual entry fallbacks.</p>
+        </div>
+        <div class="domain-stats">
+          <span class="stat">59 records</span>
+          
+          
+        </div>
+      </div>
+      
+      <div class="type-section">
+        <h3 class="type-heading">Jobs <span class="count">8</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_55clxmeg" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Efficiently log completed services from shop visits</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_55clxmeg</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I get service done at a shop I need to quickly capture what was performed and at what mileage so that I can maintain accurate records without manual data entry</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Scanning a receipt and having services automatically logged with correct mileage and shop details</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Sends image to Claude vision API... Claude extracts: mileage on receipt, list of matched service IDs</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_ad0tlqg1" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Track vehicle mileage over time</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_ad0tlqg1</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I use my vehicle I need to update odometer readings so that maintenance schedules stay accurate</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Current mileage is always up to date and maintenance timing is calculated correctly</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Profile view shows odometer display with inline update field</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_bgdusmj2" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Track vehicle service history for resale credibility</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_bgdusmj2</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I'm selling my car I need a credible chronological record of all service visits so that I can demonstrate the vehicle has been well-maintained and command a higher resale value</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">A shareable report showing complete service history with verified receipts that gives buyers confidence in the vehicle's maintenance</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Chronological log of all service visits. Provides a credible record for resale.</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_k1p15o1q" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Add first vehicle to app</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_k1p15o1q</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I'm a new user I need to add my car's information so that the app can provide personalized maintenance tracking</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Car profile is created with accurate specs and I feel confident the app knows my vehicle</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">First-launch flow section describes onboarding new users</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_nb1yjzfp" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Get expert mechanical advice tailored to my specific vehicle</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_nb1yjzfp</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I have questions about my car I need advice from a knowledgeable mechanic who already knows my car details, mileage, and service history so that I get relevant, practical guidance without having to explain my situation repeatedly</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Getting direct, practical advice that takes into account my specific car's maintenance status and history</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">A knowledgeable mechanic who already knows your car, your mileage, what's overdue, and your recent service history</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_o60a3vvk" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Maintain accurate vehicle records without technical expertise</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_o60a3vvk</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When camera scanning isn't available I need manual entry options so that I can still add my vehicle information</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Vehicle profile is created with the information I can provide, even without VIN scanning</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Manual entry fallback with make dropdown and text inputs</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_qzkyuc06" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Easily identify my vehicle without technical knowledge</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_qzkyuc06</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I need to enter my car information I need an easy way to get accurate specs so that I don't have to research or guess vehicle details</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Vehicle specs are automatically populated and I only need to add basic info like mileage</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">VIN scan flow automates vehicle identification via NHTSA API</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_zk6rr9ux" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Manage vehicle specifications and identification</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">medium</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_zk6rr9ux</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I set up my vehicle I need the system to capture and store accurate car specifications and identification details so that I receive appropriate maintenance schedules and advice</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Vehicle profile with complete specs, VIN, and appropriate maintenance schedule loaded automatically</span></div>
+      
+    
+      <div class="field warn"><span class="label">⚠ Agent note</span><span class="value">VIN scanning and car setup mentioned but detailed process not fully described in this chunk</span></div>
+      <div class="field"><span class="label">Source</span><span class="value source">VIN scanning/decoding, car specs storage</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Requirements <span class="count">39</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_1kjm5noy" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Integrate known issues into carousel context</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_1kjm5noy</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system surfaces known issues as 'ALSO MENTION' tips on relevant milestone cards within the carousel rather than as a separate section</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Surface in the carousel as 'ALSO MENTION' tips on relevant milestone cards - NOT shown as a separate section</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_2p6zcmc9" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Manual service completion logging</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_2p6zcmc9</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system logs a service as completed at current mileage when user manually taps 'DONE' on any carousel item</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Manual 'DONE' tap on any carousel item logs it at current mileage</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_3qymh650" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display visit cards with comprehensive details</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_3qymh650</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows each visit card with date, shop name, mileage, services as pills, cost, and source badge</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Each visit card shows: date, shop name, mileage, services (as pills), cost, source badge</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_3udkp3vn" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Store maintenance schedule by vehicle</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_3udkp3vn</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system stores maintenance schedule as JSON array using key format @pitcrew_schedule_{year}_{make}_{model}</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">@pitcrew_schedule_{year}_{make}_{model} — JSON array of schedule items</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_6dn9dlco" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Manual vehicle entry fallback</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_6dn9dlco</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system provides manual entry with make dropdown (30 common brands) and text inputs for model, year, and mileage</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Ensures app functionality when camera scanning isn't available or fails</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Used when: no camera permission, scan fails, user preference, editing</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_77qrlxsr" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Include contextual vehicle information in mechanic chat</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_77qrlxsr</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system rebuilds context on every message including vehicle details, maintenance status, and recent services</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">The system prompt is rebuilt on every message and includes: - Vehicle... - Maintenance status... - Recent services</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_7ui7v191" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">VIN barcode scanning via camera</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_7ui7v191</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system opens camera via expo-camera and scans Code 39/Code 128 barcodes to capture VIN</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Eliminates manual VIN entry errors and provides better user experience</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">VIN scan flow uses expo-camera for barcode scanning</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_7vvof133" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display service tips one at a time with dimming</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_7vvof133</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows only one tip open at a time and dims all other tips when one is selected</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Only one tip open at a time; others dim</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_8xzgambx" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Vehicle specification lookup via NHTSA API</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_8xzgambx</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system calls NHTSA vPIC API to decode VIN and retrieve make, model, year, body class, fuel type, and drive type</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides accurate manufacturer specifications without user input</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Calls NHTSA vPIC API: https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/{VIN}?format=json</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_9nymxqua" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Clear chat history on refresh</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_9nymxqua</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system clears chat history when the refresh button is used</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Refresh button clears chat history</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_ab6be631" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Vehicle profile display with specifications</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_ab6be631</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system displays hero card with car icon, nickname, year+make+model, VIN as monospace pill, and spec pills for fuel type, drive type, body class</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides at-a-glance vehicle identification and key specifications</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Profile view shows hero card with specified elements and spec pills from NHTSA decode</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_axlgj0f1" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Service verification before logging</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_axlgj0f1</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows extracted services as checkboxes that users can deselect before confirming to handle misread items</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">matched services as checkboxes - User can deselect anything misread before confirming</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_bhazv8n5" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display car context in mechanic header</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_bhazv8n5</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows car year/make/model in amber in the mechanic chat header</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Header shows car year/make/model in amber</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_d8lb341c" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Collapsible up-to-date services section</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_d8lb341c</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows up-to-date services in a collapsed section that displays count and expands to show details when tapped</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Collapsed by default: '6 services up to date ⌄' - Expands to a simple list</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_d8wyg1qa" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">VIN validation before processing</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_d8wyg1qa</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system filters non-VIN barcodes by validating 17-character alphanumeric format excluding I/O/Q characters</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Prevents processing invalid barcodes that aren't VINs</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Filters non-VIN barcodes silently (validates 17-char alphanumeric, no I/O/Q)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_do2n4jh1" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Inline odometer update</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_do2n4jh1</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system provides odometer display with inline update field for mileage changes</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Allows easy mileage tracking for maintenance schedule accuracy</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Odometer display with inline update field</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_edut87f4" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Confirmation before saving service completion</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_edut87f4</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows a confirmation alert before saving any manually completed service</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Confirmation alert before saving</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_eh8l5zxl" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Store service completion mileage</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_eh8l5zxl</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system stores mileage at last service for each item in @pitcrew_services format</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">@pitcrew_services — { 'oil': 47200, 'tires': 47500, ... } (mileage at last service per item)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_iyys1dr4" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Log services at receipt mileage</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_iyys1dr4</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system logs services at the mileage found on the receipt rather than the current odometer reading</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Services are logged at the mileage from the receipt (not current odometer)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_lda5y9of" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Success haptic feedback on VIN decode</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_lda5y9of</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system fires Haptics.NotificationFeedbackType.Success when VIN decode succeeds</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides tactile confirmation of successful scan</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">On success: fires Haptics.NotificationFeedbackType.Success</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_m5j3oq3e" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Cache known issues alongside schedule</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_m5j3oq3e</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system caches results from the Claude API call about known reliability issues alongside the maintenance schedule</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Results cached alongside schedule</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_mquhbdof" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Animated vehicle specification reveal</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_mquhbdof</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows staggered animated reveal of decoded fields with 80ms intervals between Make, Model, Year, Body, and Fuel sliding in from left</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Creates surprise and delight moment for user engagement</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Animated cascade: success banner slides in, then each field slides in from left at 80ms stagger intervals</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_murxlysm" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Second haptic feedback on profile save</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_murxlysm</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system provides ImpactFeedbackStyle.Medium haptic feedback when user saves vehicle profile</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Confirms completion of vehicle setup process</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Second haptic (ImpactFeedbackStyle.Medium) on save</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_n5jrqjov" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Image source selection for receipts</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_n5jrqjov</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system opens a sheet with camera or photo library options when receipt scanning is initiated</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Opens a sheet with two options: camera or photo library</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_nqkjtbfr" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Vehicle profile storage in AsyncStorage</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_nqkjtbfr</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system stores vehicle data including make, model, year, mileage, nickname, VIN, bodyClass, fuelType, and driveType in AsyncStorage with key @pitcrew_car</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Persists vehicle information locally for app functionality</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Data stored (AsyncStorage key: @pitcrew_car) with specified JSON structure</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_o9ao0oto" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Group history by year with dividers</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_o9ao0oto</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system groups service visits by year and displays year dividers in the history list</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Visits grouped by year with dividers</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_og95xigd" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display tracking statistics</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_og95xigd</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system shows a stats strip with total visits, total spent, and miles tracked</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Stats strip: total visits, total spent, miles tracked</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_psx655bs" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">AI-generated vehicle personality quote</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_psx655bs</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system calls Claude API to generate one warm, encouraging sentence about the specific make/model/year in the tone of a warm mechanic</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Creates emotional connection and personalization</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Calls Claude API in parallel: generates one warm, encouraging sentence about the specific make/model/year</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_px2qb62l" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Differentiate receipt vs manual entry sources</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_px2qb62l</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system displays 'RECEIPT' badge in amber for verified scanned invoices and 'MANUAL' badge muted for owner-entered records</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">'RECEIPT' badge = verified from scanned invoice (amber) - 'MANUAL' badge = owner-entered (muted)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_sf61nsi8" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Receipt scanning entry point</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_sf61nsi8</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system provides an amber 'Just got a service?' button at the bottom of the Service tab that opens receipt scanning functionality</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Amber 'Just got a service?' button at bottom of Service tab</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_tr543y5g" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Immediate model year preview from VIN</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_tr543y5g</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system decodes model year from VIN position 10 immediately as preview without API calls</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Provides instant feedback to user that scan was successful</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Decodes model year from VIN position 10 immediately as a preview (deterministic, no API)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_u4urluhi" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Refresh mechanic context when tab gains focus</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_u4urluhi</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system loads fresh data from AsyncStorage each time the Mechanic tab gains focus</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Loaded fresh from AsyncStorage each time Mechanic tab gains focus</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_udj4eg17" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Activate send button when text is present</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_udj4eg17</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system activates the send button only when text is present in the input bar</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Input bar with send button (activates when text present)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_uft4wci7" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate shareable service report</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_uft4wci7</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system creates a shareable report document with vehicle details, service summary, and full service table when Report button is accessed</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Accessed via 'Report' button... Designed as a shareable document</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_vafihm3p" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Success haptic feedback on service logging</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_vafihm3p</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system fires success haptic feedback when receipt services are applied</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Applying fires Haptics.NotificationFeedbackType.Success</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_vdfbbyy7" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Receipt processing with vehicle context</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_vdfbbyy7</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system sends receipt images to Claude vision API with the car's actual schedule item IDs so Claude can map services directly</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Prompt includes the car's actual schedule item IDs so Claude maps directly</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_wohum1hk" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Provide car-specific quick questions</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_wohum1hk</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system displays quick question chips on first load that are specific to the user's car</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Quick question chips on first load (car-specific, e.g. 'CVT fluid interval?' for a Civic)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_xoxlugn6" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Include AI assessment in reports</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_xoxlugn6</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system generates an AI one-line assessment like 'Well-maintained vehicle' for inclusion in service reports</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Summary box: AI-generated one-line assessment ('Well-maintained vehicle')</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_zcdiozr2" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Provide report sharing options</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_zcdiozr2</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">The system provides Share and Print buttons for service reports</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Add first vehicle to app</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Share (📤) and Print (🖨) buttons</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Decisions <span class="count">5</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_4t6xsbj4" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Known issues integration approach</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_4t6xsbj4</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Known issues should be integrated into the carousel context rather than shown as a separate section to maintain timing context</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">If users specifically request a dedicated known issues section</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">NOT shown as a separate section — integrated into carousel to keep timing context</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_atfh542y" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">AI personality tone constraints</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_atfh542y</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">AI-generated vehicle quotes must NOT be snarky or ironic</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">If user feedback indicates desire for different tone options</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">NOT snarky or ironic - explicit constraint on Claude API prompts</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_fv8c5g3d" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">API key security approach</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_fv8c5g3d</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Production implementation should move API keys to a backend proxy rather than shipping keys in the app binary</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">Production release preparation</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Production: move to a backend proxy — never ship a key in a production app binary</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_nkxrkebu" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">VIN scanning hint placement</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">medium</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_nkxrkebu</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">VIN barcode location hint is provided on home screen rather than during scanning</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">If users struggle to locate VIN during scanning process</span></div>
+    
+      <div class="field warn"><span class="label">⚠ Agent note</span><span class="value">Implied by first-launch flow description</span></div>
+      <div class="field"><span class="label">Source</span><span class="value source">Hint explaining the VIN barcode is on the driver's door jamb sticker</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_zw8f94po" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Full service history data structure implementation</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_zw8f94po</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">deferred</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Current storage only records last service mileage per item, but History tab requires expanding to a full log with timestamps, shop names, and costs</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">v2 implementation phase</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Data needed (v2 — not yet built) Current storage only records last service mileage per item</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Design Principles <span class="count">7</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_4e993os7" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Trusted friend mechanic tone</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_4e993os7</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">The mechanic should communicate like a trusted friend - direct, practical, and warm, without being overly technical</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Overly technical language</li><li>Cold or impersonal responses</li><li>Academic or formal tone</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_aq2w6l0e" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Surprise and delight in vehicle identification</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_aq2w6l0e</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Vehicle setup should feel magical and engaging through animated reveals and personalized AI content</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Boring form filling</li><li>Generic confirmation messages</li><li>Instant data dumps without animation</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_ex8kj61a" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Minimal user input required</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_ex8kj61a</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">User should only need to provide information the system cannot automatically determine</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Asking for data available via API</li><li>Redundant manual entry when automation works</li><li>Complex forms for basic setup</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_fiswvccp" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Clear professional repair recommendations</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_fiswvccp</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">The system should clearly recommend professional help when repairs are beyond DIY capability</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Encouraging unsafe DIY repairs</li><li>Ambiguous repair recommendations</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_p1bolykt" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Natural mention of overdue items</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_p1bolykt</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">The mechanic should mention overdue services naturally when relevant, not in a preachy way</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Being preachy about overdue services</li><li>Aggressive maintenance reminders</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_ublz56r9" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Clear error communication with recovery options</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_ublz56r9</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">When things go wrong, show clear messages and provide paths to retry or continue</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Generic error messages</li><li>Dead-end error states</li><li>Technical error jargon</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_wqrje067" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Graceful automation fallbacks</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_wqrje067</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">When automated features fail, manual alternatives should be seamlessly available without user frustration</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Dead ends when camera fails</li><li>No alternatives to primary input method</li><li>Error states without recovery options</li></ul></div>
+    
+      
+      
+    </div>
+  
+      </div>
+    
+    </div>
+  
+    <div class="domain" id="dom_jznd7ho7">
+      <div class="domain-header">
+        <div>
+          <h2 class="domain-title">Maintenance Scheduling</h2>
+          <p class="domain-desc">Generating and tracking manufacturer-recommended maintenance schedules — health status, service intervals, and known issues.</p>
+        </div>
+        <div class="domain-stats">
+          <span class="stat">19 records</span>
+          
+          
+        </div>
+      </div>
+      
+      <div class="type-section">
+        <h3 class="type-heading">Jobs <span class="count">4</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_3d1d48i8" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Understand timing and priority of upcoming maintenance</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_3d1d48i8</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I plan maintenance I need to see what's due now versus soon versus later so that I can make informed decisions about timing and bundling services</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Carousel shows clear progression from immediate needs to future milestones with logical grouping</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Mental model: now → soon → later → much later</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_686vwm9l" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Know maintenance status at a glance</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_686vwm9l</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I look at my car's maintenance I need to quickly know if I'm good or need to go to the shop so that I can make decisions without becoming a car expert</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">User sees clear health status (red/amber/yellow/green) with plain-English explanation of what needs attention</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">core design principle: casual driver thinks 'am I good, or do I need to go to the shop?' — not in individual line items</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_cau346ca" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Be aware of model-specific issues</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_cau346ca</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I take my car for service I need to know about known issues and failure points for my specific vehicle so that I can discuss them with my mechanic proactively</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Tips surface at relevant times with model-specific context and actionable advice</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">what are the known reliability issues, common failure points, or things mechanics find</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="job_yh313qxj" data-type="job" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">job</span>
+          <span class="record-name">Follow manufacturer-recommended maintenance</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">job_yh313qxj</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Narrative</span><span class="value">When I own a specific car I need personalized maintenance schedules based on my actual vehicle so that I follow the right intervals and procedures for my make/model/year</span></div>
+      <div class="field"><span class="label">Success looks like</span><span class="value">Generated schedule matches owner's manual intervals with model-specific items and timing</span></div>
+      
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">calls Claude API to generate the manufacturer-recommended maintenance schedule for that specific year/make/model</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Requirements <span class="count">12</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_1u745edz" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Surface known issues as contextual tips</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_1u745edz</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System displays known issues as tappable 💬 items on relevant milestone cards in the carousel</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Surface in the carousel as 'ALSO MENTION' tips on relevant milestone cards</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_3cb5qhu2" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate known issues for specific vehicle</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_3cb5qhu2</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System calls Claude API to identify reliability issues and common failure points for the specific year/make/model</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Second Claude API call at car setup: what are the known reliability issues, common failure points</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_4gf8wlc6" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Show loading state during schedule generation</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_4gf8wlc6</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System displays spinner with 'Building your schedule' message, car name, and three animated steps</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Loading state shows: spinner + 'Building your schedule' + car name + three animated steps</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_6vgtxep0" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Display single health status card</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_6vgtxep0</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System shows one card with color-coded status (red/amber/yellow/green) and plain-English subtitle explaining the specific situation</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Single card at top of screen. One of four states... Plain-English subtitle says specifically what the issue is</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_8brpoqkx" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Fall back to generic schedule on API failure</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_8brpoqkx</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System uses a generic 10-item schedule silently if Claude API call fails</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Fallback: if API fails, uses a generic 10-item schedule silently</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_abwd59ox" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Show tip detail panel below carousel</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_abwd59ox</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System displays expandable detail panel below carousel when tip is tapped, showing icon, title, model tag, explanation, and CTA</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Appears below the carousel when a 💬 tip is tapped... Shows: icon, tip title, model-specific tag</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_av0izozd" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Generate manufacturer-specific maintenance schedule on first load</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_av0izozd</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System calls Claude API to generate maintenance schedule for specific year/make/model with actual owner's manual intervals and model-specific items</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Personalized schedules are more accurate than generic ones</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">On first visit after adding a car, calls Claude API to generate the manufacturer-recommended maintenance schedule</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_b4e2ar6f" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Allow only one tip open at a time</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_b4e2ar6f</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System closes other tip details and dims other tips when a new tip is opened</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Only one tip open at a time; others dim</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_davb751y" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Cache maintenance schedule permanently</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_davb751y</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System stores generated schedule in AsyncStorage with key @pitcrew_schedule_{year}_{make}_{model} and never regenerates unless user explicitly requests refresh</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Avoid unnecessary API calls and maintain consistency</span></div>
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Cached in AsyncStorage... Never regenerated unless user explicitly requests it (refresh button)</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_f1s5t20k" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Show NEXT VISIT card first in carousel</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_f1s5t20k</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System always displays a red card with pulsing dot as first carousel item, listing overdue and due items with colored dots</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Card 0 — 'NEXT VISIT' (always first) Red background, pulsing dot</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_i1qnmf3v" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Store maintenance data in specific JSON format</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_i1qnmf3v</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System stores maintenance items with id, name, intervalMiles, intervalMonths, description, severity, and notes fields</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Claude returns a JSON array of service items with id, name, intervalMiles, intervalMonths, description, severity, notes</span></div>
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="req_xueqb5c8" data-type="requirement" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">requirement</span>
+          <span class="record-name">Group future services by mileage milestones</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">req_xueqb5c8</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Behavior</span><span class="value">System creates carousel cards for future services grouped by approximate mileage windows</span></div>
+      
+      <div class="field"><span class="label">Serves job</span><span class="value ref">Know maintenance status at a glance</span></div>
+      <div class="field"><span class="label">Implementation</span><span class="value">unbuilt</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">Cards 1–N — future milestones Grouped by approximate mileage window</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Decisions <span class="count">1</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dec_fijsudcl" data-type="decision" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">decision</span>
+          <span class="record-name">Known issues integration approach</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dec_fijsudcl</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Outcome</span><span class="value">excluded</span></div>
+      <div class="field"><span class="label">Rationale</span><span class="value">Known issues are integrated into carousel timing context rather than shown as separate section</span></div>
+      <div class="field"><span class="label">Revisit when</span><span class="value">User feedback indicates need for dedicated issues view</span></div>
+    
+      
+      <div class="field"><span class="label">Source</span><span class="value source">NOT shown as a separate section — integrated into carousel to keep timing context</span></div>
+    </div>
+  
+      </div>
+    
+      <div class="type-section">
+        <h3 class="type-heading">Design Principles <span class="count">2</span></h3>
+        
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_3p9xpaee" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Health status over maintenance lists</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_3p9xpaee</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Show car health at a glance rather than presenting maintenance as a checklist</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Checkbox interfaces</li><li>Long scrolling lists</li><li>Technical service names</li></ul></div>
+    
+      
+      
+    </div>
+  
+    <div class="record" style="border-left:3px solid #d0d7de" data-id="dp_3srhopkz" data-type="design-principle" data-legitimacy="proposed">
+      <div class="record-header">
+        <div class="record-title">
+          <span class="record-type">design-principle</span>
+          <span class="record-name">Casual driver mental model</span>
+        </div>
+        <div class="record-badges">
+          <span style="background:#2da44e;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">high</span>
+          <span style="background:#bf8700;color:white;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600">proposed</span>
+          <span class="record-id">dp_3srhopkz</span>
+        </div>
+      </div>
+      
+      <div class="field"><span class="label">Intent</span><span class="value">Design around the question 'am I good, or do I need to go to the shop?' rather than individual maintenance line items</span></div>
+      <div class="field"><span class="label">Avoid</span><ul class="list"><li>Detailed checklists</li><li>Technical maintenance terminology</li><li>Individual line item focus</li><li>Car enthusiast complexity</li></ul></div>
+    
+      
+      
+    </div>
+  
+      </div>
+    
+    </div>
+  
+  </div>
+
+  <script>
+    function filterType(type) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.querySelectorAll('.record').forEach(r => {
+        if (type === 'all') {
+          r.style.display = '';
+        } else if (type === 'low-confidence') {
+          r.style.display = r.dataset.id && r.querySelector('.record-badges span[style*="cf222e"]') ? '' : 'none';
+        } else {
+          r.style.display = r.dataset.type === type ? '' : 'none';
+        }
+      });
+
+      document.querySelectorAll('.type-section').forEach(s => {
+        const visible = [...s.querySelectorAll('.record')].some(r => r.style.display !== 'none');
+        s.style.display = visible ? '' : 'none';
+      });
+
+      document.querySelectorAll('.domain').forEach(d => {
+        const visible = [...d.querySelectorAll('.record')].some(r => r.style.display !== 'none');
+        d.style.display = visible ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
