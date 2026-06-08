@@ -1,0 +1,17 @@
+id: req_tijov1oh
+type: requirement
+title: Log services at receipt mileage
+domain: dom_btetyae4
+job: job_4b4svj8x
+behavior: Services are logged at the mileage from the receipt, not current odometer reading
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Services are logged at the mileage from the receipt (not current odometer)
+rationale: Maintains accurate historical record based on when service was actually performed

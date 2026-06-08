@@ -1,0 +1,19 @@
+id: req_ab6be631
+type: requirement
+title: Vehicle profile display with specifications
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: >-
+  The system displays hero card with car icon, nickname, year+make+model, VIN as monospace pill, and spec pills for fuel
+  type, drive type, body class
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Profile view shows hero card with specified elements and spec pills from NHTSA decode
+rationale: Provides at-a-glance vehicle identification and key specifications

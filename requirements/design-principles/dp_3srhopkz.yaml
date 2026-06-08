@@ -1,0 +1,19 @@
+id: dp_3srhopkz
+type: design-principle
+title: Casual driver mental model
+domain: dom_jznd7ho7
+intent: Design around the question 'am I good, or do I need to go to the shop?' rather than individual maintenance line items
+anti-patterns:
+  - Detailed checklists
+  - Technical maintenance terminology
+  - Individual line item focus
+  - Car enthusiast complexity
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,17 @@
+id: req_d8wyg1qa
+type: requirement
+title: VIN validation before processing
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: The system filters non-VIN barcodes by validating 17-character alphanumeric format excluding I/O/Q characters
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Filters non-VIN barcodes silently (validates 17-char alphanumeric, no I/O/Q)
+rationale: Prevents processing invalid barcodes that aren't VINs

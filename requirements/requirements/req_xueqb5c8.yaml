@@ -1,0 +1,16 @@
+id: req_xueqb5c8
+type: requirement
+title: Group future services by mileage milestones
+domain: dom_jznd7ho7
+job: job_686vwm9l
+behavior: System creates carousel cards for future services grouped by approximate mileage windows
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Cards 1–N — future milestones Grouped by approximate mileage window

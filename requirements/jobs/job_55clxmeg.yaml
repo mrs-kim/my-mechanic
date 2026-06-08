@@ -1,0 +1,18 @@
+id: job_55clxmeg
+type: job
+title: Efficiently log completed services from shop visits
+domain: dom_fhtdpco8
+narrative: >-
+  When I get service done at a shop I need to quickly capture what was performed and at what mileage so that I can
+  maintain accurate records without manual data entry
+success-looks-like: Scanning a receipt and having services automatically logged with correct mileage and shop details
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Sends image to Claude vision API... Claude extracts: mileage on receipt, list of matched service IDs"

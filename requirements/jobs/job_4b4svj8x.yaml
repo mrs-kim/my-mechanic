@@ -1,0 +1,21 @@
+id: job_4b4svj8x
+type: job
+title: Track completed services for maintenance decisions and verification
+domain: dom_btetyae4
+narrative: >-
+  When I need to understand what maintenance has been done on my car, I need a reliable record of completed services so
+  that I can make informed decisions about upcoming maintenance, avoid duplicate work, and have proof for warranty,
+  resale, or future reference
+success-looks-like: >-
+  A chronological record with dates, mileage, services performed, costs, and source verification that I can share or
+  print, helping me communicate with mechanics and track maintenance history
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Combined from domain description and detailed purpose statements

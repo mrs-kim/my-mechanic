@@ -1,0 +1,18 @@
+id: req_1kjm5noy
+type: requirement
+title: Integrate known issues into carousel context
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: >-
+  The system surfaces known issues as 'ALSO MENTION' tips on relevant milestone cards within the carousel rather than as
+  a separate section
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Surface in the carousel as 'ALSO MENTION' tips on relevant milestone cards - NOT shown as a separate section

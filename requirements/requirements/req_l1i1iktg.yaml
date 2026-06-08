@@ -1,0 +1,17 @@
+id: req_l1i1iktg
+type: requirement
+title: AI chat shows car details in header
+domain: dom_2pr5dqn8
+job: job_d34mmkjb
+behavior: Chat interface displays the car year/make/model in amber color in the header
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Header shows car year/make/model in amber
+rationale: Provides visual confirmation of which car the AI is advising about

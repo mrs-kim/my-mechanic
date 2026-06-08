@@ -1,0 +1,16 @@
+id: req_axlgj0f1
+type: requirement
+title: Service verification before logging
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: The system shows extracted services as checkboxes that users can deselect before confirming to handle misread items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: matched services as checkboxes - User can deselect anything misread before confirming

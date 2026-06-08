@@ -1,0 +1,18 @@
+id: req_uft4wci7
+type: requirement
+title: Generate shareable service report
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: >-
+  The system creates a shareable report document with vehicle details, service summary, and full service table when
+  Report button is accessed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Accessed via 'Report' button... Designed as a shareable document

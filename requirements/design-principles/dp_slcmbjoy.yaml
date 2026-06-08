@@ -1,0 +1,20 @@
+id: dp_slcmbjoy
+type: design-principle
+title: Car-aware contextual AI
+domain: dom_2pr5dqn8
+intent: >-
+  AI should provide advice that's specific to the user's exact vehicle make/model/year rather than generic automotive
+  advice
+anti-patterns:
+  - Generic car advice that applies to all vehicles
+  - Technical jargon without context
+  - Cold or impersonal responses
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high

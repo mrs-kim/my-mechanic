@@ -1,0 +1,18 @@
+id: dec_7auxjbx8
+type: decision
+title: API key security approach
+domain: dom_2pr5dqn8
+outcome: deferred
+rationale: >-
+  Currently using single API key across all screens, should be extracted to utils/constants.js and excluded from version
+  control, but production requires backend proxy as shipping keys in production app binaries is insecure
+revisit-when: Before production release
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Production: move to a backend proxy — never ship a key in a production app binary"

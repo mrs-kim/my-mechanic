@@ -1,0 +1,19 @@
+id: req_mquhbdof
+type: requirement
+title: Animated vehicle specification reveal
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: >-
+  The system shows staggered animated reveal of decoded fields with 80ms intervals between Make, Model, Year, Body, and
+  Fuel sliding in from left
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Animated cascade: success banner slides in, then each field slides in from left at 80ms stagger intervals"
+rationale: Creates surprise and delight moment for user engagement

@@ -1,0 +1,16 @@
+id: req_4gf8wlc6
+type: requirement
+title: Show loading state during schedule generation
+domain: dom_jznd7ho7
+job: job_686vwm9l
+behavior: System displays spinner with 'Building your schedule' message, car name, and three animated steps
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Loading state shows: spinner + 'Building your schedule' + car name + three animated steps"

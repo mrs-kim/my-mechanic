@@ -1,0 +1,18 @@
+id: dp_ublz56r9
+type: design-principle
+title: Clear error communication with recovery options
+domain: dom_fhtdpco8
+intent: When things go wrong, show clear messages and provide paths to retry or continue
+anti-patterns:
+  - Generic error messages
+  - Dead-end error states
+  - Technical error jargon
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high

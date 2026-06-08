@@ -1,0 +1,19 @@
+id: req_pw8utiaj
+type: requirement
+title: Provide expandable tip details
+domain: dom_2pr5dqn8
+job: job_d34mmkjb
+behavior: >-
+  When user taps a 💬 tip in the maintenance carousel, system shows detail panel below carousel with icon, tip title,
+  model-specific tag, full explanation paragraph, and 'Ask your mechanic about this' CTA
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tip detail panel - Appears below the carousel when a 💬 tip is tapped
+rationale: Allows users to get detailed information when they want it without cluttering the main interface

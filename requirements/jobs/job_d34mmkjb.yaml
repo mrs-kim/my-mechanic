@@ -1,0 +1,21 @@
+id: job_d34mmkjb
+type: job
+title: Get personalized mechanic advice for my specific car
+domain: dom_2pr5dqn8
+narrative: >-
+  When I have questions about my car's maintenance or problems, I need personalized, warm guidance from an AI that knows
+  my specific vehicle and service history so that I can make informed decisions and get relevant advice without having
+  to explain my situation every time
+success-looks-like: >-
+  I can ask natural questions and get warm, encouraging advice that considers my exact car model, current mileage,
+  maintenance status, and service history
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: A knowledgeable mechanic who already knows your car, your mileage, what's overdue, and your recent service history

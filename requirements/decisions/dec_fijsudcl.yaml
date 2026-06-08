@@ -1,0 +1,16 @@
+id: dec_fijsudcl
+type: decision
+title: Known issues integration approach
+domain: dom_jznd7ho7
+outcome: excluded
+rationale: Known issues are integrated into carousel timing context rather than shown as separate section
+revisit-when: User feedback indicates need for dedicated issues view
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: NOT shown as a separate section — integrated into carousel to keep timing context

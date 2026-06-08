@@ -1,0 +1,17 @@
+id: req_dwtaxhxq
+type: requirement
+title: Scan receipts using camera or photo library
+domain: dom_btetyae4
+job: job_4b4svj8x
+behavior: Amber 'Just got a service?' button opens sheet with camera or photo library options using expo-image-picker
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Opens a sheet with two options: camera or photo library (expo-image-picker)"
+rationale: Provides flexible input methods for receipt capture

@@ -1,0 +1,19 @@
+id: req_davb751y
+type: requirement
+title: Cache maintenance schedule permanently
+domain: dom_jznd7ho7
+job: job_686vwm9l
+behavior: >-
+  System stores generated schedule in AsyncStorage with key @pitcrew_schedule_{year}_{make}_{model} and never
+  regenerates unless user explicitly requests refresh
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Cached in AsyncStorage... Never regenerated unless user explicitly requests it (refresh button)
+rationale: Avoid unnecessary API calls and maintain consistency

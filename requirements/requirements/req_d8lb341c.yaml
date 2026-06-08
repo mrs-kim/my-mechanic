@@ -1,0 +1,18 @@
+id: req_d8lb341c
+type: requirement
+title: Collapsible up-to-date services section
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: >-
+  The system shows up-to-date services in a collapsed section that displays count and expands to show details when
+  tapped
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Collapsed by default: '6 services up to date ⌄' - Expands to a simple list"

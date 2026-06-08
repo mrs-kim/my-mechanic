@@ -1,0 +1,17 @@
+id: req_l178t3zz
+type: requirement
+title: Distinguish receipt vs manual entries
+domain: dom_btetyae4
+job: job_4b4svj8x
+behavior: System shows 'RECEIPT' badge in amber for scanned invoices and 'MANUAL' badge in muted color for owner-entered data
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'RECEIPT' badge = verified from scanned invoice (amber). 'MANUAL' badge = owner-entered (muted)"
+rationale: Provides credibility indicators for service records

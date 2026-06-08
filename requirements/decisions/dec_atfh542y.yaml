@@ -1,0 +1,16 @@
+id: dec_atfh542y
+type: decision
+title: AI personality tone constraints
+domain: dom_fhtdpco8
+outcome: excluded
+rationale: AI-generated vehicle quotes must NOT be snarky or ironic
+revisit-when: If user feedback indicates desire for different tone options
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: NOT snarky or ironic - explicit constraint on Claude API prompts

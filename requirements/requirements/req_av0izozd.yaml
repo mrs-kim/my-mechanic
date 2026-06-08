@@ -1,0 +1,19 @@
+id: req_av0izozd
+type: requirement
+title: Generate manufacturer-specific maintenance schedule on first load
+domain: dom_jznd7ho7
+job: job_686vwm9l
+behavior: >-
+  System calls Claude API to generate maintenance schedule for specific year/make/model with actual owner's manual
+  intervals and model-specific items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: On first visit after adding a car, calls Claude API to generate the manufacturer-recommended maintenance schedule
+rationale: Personalized schedules are more accurate than generic ones

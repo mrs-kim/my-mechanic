@@ -1,0 +1,18 @@
+id: dp_rc6owsc9
+type: design-principle
+title: Build credible service records
+domain: dom_btetyae4
+intent: Service history should provide trustworthy documentation that increases resale value and validates maintenance
+anti-patterns:
+  - Unverifiable claims
+  - Missing source attribution
+  - Incomplete service details
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,17 @@
+id: req_7ui7v191
+type: requirement
+title: VIN barcode scanning via camera
+domain: dom_fhtdpco8
+job: job_k1p15o1q
+behavior: The system opens camera via expo-camera and scans Code 39/Code 128 barcodes to capture VIN
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN scan flow uses expo-camera for barcode scanning
+rationale: Eliminates manual VIN entry errors and provides better user experience

@@ -1,0 +1,19 @@
+id: req_ac4su4td
+type: requirement
+title: Use fallback schedule on API failure
+domain: dom_2pr5dqn8
+job: job_d34mmkjb
+behavior: >-
+  If Claude API fails during schedule generation, system uses a generic 10-item schedule silently without user
+  notification
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Fallback: if API fails, uses a generic 10-item schedule silently"
+rationale: Ensures users can still access basic functionality when AI service is unavailable

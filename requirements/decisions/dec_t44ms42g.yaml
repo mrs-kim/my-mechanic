@@ -1,0 +1,16 @@
+id: dec_t44ms42g
+type: decision
+title: AI tone must not be snarky or ironic
+domain: dom_2pr5dqn8
+outcome: excluded
+rationale: AI should be warm and encouraging like a mechanic who loves cars, not snarky or ironic
+revisit-when: If user feedback suggests tone adjustment needed
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-08"
+  updated: "2026-06-08"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: NOT snarky or ironic
