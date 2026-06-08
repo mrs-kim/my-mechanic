@@ -1,0 +1,50 @@
+name: Spec Agent — PR Comments
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  spec-agent-pr:
+    name: Handle Figma link in PR comment
+    runs-on: ubuntu-latest
+
+    # Only run on PR comments (not issue comments) containing Figma URLs
+    if: |
+      github.event.issue.pull_request != null &&
+      github.actor != 'intent-bot' &&
+      contains(github.event.comment.body, 'figma.com')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run spec agent — PR Figma comment
+        run: |
+          node scripts/agents/spec-agent.js \
+            --event=pr_comment \
+            --pr=${{ github.event.issue.number }} \
+            --comment=${{ github.event.comment.id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}

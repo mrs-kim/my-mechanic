@@ -1,0 +1,101 @@
+name: Decision Agent
+
+on:
+  # Run conflict check immediately after any requirement merge
+  push:
+    branches: [main]
+    paths:
+      - "requirements/**"
+
+  # Run full check on schedule — gaps and revisits weekly
+  schedule:
+    - cron: "0 9 * * 1"  # Every Monday at 9am UTC
+
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      check:
+        description: "Which check to run"
+        required: true
+        default: "all"
+        type: choice
+        options: [all, conflicts, gaps, revisit]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  conflict-check:
+    name: Check for requirement conflicts
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run conflict check
+        run: node scripts/agents/decision-agent.js --check=conflicts
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Commit updated state
+        run: |
+          git config user.name "intent-bot"
+          git config user.email "intent-bot@users.noreply.github.com"
+          git add .intent/decision-agent-state.json
+          git diff --staged --quiet || git commit -m "chore: update decision agent state [intent-bot] [skip ci]" && git push || true
+
+  scheduled-check:
+    name: Weekly gap and revisit check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run decision agent
+        run: |
+          node scripts/agents/decision-agent.js --check=${{ github.event.inputs.check || 'all' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Commit updated state
+        run: |
+          git config user.name "intent-bot"
+          git config user.email "intent-bot@users.noreply.github.com"
+          git add .intent/decision-agent-state.json
+          if git diff --staged --quiet; then
+            echo "No state changes"
+          else
+            git commit -m "chore: update decision agent state [intent-bot] [skip ci]"
+            git push
+          fi

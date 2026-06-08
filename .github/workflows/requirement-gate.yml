@@ -1,0 +1,145 @@
+name: Requirement Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  validate:
+    name: Validate requirement records
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install harness dependencies
+        run: npm ci
+        working-directory: .intent
+
+      - name: Run schema validation and graph integrity
+        id: validate
+        run: node .intent/scripts/validate.js
+        env:
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Comment validation errors on PR
+        if: failure() && steps.validate.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ✗ Requirement gate failed\n\nSchema validation or graph integrity errors were found.\nRun \`intent validate\` locally to see the full output.\n\nRequirement records must be valid and all ID references must resolve before this PR can merge.`
+            })
+
+  check-pr-fields:
+    name: Check PR template fields
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check requirement links in PR body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body || '';
+
+            // Check that PR body contains at least one requirement ID
+            const hasReqLink = /req_[a-z0-9]{6,12}/.test(body) ||
+                               body.toLowerCase().includes('no requirement change') ||
+                               body.toLowerCase().includes('chore') ||
+                               body.toLowerCase().includes('docs only');
+
+            if (!hasReqLink) {
+              core.setFailed(
+                'PR body must reference at least one requirement ID (e.g. req_cv3p8x) ' +
+                'or explicitly state "no requirement change" for non-behavior changes.'
+              );
+            }
+
+  check-design-gaps:
+    name: Flag design system gaps
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install harness dependencies
+        run: npm ci
+        working-directory: .intent
+
+      - name: Check for design system gaps
+        id: gaps
+        run: node .intent/scripts/check-design-gaps.js
+        env:
+          INTENT_ROOT: ${{ github.workspace }}
+        continue-on-error: true
+
+      - name: Add design-system-gap label if needed
+        if: steps.gaps.outputs.has_gaps == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['design-system-gap']
+            });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ⚠ Design system gap detected\n\nOne or more design specs in this PR do not reference a design system component.\n\nThis is not a blocker — but the design system owner should review whether a new component is needed, this is a deliberate one-off, or an existing component was missed.\n\nLabel \`design-system-gap\` has been added.`
+            });
+
+  flip-legitimacy:
+    name: Flip proposed to approved on merge
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install harness dependencies
+        run: npm ci
+        working-directory: .intent
+
+      - name: Flip legitimacy on merged records
+        run: node .intent/scripts/flip-legitimacy.js
+        env:
+          INTENT_ROOT: ${{ github.workspace }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+
+      - name: Commit flipped records
+        run: |
+          git config user.name "intent-bot"
+          git config user.email "intent-bot@users.noreply.github.com"
+          git add requirements/
+          git diff --staged --quiet || git commit -m "chore: flip legitimacy on merged requirement records [intent-bot]"
+          git push

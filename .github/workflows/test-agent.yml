@@ -1,0 +1,67 @@
+name: Test Agent
+
+on:
+  # Run after requirement records are merged and legitimacy is flipped
+  push:
+    branches: [main]
+    paths:
+      - "requirements/requirements/**"
+
+  # Manual trigger for a specific requirement or full pass
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Mode"
+        required: true
+        default: "all"
+        type: choice
+        options: [all, single]
+      req_id:
+        description: "Requirement ID (single mode only)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-criteria:
+    name: Generate acceptance criteria
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run test agent (all uncovered)
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'all')
+        run: node scripts/agents/test-agent.js --mode=all
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Run test agent (single requirement)
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'single'
+        run: |
+          node scripts/agents/test-agent.js \
+            --mode=single \
+            --req=${{ github.event.inputs.req_id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}

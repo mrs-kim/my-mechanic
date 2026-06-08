@@ -1,0 +1,64 @@
+name: Spec Agent — Issues
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  spec-agent:
+    name: Run spec agent
+    runs-on: ubuntu-latest
+
+    # Don't run on bot comments or intent-skip issues.
+    # Always run when @intent-bot draft appears in a comment.
+    # decision-needed and design-review-needed issues can still get drafts.
+    if: |
+      github.actor != 'intent-bot' &&
+      !contains(github.event.issue.labels.*.name, 'intent-skip')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run spec agent — issue opened
+        if: github.event_name == 'issues' && github.event.action == 'opened'
+        run: node scripts/agents/spec-agent.js --event=issue_opened --issue=${{ github.event.issue.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Run spec agent — issue comment
+        if: github.event_name == 'issue_comment' && github.event.action == 'created'
+        run: |
+          node scripts/agents/spec-agent.js \
+            --event=issue_comment \
+            --issue=${{ github.event.issue.number }} \
+            --comment=${{ github.event.comment.id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}

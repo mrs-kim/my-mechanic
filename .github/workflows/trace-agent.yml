@@ -1,0 +1,116 @@
+name: Trace Agent
+
+on:
+  # Full scan on push to main when source files change
+  push:
+    branches: [main]
+    paths-ignore:
+      - "requirements/**"
+      - ".intent/**"
+      - "*.md"
+
+  # PR scan on changed files only
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+  # Manual trigger for full scan
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Scan mode"
+        required: true
+        default: "full"
+        type: choice
+        options: [full, report]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  trace-pr:
+    name: Trace changed files (PR)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Get changed source files
+        id: changed
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            src/**
+            app/**
+            lib/**
+          separator: " "
+
+      - name: Run trace agent on changed files
+        if: steps.changed.outputs.any_changed == 'true'
+        run: |
+          node scripts/agents/trace-agent.js \
+            --mode=pr \
+            --files="${{ steps.changed.outputs.all_changed_files }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+
+      - name: No source changes
+        if: steps.changed.outputs.any_changed == 'false'
+        run: echo "No source files changed — skipping trace scan"
+
+  trace-full:
+    name: Full trace scan (post-merge)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Run full trace scan
+        run: |
+          node scripts/agents/trace-agent.js --mode=${{ github.event.inputs.mode || 'full' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
+
+      - name: Commit trace.json and updated records
+        run: |
+          git config user.name "intent-bot"
+          git config user.email "intent-bot@users.noreply.github.com"
+          git add .intent/trace.json requirements/
+          if git diff --staged --quiet; then
+            echo "No trace changes to commit"
+          else
+            git commit -m "chore: update trace map and implementation status [intent-bot] [skip ci]"
+            git push
+          fi

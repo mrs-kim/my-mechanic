@@ -1,0 +1,105 @@
+name: Spec Agent — Post Merge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "requirements/**"
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: read
+
+jobs:
+  flip-legitimacy:
+    name: Flip proposed → approved on merged records
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          fetch-depth: 2  # need previous commit to detect changed files
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Detect changed requirement files
+        id: changed
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'requirements/**/*.yaml' 'requirements/**/*.yml' | tr '\n' ' ')
+          echo "files=$CHANGED" >> $GITHUB_OUTPUT
+          echo "Changed requirement files: $CHANGED"
+
+      - name: Flip legitimacy on merged proposed records
+        run: node .intent/scripts/flip-legitimacy.js
+        env:
+          INTENT_ROOT: ${{ github.workspace }}
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+
+      - name: Commit flipped records
+        run: |
+          git config user.name "intent-bot"
+          git config user.email "intent-bot@users.noreply.github.com"
+          git add requirements/
+          if git diff --staged --quiet; then
+            echo "No legitimacy changes to commit"
+          else
+            git commit -m "chore: flip legitimacy on merged records [intent-bot] [skip ci]"
+            git push
+          fi
+
+  check-design-staleness:
+    name: Check for stale design specs
+    runs-on: ubuntu-latest
+    needs: flip-legitimacy
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .intent
+
+      - name: Detect changed requirement IDs
+        id: reqs
+        run: |
+          # Find requirement files changed in this push
+          CHANGED_REQS=$(git diff --name-only HEAD~1 HEAD -- 'requirements/requirements/*.yaml' | \
+            xargs -I{} basename {} .yaml | tr '\n' ' ')
+          echo "ids=$CHANGED_REQS" >> $GITHUB_OUTPUT
+          echo "Changed requirement IDs: $CHANGED_REQS"
+
+      - name: Run spec agent — requirement updated
+        if: steps.reqs.outputs.ids != ''
+        run: |
+          for REQ_ID in ${{ steps.reqs.outputs.ids }}; do
+            echo "Checking design staleness for $REQ_ID"
+            node scripts/agents/spec-agent.js \
+              --event=requirement_updated \
+              --req=$REQ_ID
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.INTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.INTENT_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          INTENT_ROOT: ${{ github.workspace }}
