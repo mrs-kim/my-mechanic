@@ -1,0 +1,16 @@
+id: req_miriivx0
+type: requirement
+title: Store service log with source attribution
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service history records track whether each entry came from 'receipt' or 'manual' source
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "source: 'receipt' and source: 'manual' in SERVICE_LOG"

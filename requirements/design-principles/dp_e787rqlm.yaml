@@ -1,0 +1,17 @@
+id: dp_e787rqlm
+type: design-principle
+title: Visual service confirmation
+domain: dom_fhtdpco8
+intent: Services should be clearly marked as selected/confirmed with checkmarks and visual indicators
+anti-patterns:
+  - Ambiguous selection states
+  - Unclear confirmation status
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,16 @@
+id: req_wvmuhz39
+type: requirement
+title: Visually differentiate user and bot message alignment
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: User messages are right-aligned and bot messages are left-aligned in the chat interface
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: flexDirection:m.role==="user"?"row-reverse":"row"

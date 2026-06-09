@@ -1,0 +1,18 @@
+id: job_bdji7urv
+type: job
+title: Get maintenance tips and education
+domain: dom_fhtdpco8
+narrative: >-
+  When looking at my maintenance schedule I need detailed information about each service so that I understand what's
+  involved and can ask informed questions
+success-looks-like: Expandable service tips with detailed explanations, tags, and ability to discuss with mechanic
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tip detail panel with explanations and 'Ask your mechanic about this' feature

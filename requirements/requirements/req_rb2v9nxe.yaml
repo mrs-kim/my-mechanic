@@ -1,0 +1,16 @@
+id: req_rb2v9nxe
+type: requirement
+title: Calculate total service costs
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service reports show the sum of all service visit costs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Totals row shows 'Total' with '$747' cost

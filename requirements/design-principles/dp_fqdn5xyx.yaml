@@ -1,0 +1,20 @@
+id: dp_fqdn5xyx
+type: design-principle
+title: Progressive disclosure for maintenance information
+domain: dom_fhtdpco8
+intent: >-
+  Present maintenance information in layers - immediate needs prominently, future items available but not overwhelming,
+  detailed tips expandable on demand
+anti-patterns:
+  - Showing all maintenance tips at once
+  - Making future milestones as prominent as immediate needs
+  - Hiding urgency indicators
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

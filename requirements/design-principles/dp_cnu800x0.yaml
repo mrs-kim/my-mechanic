@@ -1,0 +1,17 @@
+id: dp_cnu800x0
+type: design-principle
+title: Make numeric data highly legible
+domain: dom_fhtdpco8
+intent: VIN numbers and mileage readings should be easy to read and verify for accuracy
+anti-patterns:
+  - Proportional fonts for technical data
+  - Hard to distinguish characters
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

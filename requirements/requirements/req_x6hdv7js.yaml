@@ -1,0 +1,18 @@
+id: req_x6hdv7js
+type: requirement
+title: Show maintenance completion status with visual indicators
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays maintenance cards with status-specific colors, icons, and labels (DONE, overdue warnings, etc.)
+  and shows completion state with green styling
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Status styling with done state: done ? { color:C.green, bg:C.greenDim, label:\"DONE\" } : ST[item.status]"

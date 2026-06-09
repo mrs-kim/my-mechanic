@@ -1,0 +1,18 @@
+id: dp_xia3f0j1
+type: design-principle
+title: Color-coded maintenance urgency
+domain: dom_fhtdpco8
+intent: Use color as a primary indicator of maintenance urgency to enable quick visual scanning
+anti-patterns:
+  - Using same color for all urgency levels
+  - Relying only on text to indicate urgency
+  - Using colors that don't clearly differentiate urgency
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

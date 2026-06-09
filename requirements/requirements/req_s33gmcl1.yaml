@@ -1,0 +1,16 @@
+id: req_s33gmcl1
+type: requirement
+title: Display receipt thumbnail after processing
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system shows a formatted preview of the scanned receipt with service items and pricing in a monospace font layout
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Fake receipt thumbnail with Honda dealership service details in Courier New font

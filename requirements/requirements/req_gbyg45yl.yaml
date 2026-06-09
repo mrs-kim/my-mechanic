@@ -1,0 +1,16 @@
+id: req_gbyg45yl
+type: requirement
+title: Show service visit details in tabular format
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service reports display each visit with date, services performed, mileage, cost, and shop name in a structured table
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service table with columns for Date/Services, Miles, Cost and rows for each visit

@@ -1,0 +1,17 @@
+id: req_8sesz6yz
+type: requirement
+title: Categorize maintenance items by urgency status
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system filters and categorizes maintenance schedule items into overdue, due, soon, and ok status groups
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: const overdue = CIVIC_SCHEDULE.filter(i => i.status === "overdue");
+rationale: Enables prioritized display of maintenance needs

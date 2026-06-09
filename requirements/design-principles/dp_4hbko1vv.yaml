@@ -1,0 +1,18 @@
+id: dp_4hbko1vv
+type: design-principle
+title: Educational transparency
+domain: dom_fhtdpco8
+intent: Users should understand what each maintenance item involves and feel empowered to discuss with mechanics
+anti-patterns:
+  - Technical jargon without explanation
+  - Hiding service details
+  - Discouraging user questions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

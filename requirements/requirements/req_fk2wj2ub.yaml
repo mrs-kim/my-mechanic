@@ -1,0 +1,20 @@
+id: req_fk2wj2ub
+type: requirement
+title: Display maintenance card visual progress indicator
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays a horizontal progress bar under each maintenance item showing completion percentage based on miles
+  driven versus interval miles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    Progress bar implementation with percentage calculation: Math.min(Math.abs(item.remaining) / item.intervalMiles *
+    100, 100)

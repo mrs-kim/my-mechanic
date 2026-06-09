@@ -1,0 +1,17 @@
+id: req_ltdt20r7
+type: requirement
+title: Indicate maintenance schedule source
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays the source of maintenance schedule information (e.g., 'Honda schedule')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Only shown in one place in the code, may not be consistently applied
+  ingestion-source: Footer text showing '◆ Honda schedule' in future milestone cards

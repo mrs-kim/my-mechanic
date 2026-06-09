@@ -1,0 +1,16 @@
+id: req_snmtvygh
+type: requirement
+title: Format mileage input with monospace font
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system uses Courier New font for all mileage input fields and displays
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Consistent Courier New font usage for odometer values

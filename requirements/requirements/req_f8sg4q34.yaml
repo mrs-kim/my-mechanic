@@ -1,0 +1,19 @@
+id: req_f8sg4q34
+type: requirement
+title: Generate maintenance schedule from manufacturer specifications
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system looks up Honda documentation and creates a personalized schedule based on the specific vehicle model and
+  current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Looking up manufacturer-recommended service intervals from Honda's documentation
+rationale: Each vehicle model has different maintenance requirements

@@ -1,0 +1,17 @@
+id: req_87m42hx8
+type: requirement
+title: Support receipt modal activation
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system opens a receipt modal interface when triggered from maintenance screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: onReceipt={()=>setReceiptModal(true)}
+rationale: Enables receipt-based service entry workflow

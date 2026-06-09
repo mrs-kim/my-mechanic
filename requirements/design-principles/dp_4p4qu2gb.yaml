@@ -1,0 +1,20 @@
+id: dp_4p4qu2gb
+type: design-principle
+title: Progressive visual disclosure
+domain: dom_fhtdpco8
+intent: >-
+  Information should be revealed progressively with staggered timing to create engaging, digestible experiences rather
+  than overwhelming users with simultaneous content
+anti-patterns:
+  - Simultaneous appearance of all content
+  - No visual progression or hierarchy
+  - Instant state changes without transitions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

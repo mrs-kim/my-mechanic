@@ -1,0 +1,18 @@
+id: req_f6oftzlr
+type: requirement
+title: Display VIN decode success state
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  When VIN is successfully decoded, the system displays a green success banner with checkmark icon, 'Ride recognised!'
+  message, and the decoded VIN number
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ✓ Ride recognised! 1HGCV1F38KA012345

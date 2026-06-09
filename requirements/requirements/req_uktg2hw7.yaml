@@ -1,0 +1,17 @@
+id: req_uktg2hw7
+type: requirement
+title: Mark receipt entries with 'RECEIPT' source indicator
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays a 'RECEIPT' label for service records that were verified from scanned shop invoices
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Records marked "RECEIPT" were verified from scanned shop invoices
+rationale: To differentiate between verified shop services and owner-entered data for credibility

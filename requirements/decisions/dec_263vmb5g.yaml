@@ -1,0 +1,16 @@
+id: dec_263vmb5g
+type: decision
+title: Manufacturer specifications require user verification
+domain: dom_fhtdpco8
+outcome: excluded
+rationale: System provides manufacturer data but explicitly requires users to verify against their owner's manual
+revisit-when: If liability or accuracy concerns change
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ⓘ Based on Honda specifications · Verify with your owner's manual

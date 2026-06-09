@@ -1,0 +1,18 @@
+id: req_dasvaj6b
+type: requirement
+title: Display future maintenance milestones with mileage
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system shows upcoming maintenance milestones with approximate mileage like '~54,000 mi' and associated service
+  items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "{ mi:\"~54,000 mi\", items:[\"Engine Air Filter\",\"Cabin Air Filter\"], urgency:\"soon\", tips:[] }"

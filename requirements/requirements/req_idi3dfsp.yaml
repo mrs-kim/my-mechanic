@@ -1,0 +1,16 @@
+id: req_idi3dfsp
+type: requirement
+title: Display year/make/model in grid format
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system shows vehicle year, make, and model as separate labeled cards in a three-column grid
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: YEAR 2019, MAKE Honda, MODEL Civic in grid layout

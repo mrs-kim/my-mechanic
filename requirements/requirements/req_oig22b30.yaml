@@ -1,0 +1,16 @@
+id: req_oig22b30
+type: requirement
+title: Include AI maintenance assessment
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service reports provide an AI-generated summary of the vehicle's maintenance status
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Green summary box shows 'Well-maintained vehicle' with details about service frequency and compliance

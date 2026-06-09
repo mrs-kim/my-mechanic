@@ -1,0 +1,16 @@
+id: req_0grdlgx3
+type: requirement
+title: Provide VIN rescan option
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The decoded vehicle screen includes a retry/back button to return to scanning mode
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ↺ button in decoded view

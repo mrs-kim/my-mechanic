@@ -1,0 +1,17 @@
+id: dp_sjuzq5mv
+type: design-principle
+title: Clear data provenance
+domain: dom_fhtdpco8
+intent: Users should understand the reliability and source of each piece of maintenance data
+anti-patterns:
+  - Mixing verified and unverified data without distinction
+  - Unclear data sources
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

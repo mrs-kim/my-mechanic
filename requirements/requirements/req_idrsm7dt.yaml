@@ -1,0 +1,17 @@
+id: req_idrsm7dt
+type: requirement
+title: Use visual hierarchy for maintenance urgency
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system uses different visual treatments (colors, animations) to indicate maintenance urgency levels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Red pulsing indicator for 'NEXT VISIT', different colors for 'soon' vs 'ok' urgency
+rationale: Visual hierarchy helps users quickly assess which items need immediate attention

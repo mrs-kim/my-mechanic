@@ -1,0 +1,16 @@
+id: req_ult6mdp4
+type: requirement
+title: Provide vehicle editing access
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system includes an 'EDIT VEHICLE' button that triggers vehicle modification interface
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: EDIT VEHICLE button with pencil icon at bottom of profile

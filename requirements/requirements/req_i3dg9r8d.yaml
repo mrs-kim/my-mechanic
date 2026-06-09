@@ -1,0 +1,16 @@
+id: req_i3dg9r8d
+type: requirement
+title: Group maintenance items by urgency categories
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system categorizes maintenance items into urgent (overdue/due), upcoming (soon), and good (completed/ok) groups
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: const urgent = CIVIC_SCHEDULE.filter(i => !done[i.id] && (i.status === "overdue" || i.status === "due"))

@@ -1,0 +1,16 @@
+id: req_dzuj6fly
+type: requirement
+title: Format mileage and costs consistently
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service reports display mileage with thousand separators and costs in dollar format with consistent alignment
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Mileage shows '52,800 mi' and costs use '$747' format with Courier New font

@@ -1,0 +1,18 @@
+id: req_d7014f6w
+type: requirement
+title: Display mechanic avatar with branded styling
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The mechanic bot messages include a branded avatar with 'M' in amber styling to distinguish from user messages
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    <div style={{ width:26,height:26,borderRadius:8,background:C.amberDim,border:`1px solid
+    ${C.amberBorder}`...}}>M</div>

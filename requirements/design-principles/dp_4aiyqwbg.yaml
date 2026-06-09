@@ -1,0 +1,17 @@
+id: dp_4aiyqwbg
+type: design-principle
+title: High-contrast scanning interface
+domain: dom_fhtdpco8
+intent: VIN scanning should feel precise and technical with dark backgrounds and amber highlights
+anti-patterns:
+  - Bright or colorful scanning interfaces
+  - Low contrast elements during scanning
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

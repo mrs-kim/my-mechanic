@@ -1,0 +1,16 @@
+id: req_g3tvpssn
+type: requirement
+title: Extract mileage from receipt
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system detects and displays mileage information found on receipts in a highlighted format
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MILEAGE ON RECEIPT 52,480 mi

@@ -1,0 +1,17 @@
+id: req_dnyzkj32
+type: requirement
+title: Barcode scanning progress feedback
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays visual scanning animation during VIN barcode reading with animated scanning line
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: stage===1 scanning animation with moving line
+rationale: Provides visual feedback that scanning is actively in progress

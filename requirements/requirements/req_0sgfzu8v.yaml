@@ -1,0 +1,18 @@
+id: req_0sgfzu8v
+type: requirement
+title: Indicate data source reliability
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Service reports distinguish between receipt-verified and manually-entered service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    Footer explains 'Records marked RECEIPT were verified from scanned shop invoices. Records marked MANUAL were entered
+    by the owner'

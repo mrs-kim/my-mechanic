@@ -1,0 +1,18 @@
+id: req_mgnbbpjb
+type: requirement
+title: Apply distinct styling to message bubbles by sender
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  User messages have amber background with no border, bot messages have surface background with border, and different
+  border radius for bubble tails
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: background:m.role==="user"?C.amber:C.surface,border:m.role==="user"?"none":`1px solid ${C.border}`

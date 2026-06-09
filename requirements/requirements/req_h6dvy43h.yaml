@@ -1,0 +1,17 @@
+id: req_h6dvy43h
+type: requirement
+title: Navigate between garage screens with state management
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system transitions between home, scan, decoded, and profile screens within the garage workflow
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onSave={()=>{setGScreen("profile");setScanStage(0);}}
+rationale: Supports multi-step vehicle management process

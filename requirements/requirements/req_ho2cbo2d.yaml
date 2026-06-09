@@ -1,0 +1,19 @@
+id: req_ho2cbo2d
+type: requirement
+title: Display vehicle-specific maintenance context
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system shows the specific vehicle model (e.g., '2019 Honda Civic') when generating or displaying the maintenance
+  schedule
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle model displayed during schedule generation and in interface
+rationale: Users need confirmation that the schedule applies to their specific vehicle

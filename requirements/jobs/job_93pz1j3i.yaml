@@ -1,0 +1,18 @@
+id: job_93pz1j3i
+type: job
+title: Track vehicle mileage accurately
+domain: dom_fhtdpco8
+narrative: >-
+  When I need to maintain my vehicle I need to track accurate mileage so that I can follow proper maintenance schedules
+  and document service history
+success-looks-like: Current odometer reading is always up-to-date and easily accessible for service decisions
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Odometer display and update functionality throughout interface

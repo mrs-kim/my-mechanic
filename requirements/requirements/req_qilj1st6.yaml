@@ -1,0 +1,18 @@
+id: req_qilj1st6
+type: requirement
+title: Context-sensitive scanning guidance
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system provides different instructional text based on scanning stage - 'Point at the door jamb barcode' during
+  search and 'Hold steady' in help text
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Point at the door jamb barcode and Hold steady instructions

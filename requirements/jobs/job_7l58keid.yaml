@@ -1,0 +1,18 @@
+id: job_7l58keid
+type: job
+title: Understand which services are overdue vs up to date
+domain: dom_fhtdpco8
+narrative: >-
+  When viewing my maintenance schedule I need to quickly see what needs attention so that I can prioritize upcoming
+  services
+success-looks-like: Clear visual separation between overdue services (prominently displayed) and up-to-date services (collapsible section)
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Overdue services shown prominently, up-to-date services in collapsible section

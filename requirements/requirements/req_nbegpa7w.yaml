@@ -1,0 +1,17 @@
+id: req_nbegpa7w
+type: requirement
+title: VIN detection confirmation
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays detected VIN in Courier New font with confirmation button when barcode is successfully read
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: stage===2 VIN DETECTED with 1HGCV1F38KA012345
+rationale: Allows user to verify the scanned VIN before proceeding

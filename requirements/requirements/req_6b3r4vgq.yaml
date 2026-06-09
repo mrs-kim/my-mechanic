@@ -1,0 +1,17 @@
+id: req_6b3r4vgq
+type: requirement
+title: Integrate receipt scanning for service completion
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system provides a prominent 'Just got a service? Scan your receipt' entry point in the maintenance view
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt scanning call-to-action with camera icon in maintenance interface
+rationale: Users need easy access to log completed services

@@ -1,0 +1,17 @@
+id: req_22j1j4uz
+type: requirement
+title: Dim inactive tips when one is selected
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: When a tip is expanded, other tips are visually dimmed (opacity reduced to 0.5)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Opacity logic: activeTip && !isActive ? 0.5 : 1"
+rationale: Helps focus attention on the selected tip while keeping others visible

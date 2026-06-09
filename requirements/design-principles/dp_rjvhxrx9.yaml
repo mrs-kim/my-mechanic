@@ -1,0 +1,18 @@
+id: dp_rjvhxrx9
+type: design-principle
+title: Celebrate successful vehicle recognition
+domain: dom_fhtdpco8
+intent: Vehicle decode success should feel rewarding and confirm the system recognized their specific car
+anti-patterns:
+  - Plain success messages
+  - Technical jargon
+  - Impersonal confirmations
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

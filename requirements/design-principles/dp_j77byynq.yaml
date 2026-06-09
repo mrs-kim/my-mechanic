@@ -1,0 +1,17 @@
+id: dp_j77byynq
+type: design-principle
+title: Status-based visual hierarchy
+domain: dom_fhtdpco8
+intent: Maintenance urgency should be immediately apparent through color coding
+anti-patterns:
+  - Using similar colors for different urgency levels
+  - Relying only on text labels without color coding
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

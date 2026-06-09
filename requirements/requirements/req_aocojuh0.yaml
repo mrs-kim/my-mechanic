@@ -1,0 +1,16 @@
+id: req_aocojuh0
+type: requirement
+title: Maintenance schedule generation simulation
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: When the maintenance tab is first opened, the system simulates generating the schedule with a 2.8 second delay
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: useEffect with maintState 'generating' and 2800ms timeout

@@ -1,0 +1,18 @@
+id: req_cucum7r8
+type: requirement
+title: Display contextual health messages based on service status
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system shows different health messages like 'Needs attention', 'Service due soon', 'Mostly good', or 'Your Civic
+  is in great shape' based on overdue/due/upcoming service items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: const healthMsg = urgent.find(i=>i.status==="overdue") ? "Needs attention"

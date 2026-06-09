@@ -1,0 +1,19 @@
+id: req_2iiwb0l3
+type: requirement
+title: Honda Civic maintenance schedule with 10 service items
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays a Honda Civic-specific maintenance schedule with 10 items: oil change, tire rotation, engine air
+  filter, cabin air filter, brake inspection, CVT fluid, spark plugs, coolant flush, battery check, and timing chain
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CIVIC_SCHEDULE constant with 10 maintenance items
+rationale: Provides vehicle-specific maintenance guidance based on Honda specifications

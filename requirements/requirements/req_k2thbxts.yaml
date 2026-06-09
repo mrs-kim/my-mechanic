@@ -1,0 +1,16 @@
+id: req_k2thbxts
+type: requirement
+title: Batch confirm multiple services
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system allows confirming multiple services at once with a single action showing the count
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MARK 2 ITEMS AS DONE

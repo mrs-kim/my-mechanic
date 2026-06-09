@@ -1,0 +1,20 @@
+id: job_udmkry1w
+type: job
+title: Track maintenance schedule based on manufacturer recommendations
+domain: dom_fhtdpco8
+narrative: >-
+  When I own a specific vehicle I need to see manufacturer-recommended service intervals so that I can maintain my car
+  properly according to Honda specifications
+success-looks-like: >-
+  A personalized maintenance schedule showing all Honda-recommended services with intervals calculated for my specific
+  mileage
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Based on Honda specifications · Verify with your owner's manual

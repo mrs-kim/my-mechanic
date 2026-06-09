@@ -1,0 +1,17 @@
+id: req_0x7c7yws
+type: requirement
+title: Show mileage remaining for each service
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system calculates and displays how many miles remain until each service is due
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service items show remaining mileage like '15,000 mi' or 'N/A'
+rationale: Users need to understand timing of upcoming maintenance

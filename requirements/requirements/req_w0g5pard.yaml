@@ -1,0 +1,16 @@
+id: req_w0g5pard
+type: requirement
+title: Provide receipt source selection options
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: "The system offers users two options for receipt input: taking a new photo with camera or selecting from photo library"
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Two options mapped: 'Take a Photo' and 'Choose from Library'"

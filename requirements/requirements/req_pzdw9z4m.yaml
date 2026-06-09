@@ -1,0 +1,16 @@
+id: req_pzdw9z4m
+type: requirement
+title: Require current mileage entry for vehicle setup
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system requires user to enter current odometer reading before saving the vehicle profile
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CURRENT MILEAGE * input field with 'Check your dashboard odometer' instruction

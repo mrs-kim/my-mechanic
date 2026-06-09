@@ -1,0 +1,18 @@
+id: req_zuc76x0g
+type: requirement
+title: Include maintenance tips with milestone information
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system associates specific maintenance tips with future milestones, such as 'Ask about CVT hesitation' at the
+  ~65,000 mi milestone
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "{ mi:\"~65,000 mi\", items:[\"Spark Plugs\",\"Coolant Flush\"], urgency:\"ok\", tips:[\"Ask about CVT hesitation\"] }"

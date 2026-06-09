@@ -1,0 +1,18 @@
+id: req_iyjqw3ga
+type: requirement
+title: Include vehicle context in receipt scanning instructions
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system mentions the specific vehicle (year, make, model) in the receipt scanning instructions and processing
+  messages
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'check off everything serviced on your 2019 Honda Civic' and 'Matching services to your Honda Civic schedule'"

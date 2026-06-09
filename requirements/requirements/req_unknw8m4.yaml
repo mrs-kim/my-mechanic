@@ -1,0 +1,19 @@
+id: req_unknw8m4
+type: requirement
+title: Display scan animation with moving scan line
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays an animated scan line that moves vertically across the VIN scanning viewfinder with opacity
+  transitions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "@keyframes scanMove { 0% { top:12%;opacity:1; } 90% { top:88%;opacity:1; } 100% { top:88%;opacity:0; } }"
+rationale: Provides visual feedback during VIN scanning process

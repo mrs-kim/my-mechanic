@@ -1,0 +1,16 @@
+id: req_flj1ne7z
+type: requirement
+title: Group future maintenance by mileage milestones
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system groups upcoming maintenance services by target mileage intervals (e.g., ~54,000 mi, ~65,000 mi)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Future milestones section with mileage headers like '~54,000 mi', '~65,000 mi', '~72,800 mi'

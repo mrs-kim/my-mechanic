@@ -1,0 +1,17 @@
+id: req_h26ngzv3
+type: requirement
+title: Service-specific descriptions and notes
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: Each maintenance item includes a description of the service and optional notes with Honda-specific details
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: desc and notes properties with Honda-specific information
+rationale: Provides detailed guidance including part numbers and Honda maintenance codes

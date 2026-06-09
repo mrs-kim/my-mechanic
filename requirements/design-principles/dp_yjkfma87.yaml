@@ -1,0 +1,18 @@
+id: dp_yjkfma87
+type: design-principle
+title: Automotive personality expression
+domain: dom_fhtdpco8
+intent: Vehicle profiles should feel personal and expressive through nicknames and styling
+anti-patterns:
+  - Generic, sterile vehicle identification
+  - Purely functional displays without character
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from prominent nickname display and emoji usage

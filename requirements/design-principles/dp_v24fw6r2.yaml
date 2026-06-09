@@ -1,0 +1,18 @@
+id: dp_v24fw6r2
+type: design-principle
+title: Scannable service history
+domain: dom_fhtdpco8
+intent: Service history should be quickly scannable with clear visual hierarchy and grouped information
+anti-patterns:
+  - Dense text blocks
+  - Poor visual separation between entries
+  - Unclear grouping of related information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

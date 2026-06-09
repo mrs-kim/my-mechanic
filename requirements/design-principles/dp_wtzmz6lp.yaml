@@ -1,0 +1,18 @@
+id: dp_wtzmz6lp
+type: design-principle
+title: Maintenance information should build user confidence
+domain: dom_fhtdpco8
+intent: Detailed explanations and cost estimates help users make informed decisions and reduce anxiety about maintenance
+anti-patterns:
+  - Vague warnings without context
+  - Technical jargon without explanation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the detailed tip explanations that include costs and outcomes

@@ -1,0 +1,17 @@
+id: req_vaozdcv6
+type: requirement
+title: Display maintenance schedule with urgency indicators
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays scheduled maintenance items with color-coded urgency tags (overdue, due soon, etc.)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Oil Change tagged as 'overdue' with red color, Tire Rotation tagged as 'due soon' with amber
+rationale: Visual urgency indicators help users prioritize which maintenance items need immediate attention

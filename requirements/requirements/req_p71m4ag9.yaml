@@ -1,0 +1,18 @@
+id: req_p71m4ag9
+type: requirement
+title: Display decoded vehicle specifications in structured format
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays decoded vehicle details (Make, Model, Year, Body, Fuel) in a structured list with amber diamond
+  indicators
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MAKE Honda, MODEL Civic, YEAR 2019, BODY Sedan/Saloon, FUEL Gasoline

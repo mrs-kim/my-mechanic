@@ -1,0 +1,18 @@
+id: req_71o5gfn2
+type: requirement
+title: Show typing indicator during response generation
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: When the mechanic is generating a response, display an animated typing indicator with three dots
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    {typing && (...<div style={{ width:7,height:7,borderRadius:"50%",background:C.amber,animation:`dot 1.2s ${d*.2}s
+    ease-in-out infinite` }}/>...)}

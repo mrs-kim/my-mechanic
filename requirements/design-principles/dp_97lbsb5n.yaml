@@ -1,0 +1,17 @@
+id: dp_97lbsb5n
+type: design-principle
+title: Guide users through onboarding with encouraging tone
+domain: dom_fhtdpco8
+intent: First-time vehicle setup should feel welcoming and helpful rather than intimidating or technical
+anti-patterns:
+  - Technical jargon without explanation
+  - Assuming users know where to find VIN information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

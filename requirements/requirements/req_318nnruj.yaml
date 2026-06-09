@@ -1,0 +1,18 @@
+id: req_318nnruj
+type: requirement
+title: Source type badge display
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays small badges labeled 'RECEIPT' or 'MANUAL' with different styling to indicate the data source of
+  each service entry
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "visit.source==='receipt' ? 'RECEIPT' : 'MANUAL' with different background colors and borders"

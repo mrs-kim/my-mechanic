@@ -1,0 +1,17 @@
+id: req_7grhm7q7
+type: requirement
+title: Pre-populate mileage field with example value
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The current mileage input field shows a default value (52800) as an example
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Field shows defaultValue='52800' but unclear if this is always the same example or dynamic
+  ingestion-source: defaultValue='52800' in input field

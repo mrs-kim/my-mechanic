@@ -1,0 +1,16 @@
+id: req_at86koat
+type: requirement
+title: Show vehicle specifications as tags
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system displays vehicle specifications like fuel type, drivetrain, body style, and engine as discrete tag elements
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Gasoline, FWD, Sedan, 1.5L Turbo displayed as individual tagged elements

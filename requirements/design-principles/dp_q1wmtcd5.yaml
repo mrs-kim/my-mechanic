@@ -1,0 +1,20 @@
+id: dp_q1wmtcd5
+type: design-principle
+title: Conversational mechanic experience
+domain: dom_fhtdpco8
+intent: >-
+  The mechanic interface should feel like chatting with a knowledgeable automotive expert who knows your specific
+  vehicle
+anti-patterns:
+  - Generic automotive advice without vehicle context
+  - Formal or robotic interaction patterns
+  - Overwhelming the user with too many options at once
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

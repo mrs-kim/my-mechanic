@@ -1,0 +1,17 @@
+id: req_clogphnz
+type: requirement
+title: Collapse up-to-date services by default
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system shows a summary count of completed services and allows expansion to see the full list
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Collapsible section showing '# services up to date' with expand/collapse functionality
+rationale: Focus attention on services that need action while keeping completed items accessible

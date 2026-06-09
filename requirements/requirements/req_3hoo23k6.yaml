@@ -1,0 +1,19 @@
+id: req_3hoo23k6
+type: requirement
+title: Provide car-specific chat context in mechanic header
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The mechanic chat interface displays the specific vehicle information (year and model) in the header below the 'MY
+  MECHANIC' title
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: <div style={{ color:C.amber, fontSize:11, marginTop:1, fontWeight:600 }}>2019 Honda Civic</div>
+rationale: Users need to know which vehicle they are getting advice about when chatting with the mechanic

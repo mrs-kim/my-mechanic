@@ -1,0 +1,17 @@
+id: req_tg1ffspu
+type: requirement
+title: Track service completion status per item
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The system maintains done/undone state for individual maintenance items with toggle capability
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onDone={(id)=>setDone(d=>({...d,[id]:!d[id]}))}
+rationale: Allows users to mark services as completed

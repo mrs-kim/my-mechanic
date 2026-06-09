@@ -1,0 +1,17 @@
+id: dp_8c6bi7ge
+type: design-principle
+title: Structured information hierarchy
+domain: dom_fhtdpco8
+intent: Vehicle information should be organized in clear, scannable sections with visual separation
+anti-patterns:
+  - Dense text blocks
+  - Mixing different types of information without clear boundaries
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

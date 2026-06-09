@@ -1,0 +1,18 @@
+id: req_y1cm04uf
+type: requirement
+title: Show specific maintenance recommendations in health card
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: >-
+  The system displays specific upcoming service needs like 'Oil change is overdue' or 'Tire rotation coming up in 420
+  miles' in the health summary
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: const healthSub = urgent.find(i=>i.status==="overdue") ? "Oil change is overdue — book a service visit"

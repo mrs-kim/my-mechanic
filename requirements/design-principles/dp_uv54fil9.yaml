@@ -1,0 +1,18 @@
+id: dp_uv54fil9
+type: design-principle
+title: Receipt scanning should feel guided and contextual
+domain: dom_fhtdpco8
+intent: Users should understand exactly what will happen with their receipt and how it relates to their specific vehicle
+anti-patterns:
+  - Generic scanning instructions without vehicle context
+  - Unclear processing states
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the specific vehicle mentions and clear step-by-step process

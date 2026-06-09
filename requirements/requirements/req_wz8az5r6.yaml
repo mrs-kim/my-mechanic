@@ -1,0 +1,16 @@
+id: req_wz8az5r6
+type: requirement
+title: Vehicle context in mechanic chat initialization
+domain: dom_fhtdpco8
+job: job_selpf4p1
+behavior: The mechanic chat starts with vehicle-specific information including make, model, year, and current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CHAT_INIT with '2019 Honda Civic — 52,800 miles and counting'
