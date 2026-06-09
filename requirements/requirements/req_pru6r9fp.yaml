@@ -1,0 +1,16 @@
+id: req_pru6r9fp
+type: requirement
+title: Service reports show chronological service log
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays all service visits in a table format with date, services performed, mileage, and cost
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Complete service log table with columns for Date · Services, Miles, Cost

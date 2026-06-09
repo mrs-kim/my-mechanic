@@ -1,0 +1,17 @@
+id: req_52mfxn9f
+type: requirement
+title: AI responses include cost estimates
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The AI chat provides parts and labor cost ranges when discussing repairs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CV axle response includes '$150–250 in parts, or $300–450 at a shop'
+rationale: Helps users budget and make informed decisions about repair timing

@@ -1,0 +1,18 @@
+id: dp_bzfpikg0
+type: design-principle
+title: Receipt scanning should feel guided and informative
+domain: dom_2pr5dqn8
+intent: Users should understand what they can do, how to do it best, and what's happening during processing
+anti-patterns:
+  - Leaving users guessing about what document types work
+  - Silent processing without status updates
+  - Technical jargon in user instructions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

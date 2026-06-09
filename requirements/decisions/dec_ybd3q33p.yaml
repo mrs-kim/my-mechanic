@@ -1,0 +1,16 @@
+id: dec_ybd3q33p
+type: decision
+title: Timing belt vs timing chain distinction
+domain: dom_2pr5dqn8
+outcome: excluded
+rationale: System explicitly clarifies when a service doesn't apply to specific engines
+revisit-when: When adding different engine types that do require timing belt service
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Timing chain item shows 'no replacement needed' and '1.5L K-series uses a chain, not a belt'

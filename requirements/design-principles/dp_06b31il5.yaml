@@ -1,0 +1,17 @@
+id: dp_06b31il5
+type: design-principle
+title: Visual hierarchy through color coding
+domain: dom_2pr5dqn8
+intent: Use distinct colors to communicate service priority - red for overdue, amber for due soon, green for completed
+anti-patterns:
+  - Using similar colors for different service states
+  - Relying only on text to communicate urgency
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

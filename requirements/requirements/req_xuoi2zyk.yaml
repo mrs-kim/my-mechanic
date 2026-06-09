@@ -1,0 +1,19 @@
+id: req_xuoi2zyk
+type: requirement
+title: Show step-by-step generation progress
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  The system displays specific loading steps when generating maintenance schedules, including 'Reading owner's manual
+  specifications', 'Checking model-specific requirements', and 'Calculating intervals for your mileage'
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MaintGenerating component shows three specific loading steps
+rationale: Provides transparency into what the AI is doing during schedule generation

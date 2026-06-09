@@ -1,0 +1,17 @@
+id: req_mkrnjtpg
+type: requirement
+title: Display service history statistics
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system shows total visit count, total money spent, and total miles tracked as summary statistics
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Total stats strip showing '6 Visits', '$747 Total spent', '22.7k Miles tracked'
+rationale: Provides quick overview of maintenance investment and usage

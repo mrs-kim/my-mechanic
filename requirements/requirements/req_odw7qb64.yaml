@@ -1,0 +1,16 @@
+id: req_odw7qb64
+type: requirement
+title: Group service records by year
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays year dividers between service records when the year changes
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Year divider logic checking if previous visit year differs from current

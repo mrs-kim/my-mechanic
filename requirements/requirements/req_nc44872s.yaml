@@ -1,0 +1,17 @@
+id: req_nc44872s
+type: requirement
+title: Receipt processing matches services to car schedule
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system matches detected services from receipts to the specific vehicle's maintenance schedule
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Matching services to your Honda Civic schedule
+rationale: Provides car-aware maintenance tracking by connecting receipts to scheduled services

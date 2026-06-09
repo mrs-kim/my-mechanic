@@ -1,0 +1,16 @@
+id: req_r8jbopyp
+type: requirement
+title: Service reports provide maintenance quality assessment
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system analyzes service history and displays an overall maintenance assessment with supporting details
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Summary box showing 'Well-maintained vehicle' with details about 6 service visits over 22,700 miles

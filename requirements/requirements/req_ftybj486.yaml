@@ -1,0 +1,17 @@
+id: req_ftybj486
+type: requirement
+title: Display future maintenance milestones
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system shows upcoming maintenance milestones with mileage targets and associated service items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: milestones array with ~54,000 mi, ~65,000 mi, ~72,800 mi entries
+rationale: Helps users plan ahead for major service intervals

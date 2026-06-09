@@ -1,0 +1,16 @@
+id: req_ftbucqg3
+type: requirement
+title: Display maintenance item due/overdue status
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system shows whether maintenance items are due in X miles or overdue by X miles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "item.remaining < 0 ? 'Overdue by' : 'Due in'"

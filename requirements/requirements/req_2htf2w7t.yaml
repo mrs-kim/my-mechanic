@@ -1,0 +1,18 @@
+id: req_2htf2w7t
+type: requirement
+title: Display manufacturer source attribution
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  The system shows attribution to manufacturer specifications (e.g., 'Based on Honda specifications · Verify with your
+  owner's manual')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Footer disclaimer in maintenance display

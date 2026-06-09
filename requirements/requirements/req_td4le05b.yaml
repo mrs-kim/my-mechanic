@@ -1,0 +1,17 @@
+id: req_td4le05b
+type: requirement
+title: Display manufacturer specifications source
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system indicates when maintenance schedules are based on Honda specifications
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 2019 Honda Civic · 52,800 mi · Honda specs
+rationale: Users need to know the maintenance schedule follows official manufacturer guidelines

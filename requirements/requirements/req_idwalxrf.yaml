@@ -1,0 +1,18 @@
+id: req_idwalxrf
+type: requirement
+title: Chat messages have conversation bubble styling
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  Messages appear in rounded bubbles with different tail positioning - user messages have right tail, bot messages have
+  left tail
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Messages have borderRadius:15 with conditional borderBottomRightRadius and borderBottomLeftRadius for tails

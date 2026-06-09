@@ -1,0 +1,19 @@
+id: dp_5b0rlj9o
+type: design-principle
+title: Visual urgency hierarchy for maintenance timing
+domain: dom_2pr5dqn8
+intent: >-
+  Use color coding and visual indicators to communicate maintenance urgency at a glance - red for overdue, amber for due
+  soon, muted colors for future items
+anti-patterns:
+  - Using same visual treatment for all maintenance items regardless of urgency
+  - Relying only on text labels without color coding
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,17 @@
+id: req_jrr7fpb6
+type: requirement
+title: Maintenance items show specific part numbers
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays manufacturer part numbers for maintenance items when available
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Cabin filter shows 'Honda part #80292-TBA-A11'"
+rationale: Ensures users get correct parts and avoid compatibility issues

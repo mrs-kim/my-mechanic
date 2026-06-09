@@ -1,0 +1,16 @@
+id: req_ki9jh3bg
+type: requirement
+title: Provide chat integration from tip details
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system includes a 'Ask your mechanic about this' button in tip detail panels that connects to the AI chat
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Chat button with mechanic icon in activeTipData detail panel

@@ -1,0 +1,17 @@
+id: req_7cur3je2
+type: requirement
+title: Receipt modal has bottom sheet design
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The receipt modal appears as a bottom sheet with rounded top corners and a drag handle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: borderRadius:'28px 28px 0 0' and drag handle div
+rationale: Follows mobile UI patterns for modal presentation

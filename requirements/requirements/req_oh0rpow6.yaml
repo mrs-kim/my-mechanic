@@ -1,0 +1,16 @@
+id: req_oh0rpow6
+type: requirement
+title: Car profile shows VIN number
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays the vehicle identification number in a formatted code block style
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN 1HGCV1F38KA012345 shown in Courier New font

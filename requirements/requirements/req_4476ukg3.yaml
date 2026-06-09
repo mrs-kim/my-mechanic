@@ -1,0 +1,16 @@
+id: req_4476ukg3
+type: requirement
+title: Show maintenance item notes and warnings
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays additional notes for maintenance items in amber/warning styling when present
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "{item.notes && <div style={{ color:C.amber,fontSize:10,marginTop:4,fontStyle:\"italic\" }}>{item.notes}</div>}"

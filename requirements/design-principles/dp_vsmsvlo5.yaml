@@ -1,0 +1,18 @@
+id: dp_vsmsvlo5
+type: design-principle
+title: Inject personality through expert voice
+domain: dom_2pr5dqn8
+intent: AI mechanic insights should feel personal and trustworthy, like advice from a knowledgeable friend
+anti-patterns:
+  - Generic corporate messaging
+  - Overly technical jargon
+  - Impersonal automated responses
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

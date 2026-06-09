@@ -1,0 +1,21 @@
+id: job_sa870csg
+type: job
+title: Generate comprehensive vehicle service reports
+domain: dom_2pr5dqn8
+narrative: >-
+  When an owner needs to document their vehicle's maintenance history, I need to compile all service records into a
+  professional report so that they can prove maintenance compliance, prepare for resale, or satisfy warranty
+  requirements
+success-looks-like: >-
+  A complete, printable service report with vehicle details, chronological service log, cost totals, and verification
+  status that owners can confidently share with buyers, dealers, or service providers
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle service record document with complete service log, totals, and verification notes

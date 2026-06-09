@@ -1,0 +1,17 @@
+id: dp_az9e0na2
+type: design-principle
+title: Clear service confirmation workflow
+domain: dom_2pr5dqn8
+intent: Users should be able to easily review and confirm detected services before they're recorded
+anti-patterns:
+  - Automatically saving detected services without user review
+  - Making it difficult to correct detection errors
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

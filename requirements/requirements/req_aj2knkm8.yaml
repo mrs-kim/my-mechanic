@@ -1,0 +1,19 @@
+id: req_aj2knkm8
+type: requirement
+title: Provide model-specific maintenance tips within milestones
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  The system includes vehicle-specific tips (like 'Ask about CVT hesitation') within appropriate maintenance milestone
+  cards
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CVT hesitation tip shown in the ~65,000 mi milestone card
+rationale: Offers targeted advice based on known vehicle characteristics and common issues

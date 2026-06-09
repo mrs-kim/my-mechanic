@@ -1,0 +1,18 @@
+id: req_ved6yfaa
+type: requirement
+title: Show maintenance item completion status visually
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  The system displays maintenance items with visual indicators for completion status including checkmarks, color coding,
+  and status labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: done ? { color:C.green, bg:C.greenDim, label:"DONE" }

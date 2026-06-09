@@ -1,0 +1,16 @@
+id: req_d9aztg1z
+type: requirement
+title: Receipt scanning offers multiple input methods
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: Users can either take a new photo or choose from their photo library when scanning receipts
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Take a Photo and Choose from Library options

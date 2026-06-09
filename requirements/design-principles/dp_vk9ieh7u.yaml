@@ -1,0 +1,17 @@
+id: dp_vk9ieh7u
+type: design-principle
+title: Contextual assistance integration
+domain: dom_2pr5dqn8
+intent: Seamlessly connect maintenance information with AI chat assistance, allowing users to get help without losing context
+anti-patterns:
+  - Forcing users to navigate away from maintenance info to ask questions
+  - Providing help that isn't contextually relevant
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

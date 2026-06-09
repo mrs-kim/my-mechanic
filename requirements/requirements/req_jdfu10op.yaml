@@ -1,0 +1,16 @@
+id: req_jdfu10op
+type: requirement
+title: AI chat suggests flagging items in notes
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The AI offers to flag maintenance items in user notes for future reference
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Want me to flag it in your notes? in simulated AI response

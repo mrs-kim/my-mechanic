@@ -1,0 +1,16 @@
+id: req_hi2f8uj5
+type: requirement
+title: Service history displays shop name and cost
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: Each service entry shows the service provider name and total cost
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "SERVICE_LOG entries with shop and cost fields like 'Honda of Springfield', cost: 101"

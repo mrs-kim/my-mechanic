@@ -1,0 +1,19 @@
+id: req_hld278uo
+type: requirement
+title: AI chat messages have visual role distinction
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  User messages appear right-aligned with amber background, bot messages appear left-aligned with surface background and
+  mechanic avatar
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Messages styled differently based on role==='user' vs role==='bot' with different alignments and colors
+rationale: Clear visual separation helps users distinguish between their messages and AI responses

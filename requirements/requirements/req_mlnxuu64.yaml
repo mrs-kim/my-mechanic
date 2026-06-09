@@ -1,0 +1,18 @@
+id: req_mlnxuu64
+type: requirement
+title: Maintenance schedule generation shows progress
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays a generating state when creating maintenance schedules
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from maintState 'generating' and timeout logic
+  ingestion-source: maintState transitions from 'generating' to 'ready' after 2800ms
+rationale: Provides feedback during potentially slow AI generation process

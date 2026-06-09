@@ -1,0 +1,16 @@
+id: req_tm5j1l1d
+type: requirement
+title: Service confirmation allows deselecting incorrectly detected items
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: Users can tap to deselect services that weren't actually performed before confirming
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TAP TO DESELECT ANYTHING THAT WASN'T DONE instruction

@@ -1,0 +1,16 @@
+id: req_7x0tpnfy
+type: requirement
+title: Display structured vehicle details after VIN decoding
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: System shows vehicle details in structured format including Make, Model, Year, Body type, and Fuel type
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VEHICLE DETAILS section with Honda Civic 2019 Sedan/Saloon Gasoline

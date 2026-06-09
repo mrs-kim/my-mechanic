@@ -1,0 +1,16 @@
+id: req_4ifv5ion
+type: requirement
+title: Show VIN code after successful vehicle recognition
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: System displays the decoded VIN code (e.g., 1HGCV1F38KA012345) when vehicle is successfully recognized
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Ride recognised! with VIN 1HGCV1F38KA012345 displayed

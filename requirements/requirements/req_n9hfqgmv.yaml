@@ -1,0 +1,17 @@
+id: req_n9hfqgmv
+type: requirement
+title: Chat shows typing indicator during response generation
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays a typing indicator while the AI is generating a response
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: typing state managed and timeout of 1700ms before bot response
+rationale: Provides feedback that the system is processing the user's input

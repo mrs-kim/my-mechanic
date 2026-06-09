@@ -1,0 +1,16 @@
+id: req_nhs4zx2y
+type: requirement
+title: Service history tracks source of each entry
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system records whether each service entry came from a receipt scan or manual entry
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "SERVICE_LOG entries showing source: 'receipt' and source: 'manual'"

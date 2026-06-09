@@ -1,0 +1,17 @@
+id: dp_qjq0xeqo
+type: design-principle
+title: Chronological service narrative
+domain: dom_2pr5dqn8
+intent: Service history should tell the story of the car's maintenance over time with clear temporal organization
+anti-patterns:
+  - Grouping services by type instead of time
+  - Hiding temporal context
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

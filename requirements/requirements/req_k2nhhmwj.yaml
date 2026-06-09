@@ -1,0 +1,18 @@
+id: req_k2nhhmwj
+type: requirement
+title: Service reports indicate record verification status
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system marks records as 'RECEIPT' when verified from scanned invoices or 'MANUAL' when owner-entered
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: >-
+    Footer note mentioning 'Records marked RECEIPT were verified from scanned shop invoices. Records marked MANUAL were
+    entered by the owner'

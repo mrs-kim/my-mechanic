@@ -1,0 +1,17 @@
+id: req_73f5x5ly
+type: requirement
+title: AI responses assess urgency and safety
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The AI chat indicates whether issues are immediately dangerous or can wait
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Not immediately dangerous but gets worse fast' for CV axle issue"
+rationale: Helps users prioritize safety and avoid getting stranded

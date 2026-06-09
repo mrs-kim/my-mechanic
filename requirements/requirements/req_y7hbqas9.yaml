@@ -1,0 +1,17 @@
+id: req_y7hbqas9
+type: requirement
+title: Categorize maintenance items by urgency
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system groups maintenance items into urgent (overdue/due), upcoming (soon), and good (completed/ok) categories
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: urgent, upcoming, and good arrays filtering CIVIC_SCHEDULE by status
+rationale: Helps users prioritize which maintenance items need immediate attention

@@ -1,0 +1,17 @@
+id: dp_p8zasvmi
+type: design-principle
+title: Progressive disclosure for supplementary information
+domain: dom_2pr5dqn8
+intent: Allow users to expand details for additional tips and information without overwhelming the main view
+anti-patterns:
+  - Showing all tip details at once
+  - Hiding important information without clear indication it exists
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

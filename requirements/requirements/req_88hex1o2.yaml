@@ -1,0 +1,17 @@
+id: req_88hex1o2
+type: requirement
+title: Show expandable tip details with practical guidance
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system provides detailed explanations for maintenance tips including detection methods and cost implications
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TIP_DETAILS object with detailed explanations for oil dilution, AC condenser, and CVT hesitation
+rationale: Users need actionable information to make informed maintenance decisions

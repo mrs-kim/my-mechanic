@@ -1,0 +1,16 @@
+id: req_6k7gcbf4
+type: requirement
+title: AI chat has message input with send button
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: Chat interface provides a text input field for user messages with a send button that activates on Enter key or click
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Input field with placeholder 'Ask your mechanic anything…' and send button that responds to Enter key and click

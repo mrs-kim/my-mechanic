@@ -1,0 +1,20 @@
+id: dp_vjtb04dq
+type: design-principle
+title: Surface actionable maintenance guidance
+domain: dom_2pr5dqn8
+intent: >-
+  Maintenance tips should provide practical, specific guidance that helps users take concrete action rather than generic
+  advice
+anti-patterns:
+  - Vague or generic maintenance tips
+  - Tips without cost context
+  - Advice that doesn't help users make decisions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

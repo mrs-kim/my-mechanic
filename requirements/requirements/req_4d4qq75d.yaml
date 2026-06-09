@@ -1,0 +1,16 @@
+id: req_4d4qq75d
+type: requirement
+title: Provide manual vehicle entry fallback
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system offers manual vehicle entry as an alternative to VIN barcode scanning
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ENTER MANUALLY option

@@ -1,0 +1,16 @@
+id: req_rxt7dlw2
+type: requirement
+title: AI chat provides contextual service timing advice
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The AI suggests addressing maintenance items at the next scheduled service visit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Yes I'd address that at your next service message in AI response

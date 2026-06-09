@@ -1,0 +1,16 @@
+id: req_j1zp9e0f
+type: requirement
+title: Vehicle setup requires current mileage input
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: During vehicle setup, the system requires users to enter their current odometer reading with instructional text
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CURRENT MILEAGE input with 'Check your dashboard odometer' instruction

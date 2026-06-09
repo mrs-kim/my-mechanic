@@ -1,0 +1,17 @@
+id: req_tp7he2gb
+type: requirement
+title: Maintenance items show mileage since last service
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays when each maintenance item was last performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Each CIVIC_SCHEDULE item has 'last' field with mileage values
+rationale: Helps users track service history and validate recommendations

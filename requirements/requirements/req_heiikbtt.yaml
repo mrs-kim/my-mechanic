@@ -1,0 +1,17 @@
+id: req_heiikbtt
+type: requirement
+title: Maintenance items include critical warnings
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system displays warnings about using incorrect parts or fluids
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "CVT fluid note: 'Do not use generic ATF — will damage CVT'"
+rationale: Prevents expensive damage from using wrong materials

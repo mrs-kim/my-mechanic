@@ -1,0 +1,18 @@
+id: dp_tjzz72n8
+type: design-principle
+title: Surface manufacturer expertise
+domain: dom_2pr5dqn8
+intent: AI responses should demonstrate deep knowledge of manufacturer-specific requirements and common issues
+anti-patterns:
+  - Generic advice that applies to all cars
+  - Recommending non-OEM parts without explaining compatibility
+  - Ignoring manufacturer service codes and procedures
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

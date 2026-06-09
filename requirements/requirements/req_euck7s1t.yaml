@@ -1,0 +1,18 @@
+id: req_euck7s1t
+type: requirement
+title: Receipt results display structured service data
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: >-
+  Processed receipts show structured information including dealership name, date, odometer reading, and itemized
+  services with costs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Fake receipt thumbnail showing HONDA DEALERSHIP SERVICE with structured data

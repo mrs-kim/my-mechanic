@@ -1,0 +1,20 @@
+id: job_z1xzvq4c
+type: job
+title: Present maintenance records with clear data provenance
+domain: dom_2pr5dqn8
+narrative: >-
+  When I view maintenance records I need to understand which data comes from verified sources versus manual entry so
+  that I can trust the accuracy of my vehicle's service history
+success-looks-like: Records clearly indicate whether they were verified from scanned shop invoices or manually entered by the owner
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    Records marked "RECEIPT" were verified from scanned shop invoices. Records marked "MANUAL" were entered by the
+    owner.

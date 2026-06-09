@@ -1,0 +1,16 @@
+id: req_fgdvsz7m
+type: requirement
+title: VIN scanner offers manual entry fallback
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system provides an 'ENTER MANUALLY' option when barcode scanning is not preferred or available
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ENTER MANUALLY option

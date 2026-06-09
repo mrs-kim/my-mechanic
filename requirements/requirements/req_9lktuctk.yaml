@@ -1,0 +1,17 @@
+id: req_9lktuctk
+type: requirement
+title: Receipt processing parses service details from receipt
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: The system identifies and extracts service items performed from receipt images
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Found 2 services on this receipt with Oil Change and Tire Rotation details
+rationale: Enables automatic service logging from receipts

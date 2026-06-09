@@ -1,0 +1,17 @@
+id: job_vri44q4q
+type: job
+title: Maintain comprehensive service records
+domain: dom_2pr5dqn8
+narrative: When I have my car serviced I need to track all maintenance history so that I can reference what work has been done
+success-looks-like: Complete chronological record of all services, costs, and mileage with ability to add manual entries for past work
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-note: Clearly shown in the service log interface with visit cards and manual entry option
+  ingestion-source: SERVICE_LOG rendering and 'Add a past service record' functionality

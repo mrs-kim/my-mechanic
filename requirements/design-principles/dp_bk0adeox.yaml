@@ -1,0 +1,18 @@
+id: dp_bk0adeox
+type: design-principle
+title: Provide actionable cost context
+domain: dom_2pr5dqn8
+intent: Users should understand both the technical and financial implications of maintenance decisions
+anti-patterns:
+  - Technical advice without cost considerations
+  - Vague cost estimates that don't help with budgeting
+  - Recommending work without urgency assessment
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

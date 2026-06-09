@@ -1,0 +1,19 @@
+id: dp_wcvhczwb
+type: design-principle
+title: Vehicle profile uses automotive visual hierarchy
+domain: dom_2pr5dqn8
+intent: >-
+  Vehicle profiles should feel authoritative and technical like automotive documentation, with clear information
+  hierarchy and monospace fonts for technical data
+anti-patterns:
+  - casual or non-technical presentation of vehicle data
+  - poor visual hierarchy that doesn't emphasize key vehicle info
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

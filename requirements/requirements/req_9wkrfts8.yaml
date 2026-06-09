@@ -1,0 +1,16 @@
+id: req_9wkrfts8
+type: requirement
+title: AI mechanic uses branded avatar
+domain: dom_2pr5dqn8
+job: job_sm3ox40i
+behavior: Bot messages display with an 'M' avatar in amber styling to represent the mechanic persona
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Bot messages show amber 'M' avatar: width:26,height:26,borderRadius:8,background:C.amberDim with 'M' text"
