@@ -1,0 +1,20 @@
+id: dp_v0dnky6t
+type: design-principle
+title: Receipt scanning should feel guided and reassuring
+domain: dom_btetyae4
+intent: >-
+  Users should feel confident about the receipt scanning process with clear visual feedback, helpful instructions, and
+  progress indicators throughout the workflow
+anti-patterns:
+  - Silent processing without feedback
+  - Unclear scanning requirements
+  - Abrupt workflow transitions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

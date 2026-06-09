@@ -1,0 +1,17 @@
+id: req_ne2w9jbx
+type: requirement
+title: Label manually entered service records
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system marks service records as 'MANUAL' when they were entered directly by the vehicle owner
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Records marked "MANUAL" were entered by the owner
+rationale: Users need to distinguish between verified shop records and self-reported data for credibility

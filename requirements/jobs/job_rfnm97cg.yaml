@@ -1,0 +1,18 @@
+id: job_rfnm97cg
+type: job
+title: Establish baseline for service tracking
+domain: dom_btetyae4
+narrative: >-
+  When adding a new vehicle, I need to record the current mileage so that future service entries can be accurately
+  tracked and scheduled
+success-looks-like: Current odometer reading is captured and stored as the starting point for all future service history tracking
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CURRENT MILEAGE input field with instruction to check dashboard odometer

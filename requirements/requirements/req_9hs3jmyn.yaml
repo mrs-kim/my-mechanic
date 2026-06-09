@@ -1,0 +1,16 @@
+id: req_9hs3jmyn
+type: requirement
+title: Display vehicle specifications from VIN
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system shows decoded vehicle details including make, model, year, body type, and fuel type
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle details section shows Honda Civic 2019 Sedan/Saloon Gasoline

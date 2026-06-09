@@ -1,0 +1,16 @@
+id: req_qix2mvfi
+type: requirement
+title: Provide VIN scanning guidance
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system displays instructions to point at the barcode on the driver's door jamb sticker and hold steady
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Instruction text: 'Point at the barcode on your driver's door jamb sticker. Hold steady.'"

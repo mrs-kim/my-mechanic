@@ -1,0 +1,16 @@
+id: req_q2gll9ay
+type: requirement
+title: Show contextual tips for maintenance items
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides educational information and tips when users interact with specific services
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: activeTipData showing detailed tips with icons, tags, and explanations

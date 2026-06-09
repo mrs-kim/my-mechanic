@@ -1,0 +1,16 @@
+id: req_p0nms6jh
+type: requirement
+title: Print service reports
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides a print option for generated service reports
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Print button with printer icon shown in report header

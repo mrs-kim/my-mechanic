@@ -1,0 +1,16 @@
+id: req_roryn4a8
+type: requirement
+title: Group services by completion status
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system separates completed services from upcoming/overdue services in different sections
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: good.map() showing completed services separately from other service items

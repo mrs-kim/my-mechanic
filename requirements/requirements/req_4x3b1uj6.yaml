@@ -1,0 +1,17 @@
+id: req_4x3b1uj6
+type: requirement
+title: Provide receipt scanning instructions
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system displays guidance about optimal receipt photo conditions and compatible document types
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Instructions about flat, well-lit receipts and that invoices/work orders work too
+rationale: Users need guidance to improve scanning success rates

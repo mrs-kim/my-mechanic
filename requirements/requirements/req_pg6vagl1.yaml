@@ -1,0 +1,17 @@
+id: req_pg6vagl1
+type: requirement
+title: Scan VIN barcode using camera
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system allows users to scan VIN barcodes through a camera interface with visual scanning feedback
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button and GarageScan component
+rationale: Enables automatic VIN entry instead of manual typing

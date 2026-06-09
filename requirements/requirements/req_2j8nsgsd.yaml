@@ -1,0 +1,19 @@
+id: req_2j8nsgsd
+type: requirement
+title: Provide receipt thumbnail view
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: >-
+  The system displays a condensed thumbnail view of the receipt contents with dealership name, date, odometer reading,
+  and service items with prices
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Fake receipt thumbnail showing formatted receipt data
+rationale: Users need to visually confirm the receipt was processed correctly before accepting the results

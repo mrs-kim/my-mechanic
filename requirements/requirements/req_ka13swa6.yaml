@@ -1,0 +1,17 @@
+id: req_ka13swa6
+type: requirement
+title: Allow VIN scan retry
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides a retry option (↺) to go back and scan again if needed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Retry button is present but behavior not explicitly documented
+  ingestion-source: ↺ symbol shown as clickable element with onBack handler

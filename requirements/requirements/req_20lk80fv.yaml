@@ -1,0 +1,16 @@
+id: req_20lk80fv
+type: requirement
+title: Show tabular service log
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Reports present service history in a structured table format with date, services, mileage, and cost columns
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Table with columns 'Date · Services', 'Miles', 'Cost'

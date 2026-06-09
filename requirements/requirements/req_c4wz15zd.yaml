@@ -1,0 +1,17 @@
+id: req_c4wz15zd
+type: requirement
+title: Label receipt-verified service records
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system marks service records as 'RECEIPT' when they were extracted and verified from scanned shop invoices
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Records marked "RECEIPT" were verified from scanned shop invoices
+rationale: Users need to distinguish between verified shop records and self-reported data for credibility

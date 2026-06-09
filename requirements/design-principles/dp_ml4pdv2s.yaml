@@ -1,0 +1,17 @@
+id: dp_ml4pdv2s
+type: design-principle
+title: Progressive disclosure for service details
+domain: dom_btetyae4
+intent: Present essential service information upfront while allowing users to access additional details on demand
+anti-patterns:
+  - Overwhelming users with all service details at once
+  - Hiding critical urgency information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

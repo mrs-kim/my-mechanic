@@ -1,0 +1,16 @@
+id: req_0ibaq7uw
+type: requirement
+title: Show receipt processing progress
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system displays processing status when analyzing receipt images
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: receiptStage transitions from 'idle' to 'processing' to 'results'

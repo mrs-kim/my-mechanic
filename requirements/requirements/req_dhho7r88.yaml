@@ -1,0 +1,17 @@
+id: req_dhho7r88
+type: requirement
+title: Decode VIN from barcode scan
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system extracts vehicle identification number from scanned barcode and decodes it to reveal vehicle specifications
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN display shows decoded result '1HGCV1F38KA012345' after successful scan
+rationale: Ensures accurate vehicle identification and prevents service history mix-ups

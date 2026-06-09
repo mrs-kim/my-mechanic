@@ -1,0 +1,18 @@
+id: job_9g26hyuo
+type: job
+title: Review receipt scan results before saving
+domain: dom_btetyae4
+narrative: >-
+  When I scan a service receipt I need to review the extracted information so that I can correct any errors before
+  adding it to my service history
+success-looks-like: Extracted service data is displayed in an editable format where I can make corrections before confirming the entry
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Present receipt scan results for review

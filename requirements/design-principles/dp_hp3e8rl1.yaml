@@ -1,0 +1,17 @@
+id: dp_hp3e8rl1
+type: design-principle
+title: Odometer input clarity
+domain: dom_btetyae4
+intent: Odometer readings should be clearly distinguishable and easy to read using monospace formatting
+anti-patterns:
+  - Using proportional fonts for numeric readings
+  - Displaying mileage without clear visual hierarchy
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

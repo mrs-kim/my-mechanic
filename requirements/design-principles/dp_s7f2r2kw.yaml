@@ -1,0 +1,17 @@
+id: dp_s7f2r2kw
+type: design-principle
+title: Educational context without overwhelming
+domain: dom_btetyae4
+intent: Provide helpful maintenance tips and context while keeping the primary interface clean and actionable
+anti-patterns:
+  - Cluttering the main view with educational content
+  - Making tips feel like interruptions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

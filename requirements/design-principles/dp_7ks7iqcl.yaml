@@ -1,0 +1,21 @@
+id: dp_7ks7iqcl
+type: design-principle
+title: Clear service timeline visualization
+domain: dom_btetyae4
+intent: >-
+  Present upcoming services in chronological order with clear mileage markers to help users understand their maintenance
+  timeline
+anti-patterns:
+  - Showing services without clear timing context
+  - Mixing past and future services without distinction
+  - Unclear mileage progression
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the layout showing future milestones at specific mileages (~54,000 mi, ~65,000 mi, etc.) in sequence

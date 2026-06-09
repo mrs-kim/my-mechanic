@@ -1,0 +1,18 @@
+id: req_4bpxhae6
+type: requirement
+title: Confirm successful vehicle recognition
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: >-
+  The system displays a success confirmation with green checkmark and 'Ride recognised!' message when VIN is
+  successfully decoded
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Green success indicator with checkmark and 'Ride recognised!' text

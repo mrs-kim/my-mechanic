@@ -1,0 +1,20 @@
+id: dp_qhd6dbuz
+type: design-principle
+title: Visual urgency communication through color coding
+domain: dom_btetyae4
+intent: >-
+  Use distinct colors to immediately communicate service urgency levels - red for overdue/next visit items, amber/yellow
+  for due soon, and muted colors for future services
+anti-patterns:
+  - Using similar colors for different urgency levels
+  - Relying only on text to communicate urgency
+  - Making all service items look the same regardless of timing
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

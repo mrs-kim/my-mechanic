@@ -1,0 +1,18 @@
+id: req_2n43quru
+type: requirement
+title: Match services to vehicle schedule
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system matches detected receipt services to the specific vehicle's maintenance schedule during processing
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied by the processing message about matching to Honda Civic schedule
+  ingestion-source: Processing message mentions 'Matching services to your Honda Civic schedule'
+rationale: Users need services properly categorized according to their specific vehicle model requirements

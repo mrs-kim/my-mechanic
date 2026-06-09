@@ -1,0 +1,18 @@
+id: dp_pmd6tbta
+type: design-principle
+title: Provide clear scanning guidance
+domain: dom_btetyae4
+intent: VIN scanning should feel approachable with specific, actionable instructions rather than generic camera guidance
+anti-patterns:
+  - Vague scanning instructions
+  - Missing target location guidance
+  - No stability guidance
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

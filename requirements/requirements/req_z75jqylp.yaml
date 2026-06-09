@@ -1,0 +1,16 @@
+id: req_z75jqylp
+type: requirement
+title: Show service descriptions for detected items
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Each detected service displays both a name and descriptive text about what was done
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Oil Change with Full synthetic 0W-20 per Honda spec description

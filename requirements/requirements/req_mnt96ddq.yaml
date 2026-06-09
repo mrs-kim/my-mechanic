@@ -1,0 +1,19 @@
+id: req_mnt96ddq
+type: requirement
+title: Show service details in cards
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: >-
+  The system displays each service visit as a card containing date, mileage, shop name, cost, source type, and list of
+  services performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Visit cards with visit.date, visit.mileage, visit.shop, visit.cost, visit.source, visit.services
+rationale: Provides comprehensive view of each service event

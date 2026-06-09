@@ -1,0 +1,17 @@
+id: req_0jj9z5pt
+type: requirement
+title: Navigate back from receipt scan screen
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: System provides back navigation from receipt scan screen to previous screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onBack={()=>setGScreen('home')} in GarageScan component
+rationale: Allow users to cancel or exit scanning process

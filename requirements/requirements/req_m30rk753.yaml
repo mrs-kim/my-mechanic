@@ -1,0 +1,17 @@
+id: req_m30rk753
+type: requirement
+title: Save decoded receipt data
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: System provides save action for decoded receipt data that returns to profile screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onSave={()=>{setGScreen('profile');setScanStage(0);}} in GarageDecoded
+rationale: Complete the receipt processing workflow by storing the extracted data

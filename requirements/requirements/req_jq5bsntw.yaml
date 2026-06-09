@@ -1,0 +1,17 @@
+id: req_jq5bsntw
+type: requirement
+title: Open receipt modal from maintenance screen
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: System provides receipt action that opens receipt modal from maintenance ready screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onReceipt={()=>setReceiptModal(true)} in MaintReady
+rationale: Allow receipt scanning from maintenance workflow

@@ -1,0 +1,18 @@
+id: dp_te8l7scs
+type: design-principle
+title: Receipt processing should feel automated
+domain: dom_btetyae4
+intent: Receipt scanning should appear intelligent and require minimal user intervention
+anti-patterns:
+  - Requiring extensive manual data entry after scanning
+  - Showing technical processing details to users
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the 2.2 second processing delay suggesting automated analysis

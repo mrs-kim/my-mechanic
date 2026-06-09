@@ -1,0 +1,17 @@
+id: req_fg4vrkuw
+type: requirement
+title: Show service due/overdue status
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system displays remaining mileage until service is due or overdue amount with color coding
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MaintCard shows 'Due in X mi' or 'Overdue by X mi' with color coding
+rationale: Users need to know when maintenance is needed

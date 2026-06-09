@@ -1,0 +1,19 @@
+id: req_1uvfeh3c
+type: requirement
+title: Display total service statistics
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: >-
+  The system displays summary statistics including total visits, total amount spent, and total miles tracked in a grid
+  layout
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: gridTemplateColumns:'1fr 1fr 1fr' with values ['6','Visits'],['$747','Total spent'],['22.7k','Miles tracked']
+rationale: Provides quick overview of service history patterns and spending

@@ -1,0 +1,16 @@
+id: req_w3xiz8h9
+type: requirement
+title: Indicate number of services found
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Display confirmation message showing how many services were detected on the receipt
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Found 2 services on this receipt message with checkmark

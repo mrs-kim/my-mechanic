@@ -1,0 +1,17 @@
+id: req_89ks41a1
+type: requirement
+title: Allow deselection of detected services
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Users can tap detected services to deselect them if they weren't actually performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TAP TO DESELECT ANYTHING THAT WASN'T DONE instruction
+rationale: Receipt may contain services that were quoted but not performed

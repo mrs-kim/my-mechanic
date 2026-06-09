@@ -1,0 +1,16 @@
+id: req_lciwo8n1
+type: requirement
+title: Display receipt total cost
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Show the total cost from the receipt with proper formatting and visual emphasis
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Total: $101.00 display with border and bold formatting"

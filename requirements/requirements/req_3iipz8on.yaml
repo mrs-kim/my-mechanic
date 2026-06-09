@@ -1,0 +1,17 @@
+id: req_3iipz8on
+type: requirement
+title: Navigate back from decoded receipt screen
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: System provides back navigation from decoded receipt results to scan screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onBack={()=>setGScreen('scan')} in GarageDecoded component
+rationale: Allow users to return to scanning if results are incorrect

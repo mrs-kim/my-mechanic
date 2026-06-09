@@ -1,0 +1,17 @@
+id: req_cnm64p7k
+type: requirement
+title: Update vehicle odometer reading
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system allows users to update their vehicle's current mileage reading through an input field
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UPDATE MILEAGE section with input field and UPDATE button
+rationale: Users need to keep their vehicle's mileage current for accurate service tracking

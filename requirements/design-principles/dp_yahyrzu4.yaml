@@ -1,0 +1,18 @@
+id: dp_yahyrzu4
+type: design-principle
+title: Clear service status communication
+domain: dom_btetyae4
+intent: Service completion and due dates should be immediately recognizable through color coding, labels, and visual hierarchy
+anti-patterns:
+  - Ambiguous status indicators
+  - Inconsistent color usage for status
+  - Hidden completion states
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

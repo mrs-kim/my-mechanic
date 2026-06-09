@@ -1,0 +1,16 @@
+id: req_4809ftcd
+type: requirement
+title: Provide option to scan different receipt
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Users can return to receipt scanning mode to scan a different receipt instead of confirming current results
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Scan a different receipt option at bottom

@@ -1,0 +1,17 @@
+id: req_v944nefn
+type: requirement
+title: Process receipt images to extract service data
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system processes receipt images and extracts service information automatically
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "receiptStage states: 'processing' -> 'results' with 2.2 second delay"
+rationale: Eliminates manual data entry and reduces errors when logging completed services

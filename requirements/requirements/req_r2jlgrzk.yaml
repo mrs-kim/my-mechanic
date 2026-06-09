@@ -1,0 +1,17 @@
+id: req_r2jlgrzk
+type: requirement
+title: Provide manual record addition option
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system displays a dashed-border button allowing users to add past service records manually
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: border:`1px dashed ${C.border}` with 'Add a past service record' text
+rationale: Allows users to backfill service history that wasn't captured via receipt scanning

@@ -1,0 +1,20 @@
+id: job_fiznbtd9
+type: job
+title: Mark multiple services as complete from receipt
+domain: dom_btetyae4
+narrative: >-
+  When I have scanned a receipt with multiple services I need to confirm all completed services at once so that I can
+  efficiently log my visit
+success-looks-like: >-
+  I can see all detected services, deselect any that weren't done, and mark the remaining services as complete with one
+  action
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MARK 2 ITEMS AS DONE button and deselection interface

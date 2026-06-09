@@ -1,0 +1,18 @@
+id: dp_52cs3g4y
+type: design-principle
+title: Transparent data provenance
+domain: dom_btetyae4
+intent: Users should always understand the source and reliability of their service data
+anti-patterns:
+  - Mixing verified and manual records without distinction
+  - Hiding the source of service information
+  - Presenting all records as equally reliable
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

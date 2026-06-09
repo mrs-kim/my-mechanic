@@ -1,0 +1,17 @@
+id: req_65we5lis
+type: requirement
+title: Validate odometer input format
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system accepts odometer readings in numeric format with miles as the unit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied by the input styling and 'mi' unit display
+  ingestion-source: Input field styled as Courier New font weight 700, with 'mi' unit label

@@ -1,0 +1,17 @@
+id: req_ydbk10vj
+type: requirement
+title: Display modal receipt scanner interface
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system presents receipt scanning functionality in a full-screen modal with handle, header, and close button
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal with handle, 'SCAN RECEIPT' header, and close button
+rationale: Receipt scanning is a focused workflow that benefits from dedicated interface real estate

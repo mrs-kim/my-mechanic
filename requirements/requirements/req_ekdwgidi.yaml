@@ -1,0 +1,16 @@
+id: req_ekdwgidi
+type: requirement
+title: Navigate to report view
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Users can switch from service log view to report view using a dedicated button
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Report button with document icon that calls setView('report')

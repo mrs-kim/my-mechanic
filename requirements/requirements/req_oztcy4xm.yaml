@@ -1,0 +1,16 @@
+id: req_oztcy4xm
+type: requirement
+title: Open receipt capture modal
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides a modal interface for receipt capture and processing
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: receiptModal state and setReceiptModal function

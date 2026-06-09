@@ -1,0 +1,17 @@
+id: job_392ludxm
+type: job
+title: Track service completion efficiently
+domain: dom_btetyae4
+narrative: When I complete maintenance services I need to quickly record them so that I maintain accurate service history
+success-looks-like: Services are recorded immediately after completion with minimal effort
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from scan and manual recording functionality
+  ingestion-source: Receipt scanning and manual logging capabilities

@@ -1,0 +1,17 @@
+id: req_4ulkgixi
+type: requirement
+title: Display receipt processing progress
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system shows a loading state with spinner and progress message while processing receipt images
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Processing stage with spinner animation and 'Reading your receipt…' message
+rationale: Users need feedback that their receipt is being processed to manage expectations during the scanning workflow

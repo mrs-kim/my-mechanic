@@ -1,0 +1,16 @@
+id: req_m4zkolfd
+type: requirement
+title: Integrate receipt scanning workflow
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides a prominent call-to-action to scan receipts after completing services
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Just got a service? Scan your receipt to mark it done' prominent button"

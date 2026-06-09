@@ -1,0 +1,17 @@
+id: req_y4w4y0rd
+type: requirement
+title: Enable report sharing
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides a share button that allows users to export or share the service report
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Share button with 📤 emoji in report header
+rationale: Enables digital sharing of service documentation

@@ -1,0 +1,17 @@
+id: dp_hie5npxh
+type: design-principle
+title: Visual hierarchy for service urgency
+domain: dom_btetyae4
+intent: Use color, icons, and positioning to immediately communicate which services need attention
+anti-patterns:
+  - Using similar visual treatment for urgent and routine items
+  - Burying overdue services in lists
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

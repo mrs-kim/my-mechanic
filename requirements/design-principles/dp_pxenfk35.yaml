@@ -1,0 +1,18 @@
+id: dp_pxenfk35
+type: design-principle
+title: Scannable service information
+domain: dom_btetyae4
+intent: Service history should be easy to browse and scan quickly while providing comprehensive details when needed
+anti-patterns:
+  - Dense text blocks
+  - Hiding important details like cost or mileage
+  - Poor visual hierarchy
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

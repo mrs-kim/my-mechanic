@@ -1,0 +1,17 @@
+id: dp_rif0xpkl
+type: design-principle
+title: Contextual scanning guidance
+domain: dom_btetyae4
+intent: Users should receive specific location guidance for where to find and how to scan VIN barcodes
+anti-patterns:
+  - Generic scanning instructions
+  - No physical location guidance
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

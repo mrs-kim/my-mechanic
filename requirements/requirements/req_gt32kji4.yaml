@@ -1,0 +1,16 @@
+id: req_gt32kji4
+type: requirement
+title: Show service record period
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: Reports indicate the time span covered by the service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Record Period 'Feb 2023 – May 2026' shown in report header

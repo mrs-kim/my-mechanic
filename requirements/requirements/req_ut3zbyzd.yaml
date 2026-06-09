@@ -1,0 +1,17 @@
+id: req_ut3zbyzd
+type: requirement
+title: Track service completion status
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: System maintains completion status for individual service items that can be toggled
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: done state and onDone={(id)=>setDone(d=>({...d,[id]:!d[id]}))} toggle logic
+rationale: Allow users to mark services as done/undone and track progress

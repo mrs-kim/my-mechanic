@@ -1,0 +1,17 @@
+id: req_kh4gye36
+type: requirement
+title: Capture initial odometer reading
+domain: dom_btetyae4
+job: job_nwpcgdq0
+behavior: The system provides an input field for users to enter their current mileage when adding a vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CURRENT MILEAGE input field with example '52800' and odometer instruction
+rationale: Establishes baseline for tracking future service intervals and mileage-based maintenance
