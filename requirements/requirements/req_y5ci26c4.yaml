@@ -1,0 +1,17 @@
+id: req_y5ci26c4
+type: requirement
+title: Provide mileage input field with placeholder guidance
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system shows an input field for mileage updates with example placeholder text
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Input with placeholder 'e.g. 52800' and default value '52800'
+rationale: Users need clear guidance on expected input format

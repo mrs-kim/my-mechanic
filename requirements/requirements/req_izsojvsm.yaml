@@ -1,0 +1,16 @@
+id: req_izsojvsm
+type: requirement
+title: Track completion status of maintenance items
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system allows marking maintenance items as done/undone and tracks their completion status
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: done={done} onDone={(id)=>setDone(d=>({...d,[id]:!d[id]}))}

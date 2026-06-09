@@ -1,0 +1,18 @@
+id: req_x3udphet
+type: requirement
+title: Flag maintenance items in service notes
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system allows mechanics to flag maintenance items in customer service notes when addressing issues
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied from dialogue about flagging items in notes
+  ingestion-source: Want me to flag it in your notes?
+rationale: Enables mechanics to document maintenance recommendations during service visits

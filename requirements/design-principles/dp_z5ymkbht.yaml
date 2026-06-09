@@ -1,0 +1,18 @@
+id: dp_z5ymkbht
+type: design-principle
+title: Receipt scanning should feel guided and reassuring
+domain: dom_jznd7ho7
+intent: Users should understand what to do and feel confident the system will work
+anti-patterns:
+  - Unclear instructions
+  - Technical jargon
+  - No feedback during processing
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

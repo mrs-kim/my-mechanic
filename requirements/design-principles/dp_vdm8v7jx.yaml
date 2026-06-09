@@ -1,0 +1,18 @@
+id: dp_vdm8v7jx
+type: design-principle
+title: Expert voice adds credibility
+domain: dom_jznd7ho7
+intent: Including mechanic perspectives should make the app feel more trustworthy and knowledgeable
+anti-patterns:
+  - Generic or robotic advice
+  - Overly technical language
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the inclusion of mechanic's quote in italics

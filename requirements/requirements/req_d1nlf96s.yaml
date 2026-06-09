@@ -1,0 +1,18 @@
+id: req_d1nlf96s
+type: requirement
+title: Display generation progress steps
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: >-
+  Show specific steps during schedule generation including reading manual specs, checking model requirements, and
+  calculating intervals
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Reading owner's manual specifications, Checking model-specific requirements, Calculating intervals for your mileage

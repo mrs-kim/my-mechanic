@@ -1,0 +1,16 @@
+id: req_4fxev4xq
+type: requirement
+title: Dim inactive tips when one is selected
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system reduces opacity of other tips to 0.5 when one tip is active
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "opacity: activeTip && !isActive ? 0.5 : 1"

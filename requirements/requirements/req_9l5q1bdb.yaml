@@ -1,0 +1,16 @@
+id: req_9l5q1bdb
+type: requirement
+title: Display maintenance source attribution
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system shows 'Honda schedule' attribution at the bottom of milestone cards
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda schedule text at bottom of milestone cards

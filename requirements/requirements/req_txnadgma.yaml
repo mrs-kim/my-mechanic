@@ -1,0 +1,16 @@
+id: req_txnadgma
+type: requirement
+title: Display comprehensive service log
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: System shows chronological history with date, mileage, services, shop, and cost for each visit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SERVICE_LOG structure with all these fields

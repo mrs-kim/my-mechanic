@@ -1,0 +1,17 @@
+id: dp_o6p13e01
+type: design-principle
+title: Visual source credibility
+domain: dom_jznd7ho7
+intent: Service records should visually communicate their data source to help users understand reliability
+anti-patterns:
+  - Treating all service records the same regardless of source
+  - Hiding whether data came from receipts or manual entry
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

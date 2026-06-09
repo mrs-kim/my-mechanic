@@ -1,0 +1,18 @@
+id: dp_qb48hszc
+type: design-principle
+title: Progressive disclosure for setup
+domain: dom_jznd7ho7
+intent: Guide users through vehicle setup with clear primary and secondary options
+anti-patterns:
+  - Overwhelming users with too many setup options at once
+  - Hiding the manual entry option completely
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the prominent scan button with secondary manual option

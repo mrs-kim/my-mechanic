@@ -1,0 +1,20 @@
+id: dp_66ky0vd5
+type: design-principle
+title: Data transparency for maintenance records
+domain: dom_jznd7ho7
+intent: >-
+  Clearly indicate the source and reliability of maintenance data so users understand what was verified vs manually
+  entered
+anti-patterns:
+  - Hiding data sources
+  - Treating all maintenance records as equally reliable
+  - Not showing when data was generated
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

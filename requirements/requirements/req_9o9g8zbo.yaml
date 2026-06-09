@@ -1,0 +1,16 @@
+id: req_9o9g8zbo
+type: requirement
+title: Show receipt scanning options in idle state
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: In idle state, display camera and photo library options with icons and descriptions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "[[\"📷\",\"Take a Photo\"],[\"🖼️\",\"Choose from Library\"]]"

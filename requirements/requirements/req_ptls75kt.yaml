@@ -1,0 +1,18 @@
+id: req_ptls75kt
+type: requirement
+title: Show different service interval schedules for first vs subsequent services
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: >-
+  The system displays different intervals for initial vs ongoing services, like 'First change at 60k, then every 30k'
+  for coolant
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: coolant entry notes about different first vs subsequent intervals

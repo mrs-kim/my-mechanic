@@ -1,0 +1,16 @@
+id: req_qq8uck0c
+type: requirement
+title: Make tips clickable with expand/collapse arrows
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system allows users to click on tips to expand or collapse them, showing ▲ when expanded and ▼ when collapsed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onClick handler with ▲/▼ arrows based on isActive state

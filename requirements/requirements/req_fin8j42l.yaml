@@ -1,0 +1,16 @@
+id: req_fin8j42l
+type: requirement
+title: Show AI-powered disclaimer during generation
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: Display disclaimer that schedule generation is powered by AI and to verify with owner's manual
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Powered by AI · Always verify with your owner's manual

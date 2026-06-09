@@ -1,0 +1,16 @@
+id: req_yuwi3xg8
+type: requirement
+title: Display AI disclaimer
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system shows 'Powered by AI · Always verify with your owner's manual' disclaimer
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Powered by AI · Always verify with your owner's manual

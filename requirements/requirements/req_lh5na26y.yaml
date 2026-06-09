@@ -1,0 +1,17 @@
+id: req_lh5na26y
+type: requirement
+title: Show receipt scanning modal in phone shell
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The receipt modal appears as an overlay within the phone shell with proper positioning and styling
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: position:"absolute",inset:0,background:"rgba(0,0,0,.85)"
+rationale: Modal is positioned absolute with inset 0 and appears within the phone interface

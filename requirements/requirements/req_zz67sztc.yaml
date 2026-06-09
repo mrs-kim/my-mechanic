@@ -1,0 +1,18 @@
+id: req_zz67sztc
+type: requirement
+title: Provide detailed explanations for maintenance tips
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system stores detailed explanations for each maintenance tip including icon, tag, and comprehensive detail text
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    TIP_DETAILS = { "Check for oil dilution": { icon: "🛢️", tag: "Common on 2019 1.5T", detail: "The 1.5T turbo can mix
+    small amounts..."

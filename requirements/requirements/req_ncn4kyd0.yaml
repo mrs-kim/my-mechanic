@@ -1,0 +1,16 @@
+id: req_ncn4kyd0
+type: requirement
+title: Show VIN detection confirmation
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays the detected VIN number and highlights the scanning area when a barcode is successfully read
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN DETECTED status with 1HGCV1F38KA012345 display

@@ -1,0 +1,16 @@
+id: req_jhvdhnkj
+type: requirement
+title: Display remaining mileage for good services
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: Show remaining miles until service is due for each up-to-date service, or 'N/A' if over 90k miles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "item.remaining < 90000 ? `${item.remaining.toLocaleString()} mi` : \"N/A\""

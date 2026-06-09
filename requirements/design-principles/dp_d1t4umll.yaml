@@ -1,0 +1,17 @@
+id: dp_d1t4umll
+type: design-principle
+title: Receipt modal feels native and accessible
+domain: dom_jznd7ho7
+intent: Modal should integrate seamlessly with the phone interface using familiar bottom sheet patterns
+anti-patterns:
+  - Jarring modal transitions
+  - Desktop-style dialogs on mobile
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

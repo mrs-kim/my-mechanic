@@ -1,0 +1,17 @@
+id: dp_8boa4e9u
+type: design-principle
+title: Use urgency-driven visual hierarchy
+domain: dom_jznd7ho7
+intent: Critical items should immediately grab attention while less urgent items recede visually
+anti-patterns:
+  - Equal visual weight for all items
+  - Subtle indicators for overdue items
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,19 @@
+id: req_pccpkpgi
+type: requirement
+title: Display vehicle recognition confirmation
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: >-
+  System shows a success state with checkmark icon, 'Ride recognised!' message, and VIN when vehicle is successfully
+  identified
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: success state with green checkmark and 'Ride recognised!' message
+rationale: Provides clear feedback that the barcode scanning worked and the vehicle was identified

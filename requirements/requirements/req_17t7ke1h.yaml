@@ -1,0 +1,17 @@
+id: req_17t7ke1h
+type: requirement
+title: Trigger maintenance schedule generation when tab first opened
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system automatically starts generating the maintenance schedule when the maintenance tab is first accessed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from useEffect that sets maintState to 'generating' when tab === 'maintenance'
+  ingestion-source: useEffect monitoring tab === 'maintenance' and maintState === 'generating'

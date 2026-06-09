@@ -1,0 +1,20 @@
+id: req_yasgsi6n
+type: requirement
+title: Calculate health status from maintenance item urgency
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: >-
+  The system determines overall vehicle health status by checking for overdue items first, then due items, then upcoming
+  items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    urgent.find(i=>i.status==="overdue") ? "Needs attention" : urgent.length > 0 ? "Service due soon" : upcoming.length
+    > 0 ? "Mostly good"

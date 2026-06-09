@@ -1,0 +1,16 @@
+id: req_o1cyezlt
+type: requirement
+title: Display scanning animation during VIN detection
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system shows a moving scanning line animation while searching for the VIN barcode
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: scanMove 1.8s ease-in-out infinite animation with SEARCHING status

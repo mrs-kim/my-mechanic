@@ -1,0 +1,17 @@
+id: req_zj5heeb8
+type: requirement
+title: Use monospace font for mileage values
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays all mileage numbers in Courier New font for better readability
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: fontFamily:'Courier New' used for mileage displays
+rationale: Monospace fonts make numeric values easier to read and compare

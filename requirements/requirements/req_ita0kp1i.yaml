@@ -1,0 +1,16 @@
+id: req_ita0kp1i
+type: requirement
+title: Close receipt modal and reset stage
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: When close button is clicked, the modal closes and receipt stage resets to idle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onClick={()=>{setReceiptModal(false);setReceiptStage("idle");}}

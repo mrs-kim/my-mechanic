@@ -1,0 +1,16 @@
+id: req_helo9x0s
+type: requirement
+title: Enable receipt generation for maintenance
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system provides a receipt action that opens a receipt modal from the maintenance ready state
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onReceipt={()=>setReceiptModal(true)}

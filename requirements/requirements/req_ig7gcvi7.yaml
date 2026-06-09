@@ -1,0 +1,16 @@
+id: req_ig7gcvi7
+type: requirement
+title: Show overdue status on maintenance items
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays maintenance items with an 'overdue' status tag in red color when they are past due
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Oil Change item with 'overdue' tag in red

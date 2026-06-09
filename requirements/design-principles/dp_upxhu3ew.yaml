@@ -1,0 +1,17 @@
+id: dp_upxhu3ew
+type: design-principle
+title: Progressive disclosure for supplementary information
+domain: dom_jznd7ho7
+intent: Users can access additional context without visual clutter by default
+anti-patterns:
+  - All tips expanded by default
+  - Hidden tips with no affordance
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

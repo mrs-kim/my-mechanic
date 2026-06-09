@@ -1,0 +1,16 @@
+id: req_49p0fn1g
+type: requirement
+title: Display service log in tabular format
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system presents complete service history in a table with Date/Services, Miles, and Cost columns
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: COMPLETE SERVICE LOG table with grid layout showing dates, services, mileage, and costs

@@ -1,0 +1,16 @@
+id: req_ak7k0bug
+type: requirement
+title: Expand good services on tap
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: When the good services summary is tapped, expand to show the full list of up-to-date services
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: setShowAll and {showAll && rendering the full list

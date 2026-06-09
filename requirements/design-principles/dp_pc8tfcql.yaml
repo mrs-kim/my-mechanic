@@ -1,0 +1,17 @@
+id: dp_pc8tfcql
+type: design-principle
+title: Provide clear warnings about component damage
+domain: dom_jznd7ho7
+intent: When incorrect parts or fluids could damage expensive components like CVTs, the system should prominently warn users
+anti-patterns:
+  - Hiding damage warnings in fine print
+  - Not explaining why specific parts are required
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

@@ -1,0 +1,17 @@
+id: req_qhqw8ebn
+type: requirement
+title: Display mechanic's assessment quote
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: System shows a mechanic's perspective or assessment of the vehicle in an italicized quote format
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: YOUR MECHANIC'S TAKE section with Civic assessment quote
+rationale: Provides expert context about the specific vehicle model

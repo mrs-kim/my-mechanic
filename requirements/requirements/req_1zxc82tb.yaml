@@ -1,0 +1,17 @@
+id: req_1zxc82tb
+type: requirement
+title: Extract mileage from receipt
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: System reads and displays vehicle mileage from receipt in highlighted format
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MILEAGE ON RECEIPT 52,480 mi
+rationale: Mileage is critical for maintenance tracking and schedule accuracy

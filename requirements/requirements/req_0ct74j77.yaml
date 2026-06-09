@@ -1,0 +1,17 @@
+id: req_0ct74j77
+type: requirement
+title: Provide VIN location guidance
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays text informing users that the VIN barcode is on a sticker inside the driver's door frame
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: The VIN barcode is on a sticker inside your driver's door frame
+rationale: Users need to know where to find the VIN barcode to successfully scan it

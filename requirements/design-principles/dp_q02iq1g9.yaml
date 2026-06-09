@@ -1,0 +1,18 @@
+id: dp_q02iq1g9
+type: design-principle
+title: Trust-building through transparency
+domain: dom_jznd7ho7
+intent: Build user confidence by explaining what the system is doing during generation and providing verification disclaimers
+anti-patterns:
+  - Hiding the generation process
+  - Not mentioning AI involvement
+  - Claiming perfect accuracy
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high

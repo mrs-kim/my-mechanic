@@ -1,0 +1,18 @@
+id: req_2xklgg8x
+type: requirement
+title: Calculate remaining miles until service based on current mileage
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: >-
+  The system calculates and displays remaining miles (positive or negative for overdue) based on service intervals and
+  current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "remaining: -800, remaining: 420 calculations in CIVIC_SCHEDULE"

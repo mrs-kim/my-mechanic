@@ -1,0 +1,16 @@
+id: req_i1fa9w3h
+type: requirement
+title: Support multiple receipt types
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: Accept receipts, invoices, and work orders for scanning
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Invoices and work orders work too

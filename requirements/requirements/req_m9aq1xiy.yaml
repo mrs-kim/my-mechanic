@@ -1,0 +1,16 @@
+id: req_m9aq1xiy
+type: requirement
+title: Show upcoming maintenance status
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays 'Due in X mi' when remaining miles is positive
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: span with 'Due in {item.remaining.toLocaleString()} mi'

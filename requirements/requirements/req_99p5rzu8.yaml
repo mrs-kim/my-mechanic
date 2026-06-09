@@ -1,0 +1,16 @@
+id: req_99p5rzu8
+type: requirement
+title: Display vehicle specifications in maintenance header
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The maintenance view shows vehicle year, make, model, current mileage, and maintenance specification source
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 2019 Honda Civic · 52,800 mi · Honda specs

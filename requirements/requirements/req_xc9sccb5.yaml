@@ -1,0 +1,16 @@
+id: req_xc9sccb5
+type: requirement
+title: Display vehicle identification details in report header
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system shows VIN, current mileage, number of owners, and record period in the service report header
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Document header shows VIN 1HGCV1F38KA012345, Current Mileage 52,800 mi, Owners 1, Record Period Feb 2023 – May 2026

@@ -1,0 +1,16 @@
+id: req_7kx2lhwr
+type: requirement
+title: Associate known issues with maintenance milestones
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system links relevant tips/known issues to specific mileage milestones in the maintenance schedule
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "{ mi:\"~65,000 mi\", items:[\"Spark Plugs\",\"Coolant Flush\"], urgency:\"ok\", tips:[\"Ask about CVT hesitation\"] }"

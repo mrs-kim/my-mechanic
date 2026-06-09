@@ -1,0 +1,16 @@
+id: req_86ez43s3
+type: requirement
+title: Calculate total maintenance costs
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays total cost across all service visits in the service log
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Totals row showing $747 total cost

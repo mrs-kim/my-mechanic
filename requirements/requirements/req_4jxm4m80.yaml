@@ -1,0 +1,17 @@
+id: req_4jxm4m80
+type: requirement
+title: Display current odometer reading prominently
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays the vehicle's current mileage in large, monospace font in the vehicle profile
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 52,800 mi displayed in Courier New font in profile card
+rationale: Users need to easily see their current mileage for reference when updating

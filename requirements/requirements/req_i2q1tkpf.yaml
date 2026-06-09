@@ -1,0 +1,16 @@
+id: req_i2q1tkpf
+type: requirement
+title: Show overdue maintenance status
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: The system displays 'Overdue by X mi' when remaining miles is negative
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: item.remaining < 0 ? span with 'Overdue by' text

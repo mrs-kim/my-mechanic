@@ -1,0 +1,16 @@
+id: req_6cvuco86
+type: requirement
+title: Provide mileage input field with example
+domain: dom_jznd7ho7
+job: job_ayr9f8i5
+behavior: System provides a text input field for current mileage with placeholder text showing example format
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-09"
+  updated: "2026-06-09"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: input field with placeholder 'e.g. 52800'
