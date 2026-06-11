@@ -10,11 +10,12 @@ success-looks-like: >-
   relevant known issues surfaced at appropriate times
 out-of-scope: []
 status:
-  legitimacy: proposed
+  legitimacy: approved
   lifecycle: active
 meta:
-  created: "2026-06-08"
-  updated: "2026-06-08"
+  created: '2026-06-08'
+  updated: '2026-06-08'
   authored-by: ingest-agent
   ingestion-confidence: high
   ingestion-source: calls Claude API to generate the manufacturer-recommended maintenance schedule for that specific year/make/model
+  approved-date: '2026-06-08'
