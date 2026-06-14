@@ -1,0 +1,18 @@
+id: req_kmcjvs85
+type: requirement
+title: Generate service reports
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: Users can view a report view of their service history
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Report button exists but report content not shown in this chunk
+  ingestion-source: Report button and ReportView component
+screen: history-screen

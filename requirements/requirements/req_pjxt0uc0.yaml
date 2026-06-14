@@ -1,0 +1,17 @@
+id: req_pjxt0uc0
+type: requirement
+title: Provide vehicle-specific maintenance tips
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system offers maintenance tips specific to known issues or characteristics of the user's vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tips like 'Check for oil dilution' tagged as 'Common on 2019 1.5T'
+screen: maintenance-schedule-screen

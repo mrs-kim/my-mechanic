@@ -1,0 +1,17 @@
+id: req_kjefkra2
+type: requirement
+title: Display service history log
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system shows a chronological list of all service visits with key details
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SERVICE HISTORY header and service log display
+screen: history-screen

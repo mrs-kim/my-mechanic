@@ -1,0 +1,17 @@
+id: req_uvatdkxd
+type: requirement
+title: Maintenance Status Labels
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System displays status labels (OK, DUE, OVERDUE) with color coding for maintenance items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Status labels with different colors and backgrounds
+screen: maintenance-schedule-screen

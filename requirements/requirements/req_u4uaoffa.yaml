@@ -1,0 +1,17 @@
+id: req_u4uaoffa
+type: requirement
+title: Receipt modal shows current vehicle context
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The receipt scanning interface displays which vehicle the receipt will be associated with
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Text mentioning 'your 2019 Honda Civic' in the description
+screen: receipt-modal

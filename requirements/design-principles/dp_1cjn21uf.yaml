@@ -1,0 +1,21 @@
+id: dp_1cjn21uf
+type: design-principle
+title: Visual urgency hierarchy
+domain: dom_aa1wa285
+intent: >-
+  Maintenance status should be immediately recognizable through color coding and visual indicators that clearly
+  communicate urgency levels
+anti-patterns:
+  - Ambiguous status indicators
+  - Uniform visual treatment regardless of urgency
+  - Hidden or unclear priority information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_5jybmpw3
+type: requirement
+title: Enable receipt scanning for service completion
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides a camera interface to scan receipts and mark services as completed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: scan receipt button with camera functionality
+screen: maintenance-schedule-screen

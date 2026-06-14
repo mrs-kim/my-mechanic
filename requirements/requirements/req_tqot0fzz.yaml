@@ -1,0 +1,19 @@
+id: req_tqot0fzz
+type: requirement
+title: Display maintenance schedule generation progress
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  While generating a maintenance schedule, the system shows a loading spinner and step-by-step progress of what it's
+  doing (reading manual, checking requirements, calculating intervals)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Building your schedule with spinning loader and progress steps listed
+screen: maintenance-generation-screen

@@ -1,0 +1,17 @@
+id: req_ao8d99t4
+type: requirement
+title: Display current mileage in service reports
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays the vehicle's current mileage in service report summaries
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Current Mileage: 52,800 mi in document header grid"
+screen: maintenance-generation-screen

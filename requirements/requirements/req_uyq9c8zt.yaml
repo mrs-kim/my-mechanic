@@ -1,0 +1,17 @@
+id: req_uyq9c8zt
+type: requirement
+title: Provide VIN barcode scanning option
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays a 'SCAN VIN BARCODE' button option for vehicle identification
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button in interface
+screen: garage-home-screen

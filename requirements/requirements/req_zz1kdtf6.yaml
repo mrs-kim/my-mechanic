@@ -1,0 +1,17 @@
+id: req_zz1kdtf6
+type: requirement
+title: Store vehicle specifications
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system maintains and displays vehicle specifications including fuel type, drivetrain, body style, and engine
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Shows tags for 'Gasoline', 'FWD', 'Sedan', '1.5L Turbo'
+screen: vehicle-profile-screen

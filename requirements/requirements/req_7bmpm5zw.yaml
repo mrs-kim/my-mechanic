@@ -1,0 +1,18 @@
+id: req_7bmpm5zw
+type: requirement
+title: Provide VIN barcode scanning capability
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays a camera interface that can detect and read VIN barcodes
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: GarageScan component with scanning stages and VIN detection
+rationale: Eliminates manual entry errors and makes vehicle identification faster
+screen: garage-scan-screen

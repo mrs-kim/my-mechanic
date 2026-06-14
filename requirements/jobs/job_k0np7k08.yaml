@@ -1,0 +1,19 @@
+id: job_k0np7k08
+type: job
+title: Record current vehicle mileage
+domain: dom_4s00lafl
+narrative: >-
+  When setting up my vehicle I need to enter my current odometer reading so that maintenance schedules can be calculated
+  accurately
+success-looks-like: Current mileage is recorded and will be used for maintenance interval calculations
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Current mileage input field with dashboard odometer instruction
+screen: garage-decoded-screen

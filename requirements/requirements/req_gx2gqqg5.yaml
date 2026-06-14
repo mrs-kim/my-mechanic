@@ -1,0 +1,17 @@
+id: req_gx2gqqg5
+type: requirement
+title: Highlight active navigation tab
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The currently selected navigation tab is visually distinguished with different coloring
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tab styling shows 'color:tab===id?C.amber:C.muted' for active state highlighting
+screen: navigation-tabs

@@ -1,0 +1,17 @@
+id: req_0fz2d95d
+type: requirement
+title: Show service visit details
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: Each service visit displays date, mileage, shop name, total cost, and list of services performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Visit card structure showing date, mileage, shop, cost, and services array
+screen: vehicle-profile-screen

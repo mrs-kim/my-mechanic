@@ -1,0 +1,17 @@
+id: req_nbxf8o1y
+type: requirement
+title: Enable text input for mechanic questions
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides a text input field where users can type custom questions to send to the mechanic
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: input field with placeholder 'Ask your mechanic anything…' and Enter key handling
+screen: mechanic-chat-interface

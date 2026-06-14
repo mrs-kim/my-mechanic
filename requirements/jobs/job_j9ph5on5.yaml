@@ -1,0 +1,21 @@
+id: job_j9ph5on5
+type: job
+title: Track comprehensive vehicle service history
+domain: dom_az9ix51b
+narrative: >-
+  When I own a vehicle I need to track all service visits, costs, and work performed so that I have a complete
+  maintenance history for resale value and future repair decisions
+success-looks-like: >-
+  A chronological list of all service visits with dates, mileage, costs, services performed, and service provider
+  information
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service log showing visits, dates, mileage, costs, and services
+screen: garage-home-screen

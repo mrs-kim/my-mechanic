@@ -1,0 +1,18 @@
+id: req_ayi675es
+type: requirement
+title: Provide quick question shortcuts for new conversations
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: When there are 3 or fewer messages, display a 'QUICK QUESTIONS' section with tappable question suggestions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: msgs.length<=3 condition showing quick questions like 'Check engine light?'
+rationale: Helps users get started with common automotive questions
+screen: mechanic-chat-interface

@@ -1,0 +1,17 @@
+id: req_w36xppdy
+type: requirement
+title: Receipt results show receipt thumbnail
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: After processing, the system displays a formatted thumbnail of the scanned receipt with service details
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Results stage shows fake receipt with dealership info, date, odometer, and service items
+screen: receipt-modal

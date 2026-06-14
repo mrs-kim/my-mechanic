@@ -1,0 +1,19 @@
+id: req_x1aythzc
+type: requirement
+title: Display vehicle maintenance status summary
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system shows a maintenance status summary with visual indicators (like checkmarks) and descriptive text indicating
+  whether the vehicle is well-maintained
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Well-maintained vehicle summary box with green checkmark
+screen: receipt-modal

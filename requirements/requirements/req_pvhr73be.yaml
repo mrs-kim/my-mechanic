@@ -1,0 +1,17 @@
+id: req_pvhr73be
+type: requirement
+title: Maintenance interval calculations
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system calculates and displays when maintenance is due based on mileage intervals
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Due in X mi, Overdue by X mi calculations in MaintCard
+screen: maintenance-schedule-screen

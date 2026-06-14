@@ -1,0 +1,19 @@
+id: job_q2aoss3j
+type: job
+title: Get AI-powered automotive diagnostic help
+domain: dom_az9ix51b
+narrative: >-
+  When I have car problems or questions I need AI assistance that knows my specific vehicle so that I can get accurate
+  repair guidance without guessing
+success-looks-like: AI understands my exact car model, mileage, and history to provide specific diagnostic help and repair recommendations
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Bot knows '2019 Honda Civic — 52,800 miles' and provides specific diagnosis for CV axle clicking
+screen: mechanic-chat-interface

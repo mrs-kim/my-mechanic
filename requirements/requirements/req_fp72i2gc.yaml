@@ -1,0 +1,19 @@
+id: req_fp72i2gc
+type: requirement
+title: Provide receipt scanning for service completion
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system offers a camera interface to scan service receipts and automatically update maintenance records when
+  services are completed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Scan your receipt to mark it done with camera icon
+screen: maintenance-schedule-screen

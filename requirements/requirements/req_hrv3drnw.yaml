@@ -1,0 +1,18 @@
+id: req_hrv3drnw
+type: requirement
+title: Extract mileage from receipts
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system automatically detects and highlights mileage information from receipts
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Mileage on receipt section showing '52,480 mi' in highlighted amber box
+rationale: Mileage tracking is essential for maintenance scheduling
+screen: receipt-modal

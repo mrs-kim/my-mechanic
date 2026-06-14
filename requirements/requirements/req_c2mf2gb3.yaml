@@ -1,0 +1,17 @@
+id: req_c2mf2gb3
+type: requirement
+title: AI responds with vehicle-contextual follow-up
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The AI provides responses that reference the user's specific vehicle mileage and maintenance context
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: "'Good question for your Civic. Based on 52,800 miles I'd address that at your next service'"
+screen: mechanic-chat-interface

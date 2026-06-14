@@ -1,0 +1,19 @@
+id: req_iad073d1
+type: requirement
+title: Provide specific part numbers and fluid specifications
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system includes exact part numbers and fluid specifications required for each vehicle (e.g., Honda part
+  #80292-TBA-A11 for cabin filter, Honda HCF-2 CVT fluid)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda part numbers and fluid specs in schedule descriptions and notes
+screen: maintenance-schedule-screen

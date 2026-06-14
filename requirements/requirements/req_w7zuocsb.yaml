@@ -1,0 +1,17 @@
+id: req_w7zuocsb
+type: requirement
+title: Switch between garage sub-screens
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system allows navigation between garage home, scan, and profile screens based on gScreen state
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Code shows conditional rendering but navigation triggers not fully visible in this chunk
+  ingestion-source: gScreen state with 'scan' and 'profile' conditions

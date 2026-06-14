@@ -1,0 +1,18 @@
+id: req_rewdlp6p
+type: requirement
+title: VIN barcode location guidance
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays information about where to find the VIN barcode on the vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: The VIN barcode is on a sticker inside your driver's door frame
+rationale: Users may not know where to locate the VIN barcode
+screen: garage-home-screen

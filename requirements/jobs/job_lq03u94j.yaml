@@ -1,0 +1,17 @@
+id: job_lq03u94j
+type: job
+title: Edit vehicle information
+domain: dom_o86dwx7m
+narrative: When my vehicle information needs correction, I need to edit vehicle details so that my profile remains accurate
+success-looks-like: I can access an edit mode to modify vehicle specifications and details
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: EDIT VEHICLE button with onEdit functionality
+screen: vehicle-profile-screen

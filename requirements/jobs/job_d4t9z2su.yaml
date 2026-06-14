@@ -1,0 +1,21 @@
+id: job_d4t9z2su
+type: job
+title: Get vehicle-specific maintenance insights
+domain: dom_aa1wa285
+narrative: >-
+  When maintaining my specific vehicle model I need targeted advice about known issues and maintenance tips so that I
+  can prevent problems and make informed decisions
+success-looks-like: >-
+  User receives model-specific tips like oil dilution checks, AC condenser inspection, and CVT hesitation fixes with
+  detailed explanations
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TIP_DETAILS object contains Honda Civic 1.5T specific maintenance advice
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: req_4xbenc9s
+type: requirement
+title: Bulk mark services as complete
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system allows users to mark multiple identified services as done with a single action
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MARK 2 ITEMS AS DONE button action
+rationale: Streamlines the process of logging multiple services from one visit
+screen: receipt-modal

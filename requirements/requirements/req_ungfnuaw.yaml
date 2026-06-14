@@ -1,0 +1,19 @@
+id: req_ungfnuaw
+type: requirement
+title: Show dynamic health status with color coding
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: >-
+  The system displays overall vehicle health with color-coded status (red/amber/yellow/green) and specific action
+  messages
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: urgencyColor logic with healthMsg, healthSub, healthBg, healthBorder based on maintenance status
+screen: maintenance-schedule-screen

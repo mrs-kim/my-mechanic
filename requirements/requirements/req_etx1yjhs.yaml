@@ -1,0 +1,17 @@
+id: req_etx1yjhs
+type: requirement
+title: Chronological service history organization
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system organizes service visits chronologically with year dividers
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Year divider logic based on visit dates
+screen: vehicle-profile-screen

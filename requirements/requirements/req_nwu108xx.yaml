@@ -1,0 +1,18 @@
+id: req_nwu108xx
+type: requirement
+title: Generate maintenance schedules
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system has a generating state for creating maintenance schedules before displaying them
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Clear generating state exists but specific generation behavior not detailed
+  ingestion-source: maintState==='generating' condition with MaintGenerating component
+screen: maintenance-generation-screen

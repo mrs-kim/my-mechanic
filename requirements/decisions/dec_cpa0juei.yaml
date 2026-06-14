@@ -1,0 +1,17 @@
+id: dec_cpa0juei
+type: decision
+title: Timing chain vs timing belt clarification
+domain: dom_az9ix51b
+outcome: excluded
+rationale: Honda Civic 1.5L K-series uses a timing chain that doesn't need replacement, not a timing belt
+revisit-when: Never - this is a permanent design characteristic
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Timing chain — no replacement needed' and '1.5L K-series uses a chain, not a belt'"
+screen: maintenance-schedule-screen

@@ -1,0 +1,19 @@
+id: job_l7069ef3
+type: job
+title: Get vehicle-specific maintenance guidance
+domain: dom_o86dwx7m
+narrative: >-
+  When I need to understand what maintenance my specific vehicle needs I need manufacturer-recommended service intervals
+  so that I follow the proper schedule
+success-looks-like: I see maintenance recommendations tailored to my vehicle's make, model, and year
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda schedule reference and model-specific requirements
+screen: maintenance-generation-screen

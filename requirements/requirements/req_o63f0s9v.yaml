@@ -1,0 +1,19 @@
+id: req_o63f0s9v
+type: requirement
+title: Scan receipts to mark services complete
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system provides a scan receipt function that allows users to photograph service receipts to automatically mark
+  maintenance items as completed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: scan receipt button with camera icon for marking services done
+screen: maintenance-schedule-screen

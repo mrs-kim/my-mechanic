@@ -1,0 +1,19 @@
+id: job_e9enp7a8
+type: job
+title: Track maintenance schedule and status
+domain: dom_o86dwx7m
+narrative: >-
+  When I own a vehicle, I need to know what maintenance is due, overdue, or coming up so that I can plan and budget for
+  proper vehicle care
+success-looks-like: Clear status indicators showing overdue, due now, soon, and ok items with remaining miles and specific intervals
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CIVIC_SCHEDULE with status tracking and ST status styling
+screen: maintenance-schedule-screen

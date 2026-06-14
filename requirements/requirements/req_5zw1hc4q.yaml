@@ -1,0 +1,17 @@
+id: req_5zw1hc4q
+type: requirement
+title: Use monospace font for numerical data
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system uses monospace font (Courier New) for VINs and mileage inputs to ensure consistent alignment
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: fontFamily:'Courier New' used for VIN and mileage fields
+screen: vehicle-profile-screen

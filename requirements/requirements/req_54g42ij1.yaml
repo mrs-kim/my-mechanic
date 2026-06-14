@@ -1,0 +1,17 @@
+id: req_54g42ij1
+type: requirement
+title: AI offers to track issues in user notes
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The AI can flag discussed issues or recommendations in the user's vehicle notes
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: "'Want me to flag it in your notes?' offer from AI"
+screen: mechanic-chat-interface

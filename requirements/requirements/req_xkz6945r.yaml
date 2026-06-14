@@ -1,0 +1,17 @@
+id: req_xkz6945r
+type: requirement
+title: Service urgency categorization
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system categorizes maintenance items as 'overdue', 'due', 'soon', or 'ok' based on service intervals
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Items filtered by status including overdue, due, soon, and ok categories
+screen: maintenance-schedule-screen

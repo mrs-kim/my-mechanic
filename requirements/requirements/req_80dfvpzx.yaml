@@ -1,0 +1,17 @@
+id: req_80dfvpzx
+type: requirement
+title: VIN detection confirmation
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system displays the detected VIN number and requires user confirmation before proceeding
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN DETECTED state showing 1HGCV1F38KA012345 with VIEW RESULTS button
+screen: garage-scan-screen

@@ -1,0 +1,18 @@
+id: req_to05xeqi
+type: requirement
+title: AI knows user's specific vehicle details
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The AI mechanic displays knowledge of the user's exact vehicle year, make, model, and current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Bot greeting mentions '2019 Honda Civic — 52,800 miles and counting'
+rationale: Enables accurate, vehicle-specific diagnostic and maintenance advice
+screen: mechanic-chat-interface

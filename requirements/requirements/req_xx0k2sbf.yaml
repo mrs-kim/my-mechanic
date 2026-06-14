@@ -1,0 +1,17 @@
+id: req_xx0k2sbf
+type: requirement
+title: Allow service deselection
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: Users can tap to deselect services that weren't actually performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TAP TO DESELECT ANYTHING THAT WASN'T DONE
+screen: receipt-modal

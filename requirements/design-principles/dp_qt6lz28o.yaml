@@ -1,0 +1,18 @@
+id: dp_qt6lz28o
+type: design-principle
+title: Mileage data should feel authoritative
+domain: dom_aa1wa285
+intent: Odometer readings should be displayed with visual weight and monospace formatting to convey precision and accuracy
+anti-patterns:
+  - Using proportional fonts for numeric data
+  - Displaying mileage without proper formatting
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

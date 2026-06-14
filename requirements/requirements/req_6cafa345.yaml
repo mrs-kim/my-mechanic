@@ -1,0 +1,18 @@
+id: req_6cafa345
+type: requirement
+title: Extract mileage from receipts
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system identifies and displays vehicle mileage from receipt scans with special highlighting
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Mileage display showing '52,480 mi' with amber highlighting and clock icon
+rationale: Mileage is critical for maintenance scheduling and tracking intervals
+screen: receipt-modal

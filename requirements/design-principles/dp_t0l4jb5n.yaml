@@ -1,0 +1,19 @@
+id: dp_t0l4jb5n
+type: design-principle
+title: Professional document presentation
+domain: dom_aa1wa285
+intent: Service reports should look official and trustworthy, suitable for sharing with mechanics, insurance, or buyers
+anti-patterns:
+  - Casual or informal styling
+  - Missing verification indicators
+  - Unclear data organization
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-generation-screen

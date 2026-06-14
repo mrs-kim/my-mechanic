@@ -1,0 +1,20 @@
+id: dp_erg00it5
+type: design-principle
+title: Vehicle information should be organized hierarchically
+domain: dom_az9ix51b
+intent: >-
+  Vehicle details should flow from most important (nickname, basic info) to supporting details (specs, technical data)
+  in a clear visual hierarchy
+anti-patterns:
+  - Flat information presentation
+  - Mixing different types of data without clear separation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

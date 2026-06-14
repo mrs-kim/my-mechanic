@@ -1,0 +1,17 @@
+id: req_iijbdenn
+type: requirement
+title: Garage scan workflow
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system provides a multi-stage scanning workflow that moves from scan to decoded to profile screens
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onConfirm={()=>setGScreen('decoded')} onBack={()=>setGScreen('scan')}
+screen: garage-scan-screen

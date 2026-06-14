@@ -1,0 +1,18 @@
+id: dp_ahtwoh1y
+type: design-principle
+title: Status-driven maintenance organization
+domain: dom_az9ix51b
+intent: Organize maintenance items by urgency to help users prioritize actions
+anti-patterns:
+  - Mixing urgent and non-urgent items without clear distinction
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from explicit status filtering and categorization
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_5dlqqgm5
+type: requirement
+title: Support multiple receipt input methods
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: Users can capture receipts by taking a new photo or selecting from their photo library
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal shows 'Take a Photo' and 'Choose from Library' options
+screen: receipt-modal

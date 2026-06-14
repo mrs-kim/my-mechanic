@@ -1,0 +1,17 @@
+id: req_g9cbspcu
+type: requirement
+title: VIN decoding and vehicle identification
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System decodes VIN from barcode scan and displays make, model, year, body type, and fuel type
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle details section showing Honda Civic 2019 Sedan/Saloon Gasoline
+screen: garage-decoded-screen

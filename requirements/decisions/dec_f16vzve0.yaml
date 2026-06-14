@@ -1,0 +1,17 @@
+id: dec_f16vzve0
+type: decision
+title: CVT requires Honda-specific fluid only
+domain: dom_4s00lafl
+outcome: excluded
+rationale: Generic ATF will damage the CVT transmission
+revisit-when: Never - manufacturer specification
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "CVT fluid notes: 'Do not use generic ATF — will damage CVT'"
+screen: maintenance-schedule-screen

@@ -1,0 +1,19 @@
+id: job_h3xcaiun
+type: job
+title: Get vehicle-specific maintenance guidance
+domain: dom_az9ix51b
+narrative: >-
+  When I need to know what maintenance my car needs I need AI that understands my specific vehicle so that I get
+  accurate schedules and part recommendations
+success-looks-like: AI provides Honda Civic-specific maintenance items with proper intervals, part numbers, and Honda-specific warnings
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda-specific schedule with CVT fluid warnings, Honda part numbers, Maintenance Minder codes
+screen: maintenance-schedule-screen

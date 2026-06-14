@@ -1,0 +1,19 @@
+id: req_ji1a6m7o
+type: requirement
+title: Provide quick question suggestions
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system displays common maintenance questions as clickable quick options when conversation history is minimal (3 or
+  fewer messages)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: QUICK QUESTIONS section with predefined questions like 'Check engine light?' and 'CVT fluid interval?'
+screen: mechanic-chat-interface

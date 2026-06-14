@@ -1,0 +1,17 @@
+id: req_7fopof5m
+type: requirement
+title: Service summary statistics
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays total statistics including number of visits, total money spent, and miles tracked
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Grid showing '6 Visits', '$747 Total spent', '22.7k Miles tracked'
+screen: vehicle-profile-screen

@@ -1,0 +1,19 @@
+id: job_2zrcagqs
+type: job
+title: Track upcoming maintenance needs
+domain: dom_az9ix51b
+narrative: >-
+  When I have a vehicle with scheduled maintenance I need to see what's coming up and when so that I can plan and budget
+  for service visits
+success-looks-like: I can see overdue items, items due soon, and future maintenance milestones with mileage targets
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Next visit section showing oil change (overdue), tire rotation (due soon), and future milestone cards
+screen: maintenance-schedule-screen

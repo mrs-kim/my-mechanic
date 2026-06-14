@@ -1,0 +1,18 @@
+id: dp_wepzryxw
+type: design-principle
+title: Visual service status indication
+domain: dom_az9ix51b
+intent: Service completion status should be immediately apparent through visual cues
+anti-patterns:
+  - Ambiguous status indicators
+  - Text-only status
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

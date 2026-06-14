@@ -1,0 +1,17 @@
+id: req_8rh3mzga
+type: requirement
+title: Allow tip expansion/collapse
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: Users can click on service tips to expand or collapse additional details
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Interactive tips with up/down arrows and underline styling when active
+screen: maintenance-schedule-screen

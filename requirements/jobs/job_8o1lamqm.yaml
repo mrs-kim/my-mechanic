@@ -1,0 +1,19 @@
+id: job_8o1lamqm
+type: job
+title: Get expert mechanical advice
+domain: dom_o86dwx7m
+narrative: >-
+  When I have car problems or questions, I need access to knowledgeable mechanical advice specific to my vehicle so that
+  I can understand issues and make informed repair decisions
+success-looks-like: Conversational interface that knows my vehicle details and provides specific, actionable advice with cost estimates
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CHAT_INIT showing CV axle diagnosis with cost estimates for Civic
+screen: mechanic-chat-interface

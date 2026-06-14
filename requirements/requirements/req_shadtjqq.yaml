@@ -1,0 +1,17 @@
+id: req_shadtjqq
+type: requirement
+title: Receipt selection from photo library
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system allows users to select a previously taken photo of a receipt from their device's photo library
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Choose from Library - Pick a photo you already took
+screen: receipt-modal

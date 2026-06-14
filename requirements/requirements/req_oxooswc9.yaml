@@ -1,0 +1,18 @@
+id: req_oxooswc9
+type: requirement
+title: Track last service mileage
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System records the mileage when each maintenance item was last performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CIVIC_SCHEDULE items have 'last' field showing mileage
+rationale: Needed to calculate when next service is due
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_80b39646
+type: requirement
+title: Mark maintenance as complete
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: Users can mark maintenance items as done, which changes the visual state and shows completion status
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onDone callback and done state handling in MaintCard
+screen: maintenance-schedule-screen

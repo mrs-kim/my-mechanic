@@ -1,0 +1,18 @@
+id: req_ybgcdsig
+type: requirement
+title: Extract receipt data automatically
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system reads receipt images and extracts service details, dates, and costs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal shows 'Reading your receipt… Matching services to your Honda Civic schedule'
+rationale: Users shouldn't have to manually type receipt information
+screen: receipt-modal

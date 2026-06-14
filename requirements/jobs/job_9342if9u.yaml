@@ -1,0 +1,20 @@
+id: job_9342if9u
+type: job
+title: Consult with mechanic about vehicle issues
+domain: dom_4s00lafl
+narrative: >-
+  When I have questions about my vehicle I need to ask a knowledgeable mechanic so that I can understand what's wrong
+  and get reliable advice
+success-looks-like: I can get helpful responses about check engine lights, maintenance intervals, brake noises, and other vehicle concerns
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from chat interface and quick question examples
+  ingestion-source: Quick questions include 'Check engine light?', 'CVT fluid interval?', 'Brake noise?', 'Tire pressure?'
+screen: mechanic-chat-interface

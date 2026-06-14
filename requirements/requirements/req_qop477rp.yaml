@@ -1,0 +1,18 @@
+id: req_qop477rp
+type: requirement
+title: Display decoded VIN details
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays vehicle make, model, year, body type, and fuel type after VIN recognition
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle details section showing Honda Civic 2019 Sedan/Saloon Gasoline
+rationale: Vehicle-specific details are needed for accurate maintenance scheduling
+screen: garage-decoded-screen

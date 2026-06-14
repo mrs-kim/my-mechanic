@@ -1,0 +1,17 @@
+id: req_qquoajz3
+type: requirement
+title: System warns about manufacturer-specific requirements
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system provides warnings about using incorrect fluids or parts that could damage the vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Do not use generic ATF — will damage CVT' warning for transmission fluid"
+screen: maintenance-schedule-screen

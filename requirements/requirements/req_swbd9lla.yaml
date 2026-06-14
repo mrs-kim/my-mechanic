@@ -1,0 +1,18 @@
+id: req_swbd9lla
+type: requirement
+title: Show detected VIN for confirmation
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays the detected VIN number (e.g., 1HGCV1F38KA012345) for user verification before proceeding
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN DETECTED display showing 1HGCV1F38KA012345 with VIEW RESULTS button
+rationale: Allows user to verify correct VIN was detected before continuing
+screen: garage-scan-screen

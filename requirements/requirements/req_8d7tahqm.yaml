@@ -1,0 +1,18 @@
+id: req_8d7tahqm
+type: requirement
+title: Manual VIN entry option
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system provides an option to manually enter vehicle information if scanning is not available
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ENTER MANUALLY button with onManual callback
+rationale: Provides fallback when barcode scanning isn't possible
+screen: garage-home-screen

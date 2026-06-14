@@ -1,0 +1,19 @@
+id: req_4eivub14
+type: requirement
+title: Provide scanning instructions
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system displays helpful text instructing users to point at the barcode on the driver's door jamb sticker and hold
+  steady
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Bottom instruction text: 'Point at the barcode on your driver's door jamb sticker. Hold steady.'"
+screen: garage-scan-screen

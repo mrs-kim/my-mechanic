@@ -1,0 +1,19 @@
+id: dp_5fmxti1j
+type: design-principle
+title: Clear data hierarchy and scanning
+domain: dom_4s00lafl
+intent: Vehicle information should be presented in a scannable, structured way that's easy to verify at a glance
+anti-patterns:
+  - Dense paragraphs of information
+  - Unclear data labels
+  - Poor visual grouping
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

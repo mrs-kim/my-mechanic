@@ -1,0 +1,17 @@
+id: req_7i0gcknh
+type: requirement
+title: Generate vehicle maintenance assessment
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system analyzes service history and generates an overall maintenance assessment with status and summary
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Well-maintained vehicle summary with 6 service visits analysis
+screen: maintenance-generation-screen

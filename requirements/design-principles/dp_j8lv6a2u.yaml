@@ -1,0 +1,18 @@
+id: dp_j8lv6a2u
+type: design-principle
+title: Visual source distinction
+domain: dom_4s00lafl
+intent: Users should immediately understand whether a service record came from a receipt scan or manual entry
+anti-patterns:
+  - Making receipt vs manual entries look identical
+  - Using subtle differences that are hard to notice
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

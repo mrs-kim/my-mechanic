@@ -1,0 +1,19 @@
+id: req_8co20od2
+type: requirement
+title: Service extraction from receipts
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system extracts service details including service types, date, and odometer reading from photographed receipts
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    Receipt results show extracted data: Date: 05/18/2026, Odometer: 52,480, Oil Change, Oil Filter, Tire Rotation with
+    costs
+screen: receipt-modal

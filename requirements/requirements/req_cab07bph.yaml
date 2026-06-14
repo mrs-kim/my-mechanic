@@ -1,0 +1,18 @@
+id: req_cab07bph
+type: requirement
+title: Store comprehensive service details
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system captures date, mileage, services performed, shop name, and cost for each service visit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service log entries containing id, date, mileage, services array, shop, cost
+rationale: Complete records enable better maintenance planning and cost tracking
+screen: maintenance-schedule-screen

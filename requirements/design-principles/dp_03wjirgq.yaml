@@ -1,0 +1,18 @@
+id: dp_03wjirgq
+type: design-principle
+title: Encourage receipt digitization
+domain: dom_4s00lafl
+intent: Make receipt scanning feel convenient and beneficial to promote adoption
+anti-patterns:
+  - Hiding receipt scanning in sub-menus
+  - Making manual entry feel easier than scanning
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: req_n8a5ybki
+type: requirement
+title: Indicate service record verification methods
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system distinguishes between verified receipt-based records and manual owner entries
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied by footer note mentioning RECEIPT and MANUAL markers, but not visible in current view
+  ingestion-source: Records marked RECEIPT were verified from scanned shop invoices
+screen: maintenance-generation-screen

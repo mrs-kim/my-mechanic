@@ -1,0 +1,17 @@
+id: req_5xokgjwb
+type: requirement
+title: Last service mileage recording
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system records and displays the mileage when maintenance was last performed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Last: X mi display in maintenance cards"
+screen: maintenance-schedule-screen

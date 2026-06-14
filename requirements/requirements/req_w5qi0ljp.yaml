@@ -1,0 +1,19 @@
+id: req_w5qi0ljp
+type: requirement
+title: Distinguish receipt vs manual entries
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system visually differentiates between services entered from receipts versus manually entered records using color
+  coding and labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Conditional styling and labels based on visit.source being 'receipt' vs other values
+screen: vehicle-profile-screen

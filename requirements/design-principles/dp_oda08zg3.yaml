@@ -1,0 +1,21 @@
+id: dp_oda08zg3
+type: design-principle
+title: Urgency-driven visual hierarchy
+domain: dom_az9ix51b
+intent: >-
+  Critical maintenance items should be immediately obvious through color and styling, with a clear progression from
+  urgent to future planning
+anti-patterns:
+  - Equal visual weight for all maintenance items
+  - Subtle or hidden overdue indicators
+  - Complex color schemes that don't clearly communicate urgency
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

@@ -1,0 +1,19 @@
+id: dp_na34d0ey
+type: design-principle
+title: Structured service data presentation
+domain: dom_o86dwx7m
+intent: Service history should be presented in clear tabular format with consistent data organization
+anti-patterns:
+  - Unstructured text descriptions
+  - Inconsistent data formatting
+  - Mixed date formats
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-generation-screen

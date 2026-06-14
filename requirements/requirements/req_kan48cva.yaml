@@ -1,0 +1,18 @@
+id: req_kan48cva
+type: requirement
+title: Allow deselection of services
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: Users can tap to deselect services that weren't actually performed before confirming
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'TAP TO DESELECT ANYTHING THAT WASN'T DONE' instruction"
+rationale: Prevents inaccurate service records when receipts contain services that weren't completed
+screen: receipt-modal

@@ -1,0 +1,18 @@
+id: req_topk47ig
+type: requirement
+title: VIN barcode scanning capability
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system can scan VIN barcodes to automatically identify and set up vehicles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button and scanning workflow
+rationale: Automates vehicle identification process and reduces manual data entry
+screen: garage-home-screen

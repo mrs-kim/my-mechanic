@@ -1,0 +1,17 @@
+id: req_yoq9fdwh
+type: requirement
+title: Enable inline mileage updates
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system allows users to update their vehicle's mileage directly from the profile view without navigating away
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UPDATE MILEAGE section with input and UPDATE button
+screen: vehicle-profile-screen

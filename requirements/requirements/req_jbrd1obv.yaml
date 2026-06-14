@@ -1,0 +1,19 @@
+id: req_jbrd1obv
+type: requirement
+title: Color-code maintenance urgency
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system uses color coding to indicate maintenance urgency (red for overdue, amber for due, yellow for upcoming,
+  green for good)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: urgencyColor logic using C.red, C.amber, C.yellow, C.green based on status
+screen: maintenance-schedule-screen

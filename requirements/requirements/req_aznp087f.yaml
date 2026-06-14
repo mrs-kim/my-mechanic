@@ -1,0 +1,18 @@
+id: req_aznp087f
+type: requirement
+title: Provide mechanic insights for vehicle
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays vehicle-specific advice or commentary from mechanics
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Mechanic's take section with quote about Civic reliability and potential mileage
+rationale: Expert insights help users understand their vehicle's maintenance needs and longevity expectations
+screen: garage-decoded-screen

@@ -1,0 +1,19 @@
+id: job_1p3oxn7h
+type: job
+title: Digitize paper receipts
+domain: dom_4s00lafl
+narrative: >-
+  When I receive a paper receipt for maintenance I need to convert it to digital format so that I can store and access
+  it electronically
+success-looks-like: Receipt information is extracted and stored digitally with all relevant details
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Photo your receipt and We'll read the invoice functionality
+screen: receipt-modal

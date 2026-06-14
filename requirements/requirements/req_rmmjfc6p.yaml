@@ -1,0 +1,17 @@
+id: req_rmmjfc6p
+type: requirement
+title: Handle maintenance state transitions
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays different maintenance screens based on whether maintenance is generating or ready
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Shows state-based rendering but state management details not visible
+  ingestion-source: maintState conditions for 'generating' and 'ready'

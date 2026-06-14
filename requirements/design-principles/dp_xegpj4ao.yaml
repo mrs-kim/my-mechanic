@@ -1,0 +1,20 @@
+id: dp_xegpj4ao
+type: design-principle
+title: Technical data should be clearly differentiated
+domain: dom_az9ix51b
+intent: >-
+  Technical information like VIN numbers and mileage should be visually distinct from descriptive text using monospace
+  fonts and specific formatting
+anti-patterns:
+  - Using regular fonts for technical data
+  - Inconsistent formatting for similar data types
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

@@ -1,0 +1,18 @@
+id: dp_l2p7mn51
+type: design-principle
+title: Visual hierarchy for service record types
+domain: dom_az9ix51b
+intent: Different record sources should be immediately recognizable through consistent visual treatment
+anti-patterns:
+  - Using the same visual treatment for receipt-based and manual records
+  - Relying only on text labels to distinguish record types
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-home-screen

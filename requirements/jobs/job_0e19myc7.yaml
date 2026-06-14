@@ -1,0 +1,16 @@
+id: job_0e19myc7
+type: job
+title: Track vehicle maintenance history
+domain: dom_4s00lafl
+narrative: When I have completed maintenance services I need to record them so that I can track what's been done and when
+success-looks-like: All completed services are captured with dates, details, and can be referenced for future planning
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service tracking functionality and maintenance schedule with 'last' dates

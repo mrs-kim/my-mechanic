@@ -1,0 +1,18 @@
+id: req_101vunm2
+type: requirement
+title: Maintenance schedule generation
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system generates maintenance schedules with a loading state when first accessing maintenance features
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Generation state exists but unclear if this is initial setup or dynamic updating
+  ingestion-source: maintState 'generating' with 2800ms timeout
+screen: maintenance-generation-screen

@@ -1,0 +1,20 @@
+id: req_bjr2ysg0
+type: requirement
+title: Display vehicle identification in service reports
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system shows vehicle year, make, model, nickname, VIN, current mileage, number of owners, and record period in the
+  report header
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Document header showing '2019 Honda Civic', 'Silver Bullet', VIN, mileage, owners, and record period
+rationale: Essential vehicle identification for official documentation
+screen: garage-decoded-screen

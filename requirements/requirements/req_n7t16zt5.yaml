@@ -1,0 +1,16 @@
+id: req_n7t16zt5
+type: requirement
+title: Track service history with metadata
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system stores service records with date, mileage, services performed, shop name, cost, and data source
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SERVICE_LOG data structure with id, date, mileage, source, services, shop, cost fields

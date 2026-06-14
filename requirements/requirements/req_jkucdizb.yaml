@@ -1,0 +1,17 @@
+id: req_jkucdizb
+type: requirement
+title: Calculate total service costs
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system sums all service costs and displays the total at the bottom of the service log
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Totals row showing $747 total cost
+screen: maintenance-generation-screen

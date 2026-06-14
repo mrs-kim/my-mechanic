@@ -1,0 +1,18 @@
+id: dp_3fejz01u
+type: design-principle
+title: Clear VIN presentation
+domain: dom_4s00lafl
+intent: When a VIN is detected, it should be displayed in a format that's easy to read and verify
+anti-patterns:
+  - Showing VIN in hard-to-read fonts
+  - Not allowing confirmation before proceeding
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+screen: garage-scan-screen

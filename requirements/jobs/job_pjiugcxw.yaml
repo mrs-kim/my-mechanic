@@ -1,0 +1,21 @@
+id: job_pjiugcxw
+type: job
+title: Track service completion status
+domain: dom_aa1wa285
+narrative: >-
+  When I complete maintenance services, I need to update my vehicle's maintenance schedule so that I can track which
+  services are up to date and which need attention
+success-looks-like: >-
+  Services marked as done are removed from upcoming maintenance list and their next due dates are calculated
+  automatically
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: scan receipt functionality and services marked as up to date
+screen: maintenance-schedule-screen

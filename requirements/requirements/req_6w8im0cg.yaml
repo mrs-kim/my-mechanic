@@ -1,0 +1,17 @@
+id: req_6w8im0cg
+type: requirement
+title: Save vehicle to garage
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system provides a save button to store the decoded vehicle information and mileage to the user's garage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'SAVE MY CAR' button with checkmark"
+screen: garage-decoded-screen

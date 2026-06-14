@@ -1,0 +1,18 @@
+id: dp_zt4k5wbq
+type: design-principle
+title: Success feedback should be immediate and clear
+domain: dom_o86dwx7m
+intent: Users should immediately understand when VIN scanning succeeds with clear visual and textual confirmation
+anti-patterns:
+  - Subtle or delayed success indication
+  - Generic success messages
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

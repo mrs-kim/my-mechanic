@@ -1,0 +1,17 @@
+id: req_tl3g2wls
+type: requirement
+title: Display upcoming maintenance items with warning indicators
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays maintenance items that are due soon with amber visual indicators and 'due soon' labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tire Rotation with tag:'due soon', col:C.amber
+screen: maintenance-schedule-screen

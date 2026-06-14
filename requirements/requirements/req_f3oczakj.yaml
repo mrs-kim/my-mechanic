@@ -1,0 +1,17 @@
+id: req_f3oczakj
+type: requirement
+title: Confirm multiple services at once
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System allows batch confirmation of detected services with count display (e.g., 'MARK 2 ITEMS AS DONE')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Button showing 'MARK 2 ITEMS AS DONE' with checkmark
+screen: receipt-modal

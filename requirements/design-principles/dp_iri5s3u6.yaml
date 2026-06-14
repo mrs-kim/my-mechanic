@@ -1,0 +1,21 @@
+id: dp_iri5s3u6
+type: design-principle
+title: Progressive disclosure of maintenance information
+domain: dom_az9ix51b
+intent: >-
+  Maintenance information should be layered so users get overview first but can drill down into details when needed,
+  avoiding overwhelming them with too much information at once
+anti-patterns:
+  - Showing all maintenance details at once
+  - Hiding important summary information
+  - Making users hunt for basic status information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

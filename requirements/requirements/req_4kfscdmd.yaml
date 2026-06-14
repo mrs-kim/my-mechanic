@@ -1,0 +1,18 @@
+id: req_4kfscdmd
+type: requirement
+title: Enable receipt capture for maintenance
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system provides functionality to capture or view receipts for completed maintenance tasks
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Receipt modal functionality referenced but implementation details not shown
+  ingestion-source: onReceipt callback and receiptModal state
+screen: receipt-modal

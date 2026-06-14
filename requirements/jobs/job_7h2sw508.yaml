@@ -1,0 +1,19 @@
+id: job_7h2sw508
+type: job
+title: Vehicle identification for accurate automotive assistance
+domain: dom_az9ix51b
+narrative: >-
+  When I need automotive assistance, I need to identify my specific vehicle so that I receive accurate diagnostic and
+  repair information tailored to my car
+success-looks-like: The system correctly identifies my vehicle from VIN data and provides vehicle-specific information
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN scanning interface for vehicle identification
+screen: garage-scan-screen

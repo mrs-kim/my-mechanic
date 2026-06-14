@@ -1,0 +1,18 @@
+id: req_nk4gfhfc
+type: requirement
+title: Display VIN confirmation
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows the recognized VIN number in a confirmation display
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN display showing '1HGCV1F38KA012345' with 'Ride recognised!' message
+rationale: Users need to verify the correct vehicle was identified
+screen: garage-decoded-screen

@@ -1,0 +1,18 @@
+id: req_xmeecr14
+type: requirement
+title: Provide expandable maintenance tips
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system allows users to expand and collapse additional maintenance tips and reminders
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Interactive tips with expand/collapse functionality using activeTip state
+rationale: Users can access contextual information without cluttering the interface
+screen: maintenance-schedule-screen

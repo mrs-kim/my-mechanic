@@ -1,0 +1,20 @@
+id: req_3yfph1c7
+type: requirement
+title: Generate vehicle-specific maintenance schedules
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system generates maintenance schedules with intervals specific to the vehicle make, model, and engine (e.g., Honda
+  Civic gets 7500 mile oil changes with 0W-20 synthetic oil per Honda spec)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CIVIC_SCHEDULE with Honda-specific intervals and specifications
+rationale: Different vehicles have different maintenance requirements and intervals
+screen: maintenance-schedule-screen

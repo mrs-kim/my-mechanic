@@ -1,0 +1,18 @@
+id: req_6dbvfmh9
+type: requirement
+title: Maintenance Task Progress Visualization
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System displays progress bars showing completion percentage for maintenance tasks
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Progress bar with percentage calculation based on remaining miles
+rationale: Visual indicator of how close a maintenance item is to being due
+screen: maintenance-schedule-screen

@@ -1,0 +1,19 @@
+id: req_gcvn3wut
+type: requirement
+title: Provide expandable service tip details
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  When a user taps on a maintenance tip, the system expands a detail panel showing the service explanation, category
+  tag, and option to ask a mechanic
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: activeTipData panel with icon, detail text, tag, and mechanic chat option
+screen: maintenance-schedule-screen

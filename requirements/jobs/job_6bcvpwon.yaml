@@ -1,0 +1,18 @@
+id: job_6bcvpwon
+type: job
+title: Identify vehicle automatically
+domain: dom_o86dwx7m
+narrative: >-
+  When I need to add a vehicle I need to scan its VIN or connect via OBD2 so that I don't have to manually enter all the
+  vehicle specifications
+success-looks-like: Vehicle details are automatically populated after successful scan
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: GarageScan component with onConfirm flow to GarageDecoded

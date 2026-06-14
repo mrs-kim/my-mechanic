@@ -1,0 +1,17 @@
+id: req_j6rgnl4p
+type: requirement
+title: Mileage-based maintenance tracking
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system calculates and displays maintenance due dates based on mileage intervals and remaining miles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Due in X mi, Overdue by X mi, intervalMiles calculations
+screen: maintenance-schedule-screen

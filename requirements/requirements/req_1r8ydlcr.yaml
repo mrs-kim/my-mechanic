@@ -1,0 +1,17 @@
+id: req_1r8ydlcr
+type: requirement
+title: Display maintenance due dates by mileage
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows when maintenance is due based on miles remaining or overdue miles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Due in X mi / Overdue by X mi display logic
+screen: maintenance-schedule-screen

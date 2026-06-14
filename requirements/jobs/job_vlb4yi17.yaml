@@ -1,0 +1,19 @@
+id: job_vlb4yi17
+type: job
+title: Stay informed about overdue and upcoming maintenance
+domain: dom_o86dwx7m
+narrative: >-
+  When I'm managing vehicle maintenance I need to see which items are overdue or due soon so that I can prioritize my
+  vehicle care
+success-looks-like: I can quickly identify overdue items (red) and items due soon (amber) with clear visual indicators
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: NEXT VISIT section showing Oil Change as overdue and Tire Rotation as due soon
+screen: maintenance-schedule-screen

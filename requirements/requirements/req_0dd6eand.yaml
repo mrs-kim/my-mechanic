@@ -1,0 +1,18 @@
+id: req_0dd6eand
+type: requirement
+title: Generate maintenance schedule
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System generates vehicle-specific maintenance schedules with loading state
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied by maintenance generation state machine
+  ingestion-source: maintState transitions from 'generating' to 'ready' with timeout
+screen: maintenance-generation-screen

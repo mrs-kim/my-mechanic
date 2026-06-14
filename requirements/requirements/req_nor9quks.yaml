@@ -1,0 +1,17 @@
+id: req_nor9quks
+type: requirement
+title: Calculate service intervals
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System calculates remaining miles until service is due based on interval and last service mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Schedule items have intervalMiles and remaining calculations
+screen: maintenance-schedule-screen

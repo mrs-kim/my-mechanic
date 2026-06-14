@@ -1,0 +1,17 @@
+id: req_6k8h69wv
+type: requirement
+title: Report generation and sharing
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system generates formatted service record reports that can be shared or printed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Report view with share and print buttons
+screen: vehicle-profile-screen

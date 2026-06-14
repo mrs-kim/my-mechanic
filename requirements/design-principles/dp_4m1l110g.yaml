@@ -1,0 +1,18 @@
+id: dp_4m1l110g
+type: design-principle
+title: Context-aware assistance
+domain: dom_o86dwx7m
+intent: Vehicle-specific help should always show which vehicle is being discussed to avoid confusion
+anti-patterns:
+  - Generic advice without vehicle context
+  - Unclear which vehicle is being referenced
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: mechanic-chat-interface

@@ -1,0 +1,21 @@
+id: dp_88t7ngfu
+type: design-principle
+title: Clear success feedback for vehicle recognition
+domain: dom_4s00lafl
+intent: >-
+  Users should immediately understand when their vehicle has been successfully identified and feel confident in the
+  accuracy
+anti-patterns:
+  - Subtle or unclear success indicators
+  - No VIN confirmation display
+  - Ambiguous recognition status
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

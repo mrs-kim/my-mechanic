@@ -1,0 +1,18 @@
+id: req_0c6rbwa6
+type: requirement
+title: Display overdue maintenance items
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system shows maintenance items that are past due with red styling and 'overdue' tags
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Oil Change labeled as 'overdue' with red styling
+rationale: Critical items need immediate attention and visual priority
+screen: maintenance-schedule-screen

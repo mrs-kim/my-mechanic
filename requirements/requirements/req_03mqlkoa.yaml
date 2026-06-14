@@ -1,0 +1,20 @@
+id: req_03mqlkoa
+type: requirement
+title: Display maintenance items by urgency color coding
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system shows maintenance items with different colors indicating urgency: red for overdue/urgent, amber for
+  upcoming, and green for completed/up to date
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: color-coded maintenance items with red, amber, and green indicators
+rationale: Visual prioritization helps users quickly identify which services need immediate attention
+screen: maintenance-schedule-screen

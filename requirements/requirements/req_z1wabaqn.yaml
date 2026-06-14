@@ -1,0 +1,19 @@
+id: req_z1wabaqn
+type: requirement
+title: Display generation progress steps
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  While generating a maintenance schedule, the system shows progress steps including reading specifications, checking
+  requirements, and calculating intervals
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: step-by-step progress indicators during schedule generation
+screen: maintenance-generation-screen

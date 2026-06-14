@@ -1,0 +1,17 @@
+id: job_0tswvt1c
+type: job
+title: Get maintenance conversation guidance
+domain: dom_aa1wa285
+narrative: When visiting a mechanic I need suggested topics to discuss so that I can ask about additional maintenance items
+success-looks-like: I have talking points about potential issues to mention during my service visit
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Also mention section with expandable tips like 'Check for oil dilution'
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: req_6i4vefdm
+type: requirement
+title: Display current odometer reading
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays the vehicle's current mileage reading prominently in the vehicle profile
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 52,800 mi displayed with odometer icon in profile
+rationale: Users need to see current mileage to track maintenance intervals and update readings
+screen: vehicle-profile-screen

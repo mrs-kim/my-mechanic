@@ -1,0 +1,20 @@
+id: dp_3bi1wnl7
+type: design-principle
+title: Chronological clarity with contextual grouping
+domain: dom_o86dwx7m
+intent: >-
+  Service history should be easy to scan chronologically while providing logical groupings that help users understand
+  maintenance patterns over time
+anti-patterns:
+  - Flat lists without temporal organization
+  - Overly complex grouping that obscures the timeline
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

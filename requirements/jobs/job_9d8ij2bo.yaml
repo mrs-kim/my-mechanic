@@ -1,0 +1,18 @@
+id: job_9d8ij2bo
+type: job
+title: Get vehicle-specific maintenance advice
+domain: dom_4s00lafl
+narrative: >-
+  When I have questions about my specific vehicle I need expert guidance so that I can make informed maintenance
+  decisions
+success-looks-like: I receive accurate, vehicle-specific recommendations based on my car's make, model, and mileage
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Mechanic chat interface with vehicle-specific responses for 2019 Honda Civic

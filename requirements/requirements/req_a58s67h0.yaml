@@ -1,0 +1,21 @@
+id: req_a58s67h0
+type: requirement
+title: Categorize maintenance items by status
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system filters and categorizes maintenance items into overdue, due, soon, and ok status groups
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    const overdue = CIVIC_SCHEDULE.filter(i => i.status === "overdue"); const due = CIVIC_SCHEDULE.filter(i => i.status
+    === "due"); const soon = CIVIC_SCHEDULE.filter(i => i.status === "soon"); const ok = CIVIC_SCHEDULE.filter(i =>
+    i.status === "ok");
+rationale: Allows users to prioritize maintenance based on urgency
+screen: maintenance-schedule-screen

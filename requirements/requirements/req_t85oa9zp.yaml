@@ -1,0 +1,17 @@
+id: req_t85oa9zp
+type: requirement
+title: Show mileage remaining for services
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays how many miles remain until each service is due
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: remaining mileage shown for each maintenance item
+screen: maintenance-schedule-screen

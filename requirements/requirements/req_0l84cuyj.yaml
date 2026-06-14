@@ -1,0 +1,21 @@
+id: req_0l84cuyj
+type: requirement
+title: Generate maintenance schedules from manufacturer data
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system reads owner's manual specifications and calculates service intervals based on vehicle make, model, and
+  current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: >-
+    Looking up manufacturer-recommended service intervals from Honda's documentation, reading owner's manual
+    specifications
+screen: maintenance-generation-screen

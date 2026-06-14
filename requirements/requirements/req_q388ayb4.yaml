@@ -1,0 +1,19 @@
+id: req_q388ayb4
+type: requirement
+title: AI-Powered Maintenance Instructions
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System provides AI-generated step-by-step maintenance instructions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from step-by-step display structure and AI disclaimer
+  ingestion-source: Step display with amber indicators and 'Powered by AI' disclaimer
+rationale: Gives users detailed guidance on how to perform maintenance tasks
+screen: maintenance-generation-screen

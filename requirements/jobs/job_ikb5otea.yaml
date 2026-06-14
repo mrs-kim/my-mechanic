@@ -1,0 +1,21 @@
+id: job_ikb5otea
+type: job
+title: Capture vehicle details for maintenance tracking
+domain: dom_aa1wa285
+narrative: >-
+  When I scan my vehicle's VIN I need to capture the make, model, year and other details so that maintenance schedules
+  can be customized for my specific vehicle
+success-looks-like: >-
+  Vehicle details are automatically populated and confirmed, with current mileage captured for maintenance interval
+  calculations
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle details form with make, model, year, body, fuel type fields and mileage input
+screen: garage-decoded-screen

@@ -1,0 +1,19 @@
+id: dp_tipzmusa
+type: design-principle
+title: Progressive disclosure of scan results
+domain: dom_az9ix51b
+intent: Guide users through scanning process with clear stages and confirmation steps
+anti-patterns:
+  - Overwhelming users with all scan data at once
+  - Skipping confirmation steps
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from staged scan process and confirmation requirements
+screen: garage-scan-screen

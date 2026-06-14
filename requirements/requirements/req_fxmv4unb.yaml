@@ -1,0 +1,19 @@
+id: req_fxmv4unb
+type: requirement
+title: Show detailed service log table
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system displays each service visit with date, services performed, mileage, cost, and shop name in a structured
+  table
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Complete service log table with columns for Date·Services, Miles, Cost showing individual service visits
+screen: maintenance-generation-screen

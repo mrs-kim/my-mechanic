@@ -1,0 +1,17 @@
+id: req_x1ry97e7
+type: requirement
+title: Calculate and display total service costs
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system calculates and shows the total cost of all recorded services in the service log
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Totals row showing '$747' total cost highlighted in amber
+screen: garage-decoded-screen

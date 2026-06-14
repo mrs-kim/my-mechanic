@@ -1,0 +1,17 @@
+id: req_uo3blvhc
+type: requirement
+title: Use monospace font for odometer display
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays mileage readings using Courier New font family for consistent digit alignment
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: fontFamily:'Courier New' in mileage displays
+screen: vehicle-profile-screen

@@ -1,0 +1,17 @@
+id: req_g2t0rqb0
+type: requirement
+title: Provide manual VIN entry alternative
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system offers an 'ENTER MANUALLY' option as an alternative to barcode scanning
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ENTER MANUALLY clickable option
+screen: garage-home-screen

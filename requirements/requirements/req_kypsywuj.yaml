@@ -1,0 +1,17 @@
+id: req_kypsywuj
+type: requirement
+title: Display next visit as action card
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system highlights the next required maintenance visit with visual urgency indicators
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Next visit card with pulsing red dot and "NEXT VISIT" label
+screen: maintenance-schedule-screen

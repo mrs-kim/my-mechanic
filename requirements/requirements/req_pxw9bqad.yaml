@@ -1,0 +1,18 @@
+id: req_pxw9bqad
+type: requirement
+title: Store service history with metadata
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: Each service record includes date, mileage, services performed, shop name, cost, and data source (receipt vs manual)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SERVICE_LOG entries showing id, date, mileage, source, services, shop, cost fields
+rationale: Complete metadata enables better maintenance tracking and decision making
+screen: garage-home-screen

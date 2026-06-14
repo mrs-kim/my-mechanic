@@ -1,0 +1,18 @@
+id: req_oj7tirdz
+type: requirement
+title: Provide manual record entry
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system offers an interface to add past service records manually
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Interface is shown but implementation details are not provided
+  ingestion-source: Dashed border element with '+' and 'Add a past service record' text
+screen: garage-home-screen

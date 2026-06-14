@@ -1,0 +1,18 @@
+id: dp_19pydz8c
+type: design-principle
+title: Urgent items demand immediate attention
+domain: dom_aa1wa285
+intent: Critical maintenance issues should be visually prominent and clearly distinguished from routine items
+anti-patterns:
+  - Treating all maintenance items with equal visual weight
+  - Burying overdue items in long lists
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen
