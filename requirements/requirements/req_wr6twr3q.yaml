@@ -1,0 +1,17 @@
+id: req_wr6twr3q
+type: requirement
+title: Allow text input for custom questions
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: Users can type custom questions in an input field and send them by pressing Enter or clicking the send button
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: input field with onKeyDown Enter handler and send button
+screen: mechanic-chat-interface

@@ -1,0 +1,17 @@
+id: req_zafsydkd
+type: requirement
+title: Display service visits chronologically
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays service visits in chronological order with year dividers separating different years
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Visit cards with year divider logic based on date comparison
+screen: vehicle-profile-screen

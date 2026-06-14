@@ -1,0 +1,19 @@
+id: job_qkasv4h0
+type: job
+title: Service record reporting
+domain: dom_aa1wa285
+narrative: >-
+  When I need to share or document my maintenance history I need a formatted service report so that I can provide
+  records to mechanics, insurance, or for resale
+success-looks-like: I can generate, share, and print a formatted service record report
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Report view with 'Ready to share or print' and share/print buttons
+screen: vehicle-profile-screen

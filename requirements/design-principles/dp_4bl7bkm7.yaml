@@ -1,0 +1,18 @@
+id: dp_4bl7bkm7
+type: design-principle
+title: Service record transparency
+domain: dom_4s00lafl
+intent: Users should clearly understand the source and reliability of their maintenance records
+anti-patterns:
+  - Mixing verified and unverified records without distinction
+  - Hiding the source of maintenance data
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

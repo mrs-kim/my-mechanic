@@ -1,0 +1,18 @@
+id: dp_e4z56btq
+type: design-principle
+title: Prominent scanning guidance
+domain: dom_o86dwx7m
+intent: Make barcode location instructions highly visible to reduce user confusion about where to find the VIN
+anti-patterns:
+  - Hidden or buried location instructions
+  - Assuming users know where VIN barcodes are located
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-home-screen

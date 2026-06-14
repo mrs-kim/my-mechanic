@@ -1,0 +1,19 @@
+id: req_va95xgni
+type: requirement
+title: Service completion tracking
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system tracks which maintenance items have been completed using a 'done' status that can be checked against item
+  IDs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CIVIC_SCHEDULE.filter(i => !done[i.id] filters out completed items
+screen: maintenance-schedule-screen

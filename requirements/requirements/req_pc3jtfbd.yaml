@@ -1,0 +1,17 @@
+id: req_pc3jtfbd
+type: requirement
+title: Track service visit count
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System displays total number of service visits logged for the vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Header showing '6 visits logged'
+screen: garage-home-screen

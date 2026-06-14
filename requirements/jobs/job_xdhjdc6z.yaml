@@ -1,0 +1,19 @@
+id: job_xdhjdc6z
+type: job
+title: Vehicle profile setup
+domain: dom_az9ix51b
+narrative: >-
+  When my vehicle is identified I need to record my current mileage so that I can receive accurate maintenance
+  scheduling and tracking
+success-looks-like: Current mileage is recorded and saved to my vehicle profile for future maintenance calculations
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CURRENT MILEAGE input field and SAVE MY CAR button
+screen: garage-decoded-screen

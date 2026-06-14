@@ -1,0 +1,18 @@
+id: req_pww7lg1k
+type: requirement
+title: Allow service deselection
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: Users can tap to deselect services that weren't actually performed before confirming
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TAP TO DESELECT ANYTHING THAT WASN'T DONE instruction
+rationale: Receipts may list services that were recommended but not completed
+screen: receipt-modal

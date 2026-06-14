@@ -1,0 +1,18 @@
+id: req_6brc7t5u
+type: requirement
+title: Scan confirmation workflow
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system requires user confirmation of scanned vehicle data before saving
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: GarageDecoded onSave flow and onBack navigation
+rationale: Ensures accuracy of automatically detected vehicle information
+screen: garage-decoded-screen

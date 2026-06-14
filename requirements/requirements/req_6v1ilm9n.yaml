@@ -1,0 +1,19 @@
+id: req_6v1ilm9n
+type: requirement
+title: Track service record verification sources
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system distinguishes between receipt-verified and manually entered service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Mentioned in footer note but not visibly implemented in the current interface
+  ingestion-source: Footer note mentioning records marked 'RECEIPT' versus 'MANUAL'
+rationale: Provides transparency about record accuracy and verification status
+screen: garage-decoded-screen

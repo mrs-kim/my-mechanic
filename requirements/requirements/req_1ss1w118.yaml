@@ -1,0 +1,18 @@
+id: req_1ss1w118
+type: requirement
+title: Display vehicle identity in service reports
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays vehicle year, make, model, and nickname in service report headers
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 2019 Honda Civic, Silver Bullet in document header
+rationale: Users need to identify which vehicle the report covers
+screen: maintenance-generation-screen

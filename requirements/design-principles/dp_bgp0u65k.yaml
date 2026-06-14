@@ -1,0 +1,18 @@
+id: dp_bgp0u65k
+type: design-principle
+title: Chronological organization with year context
+domain: dom_4s00lafl
+intent: Service history should be organized chronologically but provide clear temporal context through year dividers
+anti-patterns:
+  - Showing dates without year context
+  - Grouping services by type instead of time
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

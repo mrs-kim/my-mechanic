@@ -1,0 +1,17 @@
+id: req_hy99h2r7
+type: requirement
+title: Display typing indicator during bot response
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: When the mechanic is typing, show an animated dot indicator with the mechanic avatar
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: typing state with animated dots and M avatar
+screen: mechanic-chat-interface

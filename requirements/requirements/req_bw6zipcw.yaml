@@ -1,0 +1,17 @@
+id: req_bw6zipcw
+type: requirement
+title: Provide vehicle-specific maintenance specs
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System includes manufacturer specifications and part numbers for each maintenance item
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Schedule items include Honda-specific details like '0W-20 per Honda spec' and part numbers
+screen: maintenance-schedule-screen

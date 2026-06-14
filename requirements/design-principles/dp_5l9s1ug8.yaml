@@ -1,0 +1,20 @@
+id: dp_5l9s1ug8
+type: design-principle
+title: Visual urgency hierarchy
+domain: dom_o86dwx7m
+intent: >-
+  Use color coding and visual cues to immediately communicate maintenance urgency without requiring users to read
+  detailed text
+anti-patterns:
+  - Using the same visual treatment for overdue and upcoming items
+  - Hiding urgency status behind interaction
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

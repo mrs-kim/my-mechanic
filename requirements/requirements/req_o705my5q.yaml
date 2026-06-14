@@ -1,0 +1,18 @@
+id: req_o705my5q
+type: requirement
+title: Show maintenance milestones by mileage
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: System displays upcoming maintenance grouped by mileage intervals with specific items and urgency levels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: milestones array with ~54,000 mi, ~65,000 mi intervals and associated items
+rationale: Helps users plan and budget for future maintenance needs
+screen: maintenance-schedule-screen

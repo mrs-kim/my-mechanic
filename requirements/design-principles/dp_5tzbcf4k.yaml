@@ -1,0 +1,19 @@
+id: dp_5tzbcf4k
+type: design-principle
+title: Prominent mileage display
+domain: dom_aa1wa285
+intent: Mileage information should be immediately visible and clearly marked as important
+anti-patterns:
+  - Burying mileage in fine print
+  - Unclear mileage formatting
+  - Missing mileage emphasis
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

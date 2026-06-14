@@ -1,0 +1,19 @@
+id: req_0mcw8vdu
+type: requirement
+title: Display maintenance items categorized by urgency
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system shows maintenance items grouped into categories like 'Needs attention', 'Coming up', and 'Up to date' with
+  appropriate color coding and visual indicators
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Red/amber/green colored sections showing different maintenance status categories
+screen: maintenance-schedule-screen

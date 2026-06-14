@@ -1,0 +1,18 @@
+id: req_gjrwtncd
+type: requirement
+title: Provide export functionality
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system allows users to print or export the service report
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Print button visible but other export options implied by share icon
+  ingestion-source: Print button and share icon (📤) in header
+screen: maintenance-generation-screen

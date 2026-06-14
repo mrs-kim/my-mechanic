@@ -1,0 +1,18 @@
+id: dp_ljdio6xl
+type: design-principle
+title: Visual scanning feedback
+domain: dom_4s00lafl
+intent: Users should clearly understand the scanning process is active and when detection occurs
+anti-patterns:
+  - Silent scanning with no progress indication
+  - Unclear detection states
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-scan-screen

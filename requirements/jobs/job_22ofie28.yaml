@@ -1,0 +1,19 @@
+id: job_22ofie28
+type: job
+title: Track maintenance service history
+domain: dom_4s00lafl
+narrative: >-
+  When I get maintenance done on my vehicle I need to record what was serviced so that I can track what's been completed
+  and what's still needed
+success-looks-like: Services marked as done are clearly distinguished from pending services, with accurate status tracking
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Services shown as completed with green checkmarks and 'up to date' status
+screen: maintenance-schedule-screen

@@ -1,0 +1,20 @@
+id: dp_mnl4xjl6
+type: design-principle
+title: Visual hierarchy for maintenance urgency
+domain: dom_4s00lafl
+intent: >-
+  Use progressive visual intensity to communicate maintenance priority - strongest visual treatment for overdue items,
+  moderate for due soon, and subtle for future items
+anti-patterns:
+  - Uniform visual treatment regardless of urgency
+  - Overwhelming visual noise that obscures priority
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

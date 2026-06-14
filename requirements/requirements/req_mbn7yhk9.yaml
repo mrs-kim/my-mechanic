@@ -1,0 +1,17 @@
+id: req_mbn7yhk9
+type: requirement
+title: Show mechanic tab in navigation
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The bottom navigation includes a 'Mechanic' tab with a circular icon that users can tap to access the chat
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tab bar with mechanic tab using ◉ icon and 'Mechanic' label
+screen: navigation-tabs

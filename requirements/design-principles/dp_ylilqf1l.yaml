@@ -1,0 +1,18 @@
+id: dp_ylilqf1l
+type: design-principle
+title: Guided receipt capture
+domain: dom_4s00lafl
+intent: Receipt scanning should feel guided and educational with clear instructions and tips
+anti-patterns:
+  - Assuming users know how to take good receipt photos
+  - Providing no guidance on optimal conditions
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

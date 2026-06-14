@@ -1,0 +1,19 @@
+id: job_nwhmv26v
+type: job
+title: Scan VIN barcode for vehicle identification
+domain: dom_o86dwx7m
+narrative: >-
+  When I need to add a vehicle to my garage I need to scan the VIN barcode so that I can quickly identify my vehicle
+  without manual data entry
+success-looks-like: The VIN is automatically detected and decoded from a barcode scan, providing immediate vehicle identification results
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button and scanning interface with detection workflow
+screen: garage-scan-screen

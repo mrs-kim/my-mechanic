@@ -1,0 +1,17 @@
+id: req_144cih7m
+type: requirement
+title: Categorize maintenance items by urgency
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system assigns status categories (overdue, due, soon, ok) with visual indicators to prioritize maintenance needs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ST object with color coding for overdue/due/soon/ok status
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: dp_75l9v8pv
+type: design-principle
+title: Progressive disclosure for vehicle setup
+domain: dom_4s00lafl
+intent: Guide users through vehicle identification with clear primary action (scan) and secondary fallback (manual entry)
+anti-patterns:
+  - Overwhelming users with multiple options upfront
+  - Making manual entry equally prominent as scanning
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-home-screen

@@ -1,0 +1,18 @@
+id: req_t3j3fjpi
+type: requirement
+title: Progress bar for maintenance intervals
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows a progress bar indicating how close a maintenance item is to being due based on mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Progress bar with pct calculation based on remaining miles and interval
+rationale: Visual indicator helps users understand urgency
+screen: maintenance-schedule-screen

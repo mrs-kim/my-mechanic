@@ -1,0 +1,17 @@
+id: req_z83z4wcc
+type: requirement
+title: Maintenance item status visualization
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays maintenance items with color-coded status indicators (amber, green, etc.) and corresponding labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ST[item.status] color mapping and status-based styling
+screen: maintenance-schedule-screen

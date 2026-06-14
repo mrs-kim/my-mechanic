@@ -1,0 +1,17 @@
+id: req_4up2zfzk
+type: requirement
+title: Indicate maintenance schedule source
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system shows the source of maintenance recommendations (e.g., 'Honda schedule')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Footer text showing 'Honda schedule' on milestone cards
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_yh9fm6pc
+type: requirement
+title: Vehicle editing access
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system provides an edit function that allows users to modify vehicle information
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: EDIT VEHICLE button with onClick handler
+screen: vehicle-profile-screen

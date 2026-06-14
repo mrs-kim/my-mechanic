@@ -1,0 +1,21 @@
+id: job_imjmsnzl
+type: job
+title: Track maintenance status and schedule services
+domain: dom_aa1wa285
+narrative: >-
+  When I want to know my vehicle's maintenance status I need a clear overview of what's overdue, due, or upcoming so
+  that I can keep my car in good condition and avoid costly repairs
+success-looks-like: >-
+  User can quickly see maintenance health status with color coding, knows exactly what needs attention now vs later, and
+  understands urgency levels
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Health card shows overdue/due/upcoming with color coding and clear urgency messaging
+screen: maintenance-schedule-screen

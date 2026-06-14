@@ -1,0 +1,19 @@
+id: job_02bp2933
+type: job
+title: Quickly ask common automotive questions
+domain: dom_az9ix51b
+narrative: >-
+  When I'm new to the mechanic chat, I need quick question suggestions so that I can easily start a conversation without
+  thinking of what to ask
+success-looks-like: I see suggested questions I can tap to quickly start asking about common car issues
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: QUICK QUESTIONS section with options like 'Check engine light?', 'CVT fluid interval?'
+screen: mechanic-chat-interface

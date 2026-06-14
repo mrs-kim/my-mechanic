@@ -1,0 +1,17 @@
+id: job_o7bvzgbj
+type: job
+title: Update vehicle mileage over time
+domain: dom_o86dwx7m
+narrative: When my vehicle's mileage changes, I need to update the odometer reading so that maintenance schedules stay current
+success-looks-like: I can quickly update my mileage with a simple input and update button
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UPDATE MILEAGE section with input field and UPDATE button
+screen: vehicle-profile-screen

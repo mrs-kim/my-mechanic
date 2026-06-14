@@ -1,0 +1,19 @@
+id: req_alupbu2r
+type: requirement
+title: Show complete chronological service log
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: >-
+  The system displays all service visits in a table format showing date, services performed, mileage, cost, and shop
+  name
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service table with columns for Date/Services, Miles, and Cost showing chronological service history
+screen: garage-decoded-screen

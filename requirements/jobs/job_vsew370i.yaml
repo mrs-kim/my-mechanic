@@ -1,0 +1,19 @@
+id: job_vsew370i
+type: job
+title: Maintenance Task Tracking
+domain: dom_az9ix51b
+narrative: >-
+  When I complete vehicle maintenance tasks, I need to mark them as done so that I can track my maintenance history and
+  know what's still needed
+success-looks-like: Completed tasks are visually marked as done and removed from active maintenance list
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: DONE button and completed state styling
+screen: maintenance-schedule-screen

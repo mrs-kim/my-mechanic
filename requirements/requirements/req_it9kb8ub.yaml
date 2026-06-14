@@ -1,0 +1,17 @@
+id: req_it9kb8ub
+type: requirement
+title: Receipt text extraction
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system extracts text and service information from receipt images
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: We'll read the invoice and Reading your receipt functionality
+screen: receipt-modal

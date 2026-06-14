@@ -1,0 +1,18 @@
+id: dp_u8lsdjyg
+type: design-principle
+title: Progressive disclosure for common tasks
+domain: dom_o86dwx7m
+intent: Offer shortcuts for common actions early in interactions to reduce typing burden
+anti-patterns:
+  - Forcing users to type everything
+  - Showing shortcuts when they're no longer needed
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: mechanic-chat-interface

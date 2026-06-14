@@ -1,0 +1,18 @@
+id: req_e018ls5u
+type: requirement
+title: Scan VIN barcode for vehicle identification
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system can scan VIN barcodes using camera to automatically identify vehicles
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button and scanning interface with detection stages
+rationale: Enables quick and accurate vehicle identification without manual entry errors
+screen: garage-scan-screen

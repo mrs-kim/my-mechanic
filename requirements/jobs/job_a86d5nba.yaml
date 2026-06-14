@@ -1,0 +1,19 @@
+id: job_a86d5nba
+type: job
+title: Generate service reports for sharing
+domain: dom_4s00lafl
+narrative: >-
+  When I need to provide service history to mechanics, insurance, or buyers, I need to generate a formatted report so
+  that I can share comprehensive maintenance documentation
+success-looks-like: I can create a professional service report that's ready to print or share digitally
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Report view with share and print functionality
+screen: vehicle-profile-screen

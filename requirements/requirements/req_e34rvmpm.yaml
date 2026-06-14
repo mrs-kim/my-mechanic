@@ -1,0 +1,17 @@
+id: req_e34rvmpm
+type: requirement
+title: Extract mileage from receipts
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system identifies and displays mileage information found on receipts
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MILEAGE ON RECEIPT 52,480 mi
+screen: receipt-modal

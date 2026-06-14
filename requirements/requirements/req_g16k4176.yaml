@@ -1,0 +1,19 @@
+id: req_g16k4176
+type: requirement
+title: Show conversation history with distinct message styles
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  User messages appear on the right with amber background, bot messages appear on the left with mechanic avatar and
+  light background
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: msgs.map with role-based styling, user messages row-reverse, bot messages with M avatar
+screen: mechanic-chat-interface

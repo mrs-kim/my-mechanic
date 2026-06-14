@@ -1,0 +1,19 @@
+id: dp_ic002cdi
+type: design-principle
+title: Clear scanning guidance
+domain: dom_az9ix51b
+intent: Users should clearly understand where to find the VIN and how to scan it effectively
+anti-patterns:
+  - Assuming users know VIN location
+  - Providing vague scanning instructions
+  - Not giving real-time feedback
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-scan-screen

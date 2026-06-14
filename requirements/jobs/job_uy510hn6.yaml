@@ -1,0 +1,20 @@
+id: job_uy510hn6
+type: job
+title: Vehicle identification and setup
+domain: dom_4s00lafl
+narrative: >-
+  When I first set up Garage I need to identify my vehicle so that the system can provide accurate maintenance schedules
+  and service tracking
+success-looks-like: My vehicle is properly identified in the system with all relevant details populated automatically
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from VIN scanning workflow and setup context
+  ingestion-source: Let's meet your ride - scan VIN barcode workflow
+screen: garage-home-screen

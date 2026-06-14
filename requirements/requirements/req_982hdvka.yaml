@@ -1,0 +1,17 @@
+id: req_982hdvka
+type: requirement
+title: Display decoded vehicle specifications
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system shows make, model, year, body type, and fuel type in a structured list format after VIN decoding
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle details showing Honda, Civic, 2019, Sedan/Saloon, Gasoline
+screen: garage-decoded-screen

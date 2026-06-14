@@ -1,0 +1,17 @@
+id: req_g6ggfcqo
+type: requirement
+title: Manual service record entry
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system allows users to manually add past service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Dashed border button with 'Add a past service record'
+screen: vehicle-profile-screen

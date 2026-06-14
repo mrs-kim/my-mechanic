@@ -1,0 +1,17 @@
+id: req_mwjxhwsk
+type: requirement
+title: Structured vehicle detail grid
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system presents year, make, and model information in a structured grid layout with labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: YEAR/2019, MAKE/Honda, MODEL/Civic in grid format
+screen: vehicle-profile-screen

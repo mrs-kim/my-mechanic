@@ -1,0 +1,19 @@
+id: dp_8prx8v15
+type: design-principle
+title: Conversational maintenance support
+domain: dom_aa1wa285
+intent: Users should feel like they're chatting with a knowledgeable mechanic rather than using a formal support system
+anti-patterns:
+  - Formal ticket-based support
+  - Impersonal automated responses
+  - Technical jargon without explanation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: mechanic-chat-interface

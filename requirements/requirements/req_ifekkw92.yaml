@@ -1,0 +1,20 @@
+id: req_ifekkw92
+type: requirement
+title: Provide expandable maintenance tips
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  System displays maintenance tips that can be selected to show detailed explanations with icons, tags, and
+  comprehensive descriptions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: TIP_DETAILS with expandable detail explanations for tips like oil dilution check
+rationale: Allows users to get as much detail as they need without cluttering the interface
+screen: maintenance-schedule-screen

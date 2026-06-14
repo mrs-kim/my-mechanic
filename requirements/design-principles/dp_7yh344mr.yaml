@@ -1,0 +1,20 @@
+id: dp_7yh344mr
+type: design-principle
+title: Progressive disclosure for service details
+domain: dom_aa1wa285
+intent: >-
+  Maintenance information should be accessible on demand without cluttering the main view, allowing users to dive deeper
+  when needed
+anti-patterns:
+  - Overwhelming users with all service details at once
+  - Making detailed information hard to access
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

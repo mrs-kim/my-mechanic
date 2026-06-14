@@ -1,0 +1,17 @@
+id: req_160cf9u5
+type: requirement
+title: Provide expandable maintenance tips
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows additional maintenance topics that can be expanded/collapsed for discussion with mechanics
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 💬 icons with expandable tips like 'Check for oil dilution' and 'Ask about CVT hesitation'
+screen: maintenance-schedule-screen

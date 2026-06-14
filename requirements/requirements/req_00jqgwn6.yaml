@@ -1,0 +1,17 @@
+id: req_00jqgwn6
+type: requirement
+title: Display service visit timeline with year dividers
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system groups service visits by year and displays year dividers between different years in the service history
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Year divider logic checking if previous visit was in different year
+screen: vehicle-profile-screen

@@ -1,0 +1,18 @@
+id: dp_5b27socv
+type: design-principle
+title: Progressive disclosure for vehicle setup
+domain: dom_o86dwx7m
+intent: Make vehicle setup feel approachable by presenting one clear primary action (scan) with a secondary fallback option
+anti-patterns:
+  - Overwhelming users with multiple input fields upfront
+  - Hiding the manual entry option completely
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-home-screen

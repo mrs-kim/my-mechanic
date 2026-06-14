@@ -1,0 +1,18 @@
+id: req_ge6tv4fi
+type: requirement
+title: Track current vehicle odometer reading
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays the current odometer reading in miles for a vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Shows '52,800 mi' in odometer section
+rationale: Users need to track mileage for service scheduling and record keeping
+screen: vehicle-profile-screen

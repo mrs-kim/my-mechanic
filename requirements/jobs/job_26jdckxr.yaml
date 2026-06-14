@@ -1,0 +1,19 @@
+id: job_26jdckxr
+type: job
+title: Easily identify my vehicle
+domain: dom_4s00lafl
+narrative: >-
+  When I need to add my vehicle to the garage I need a quick way to scan my VIN barcode so that I don't have to manually
+  type the long VIN number
+success-looks-like: The VIN is automatically detected and decoded from scanning the barcode on my door jamb sticker
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: SCAN VIN BARCODE button and scanning interface with automatic detection
+screen: garage-scan-screen

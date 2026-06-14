@@ -1,0 +1,21 @@
+id: job_9ug5bevi
+type: job
+title: Vehicle identification and recognition
+domain: dom_az9ix51b
+narrative: >-
+  When I scan a vehicle barcode I need the system to identify my specific car so that I can get accurate diagnostic and
+  maintenance information
+success-looks-like: >-
+  The system correctly identifies the make, model, year, body type, and fuel type from the VIN scan and confirms the
+  vehicle is recognized
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Ride recognised! success message and vehicle details display
+screen: garage-decoded-screen

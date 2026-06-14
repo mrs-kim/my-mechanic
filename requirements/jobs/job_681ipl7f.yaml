@@ -1,0 +1,19 @@
+id: job_681ipl7f
+type: job
+title: Get AI-powered automotive diagnostic help
+domain: dom_az9ix51b
+narrative: >-
+  When I have car issues or maintenance questions, I need AI-powered automotive diagnostic assistance so that I can
+  understand what's wrong and get appropriate repair guidance
+success-looks-like: User receives accurate diagnostic information and actionable repair guidance specific to their vehicle
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the overall context and domain description, but specific job narrative not explicitly stated
+  ingestion-source: "Domain: AI-powered automotive diagnostic assistance and repair guidance"

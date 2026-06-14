@@ -1,0 +1,17 @@
+id: req_qmiqdnaf
+type: requirement
+title: Offer vehicle-specific diagnostic advice
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The mechanic chat provides diagnosis and repair estimates specific to the user's vehicle make, model, and mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: CV axle diagnosis specific to 2019 Honda Civic at 52,800 miles with cost estimates
+screen: mechanic-chat-interface

@@ -1,0 +1,19 @@
+id: job_0d6azuo1
+type: job
+title: Track service history for documentation
+domain: dom_4s00lafl
+narrative: >-
+  When I need to maintain records of my vehicle's service history, I need to view and document all completed maintenance
+  services so that I can prove maintenance was performed and track spending patterns
+success-looks-like: I can see a chronological list of all services performed, costs paid, and have documentation ready to share or print
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Service log display with visits, costs, mileage tracking, and report generation
+screen: vehicle-profile-screen

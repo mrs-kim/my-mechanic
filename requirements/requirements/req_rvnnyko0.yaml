@@ -1,0 +1,18 @@
+id: req_rvnnyko0
+type: requirement
+title: Track service sources
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system records whether service data came from receipts or manual entry
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "SERVICE_LOG entries showing source: 'receipt' or 'manual'"
+rationale: Different sources have different reliability levels for maintenance tracking
+screen: maintenance-schedule-screen

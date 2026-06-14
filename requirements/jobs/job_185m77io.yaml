@@ -1,0 +1,18 @@
+id: job_185m77io
+type: job
+title: Scan and process service receipts
+domain: dom_4s00lafl
+narrative: >-
+  When I receive a service receipt I need to quickly digitize it so that service details are automatically captured
+  without manual entry
+success-looks-like: Receipt information is extracted and stored with minimal manual input required
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt scanning functionality and receipt modal processing

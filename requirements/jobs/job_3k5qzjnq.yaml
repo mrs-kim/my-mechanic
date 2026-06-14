@@ -1,0 +1,21 @@
+id: job_3k5qzjnq
+type: job
+title: Identify vehicle for personalized service
+domain: dom_o86dwx7m
+narrative: >-
+  When I get a new vehicle or need to set up the app, I need to quickly and accurately identify my specific car so that
+  I can receive maintenance schedules and advice tailored to my exact vehicle
+success-looks-like: >-
+  The app knows my specific vehicle model, year, mileage, and can provide Honda Civic-specific maintenance
+  recommendations and part numbers
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda Civic-specific schedule with exact part numbers and maintenance codes
+screen: garage-home-screen

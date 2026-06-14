@@ -1,0 +1,17 @@
+id: req_fx5pg0qw
+type: requirement
+title: Mileage input guidance
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System provides instruction to check dashboard odometer for current reading
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Help text 'Check your dashboard odometer for the current reading'
+screen: garage-decoded-screen

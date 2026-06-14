@@ -1,0 +1,17 @@
+id: req_w7dgo0oa
+type: requirement
+title: Organize future maintenance by mileage milestones
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system groups future maintenance items by specific mileage intervals (e.g., ~54,000 mi, ~65,000 mi)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Future milestones array with mi, items, and urgency properties
+screen: maintenance-schedule-screen

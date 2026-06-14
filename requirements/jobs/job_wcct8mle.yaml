@@ -1,0 +1,19 @@
+id: job_wcct8mle
+type: job
+title: Create shareable service reports
+domain: dom_az9ix51b
+narrative: >-
+  When I need to provide service history I need to generate a formatted report so that I can share it with potential
+  buyers, mechanics, or insurance companies
+success-looks-like: A professional-looking report that can be printed or shared electronically
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Report view with share and print options
+screen: garage-home-screen

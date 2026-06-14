@@ -1,0 +1,19 @@
+id: req_iqtl5qq6
+type: requirement
+title: Generate schedules from manufacturer documentation
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system looks up manufacturer-recommended service intervals from official documentation to create vehicle-specific
+  maintenance schedules
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: reading owner's manual specifications and manufacturer documentation lookup
+screen: maintenance-generation-screen

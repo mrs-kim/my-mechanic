@@ -1,0 +1,21 @@
+id: dp_5m6pao11
+type: design-principle
+title: Receipt scanning should feel guided and informative
+domain: dom_o86dwx7m
+intent: >-
+  Users should understand what receipt scanning does and feel confident about the process through clear instructions and
+  contextual information
+anti-patterns:
+  - Launching camera without explanation
+  - Generic scanning without vehicle context
+  - Processing without status updates
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

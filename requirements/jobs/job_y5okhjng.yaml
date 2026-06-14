@@ -1,0 +1,17 @@
+id: job_y5okhjng
+type: job
+title: Track upcoming maintenance schedules
+domain: dom_aa1wa285
+narrative: When my vehicle needs maintenance I need to see what's due and when so that I can stay on top of required service
+success-looks-like: I can see current and future maintenance items with their due dates and urgency levels
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Next visit section showing oil change, tire rotation with overdue/due soon tags
+screen: maintenance-schedule-screen

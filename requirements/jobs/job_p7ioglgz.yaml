@@ -1,0 +1,19 @@
+id: job_p7ioglgz
+type: job
+title: Get automotive advice for my specific vehicle
+domain: dom_az9ix51b
+narrative: >-
+  When I have questions about my car, I need to chat with an AI mechanic who knows my specific vehicle so that I can get
+  accurate, personalized automotive guidance
+success-looks-like: I can ask questions about my vehicle and get relevant, contextual advice specific to my car model
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MY MECHANIC header shows 2019 Honda Civic, chat interface allows asking mechanic anything
+screen: mechanic-chat-interface

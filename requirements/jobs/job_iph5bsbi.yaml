@@ -1,0 +1,21 @@
+id: job_iph5bsbi
+type: job
+title: Track maintenance completion status
+domain: dom_4s00lafl
+narrative: >-
+  When I'm reviewing my vehicle maintenance I need to see which services have been completed and which are pending so
+  that I can understand my vehicle's current maintenance state
+success-looks-like: >-
+  Service records clearly indicate completion status with visual indicators and distinguish between done and pending
+  items
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Records are filtered into 'done' and not done categories with visual status indicators
+screen: maintenance-schedule-screen

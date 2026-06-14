@@ -1,0 +1,17 @@
+id: req_4j343t27
+type: requirement
+title: Provide odometer reading guidance
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system instructs users to check their dashboard odometer for current readings
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Check your dashboard odometer for the current reading guidance text
+screen: vehicle-profile-screen

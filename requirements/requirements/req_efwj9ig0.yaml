@@ -1,0 +1,17 @@
+id: req_efwj9ig0
+type: requirement
+title: Track maintenance task completion
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system allows users to mark maintenance tasks as done/undone and tracks completion state
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onDone callback with task ID toggling in maintenance section
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: req_f36izpxp
+type: requirement
+title: Provide service report generation
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: Users can generate reports from their service history data
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Report button is shown but report functionality not detailed in this chunk
+  ingestion-source: Report button with document icon in header
+screen: garage-home-screen

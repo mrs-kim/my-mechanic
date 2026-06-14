@@ -1,0 +1,17 @@
+id: req_hlx6jhw1
+type: requirement
+title: Accept current mileage input
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system provides a numeric input field for users to enter their current odometer reading
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Input field with placeholder 'e.g. 52800' and default value
+screen: garage-decoded-screen

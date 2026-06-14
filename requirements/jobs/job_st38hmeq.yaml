@@ -1,0 +1,19 @@
+id: job_st38hmeq
+type: job
+title: Add manual service records
+domain: dom_az9ix51b
+narrative: >-
+  When I have past service records I need to manually enter them so that my service history is complete even for work
+  done before using the app
+success-looks-like: Ability to add historical service records with all relevant details
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Add manual record interface with dashed border
+screen: garage-home-screen

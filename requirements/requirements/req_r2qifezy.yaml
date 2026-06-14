@@ -1,0 +1,17 @@
+id: req_r2qifezy
+type: requirement
+title: Display receipt parsing results
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System shows detected services from receipt with checkmark and count (e.g., 'Found 2 services on this receipt')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Green checkmark with '✓ Found 2 services on this receipt'
+screen: receipt-modal

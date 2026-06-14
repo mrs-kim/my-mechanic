@@ -1,0 +1,17 @@
+id: req_2fvm6qcw
+type: requirement
+title: Maintenance schedule shows Honda-specific requirements
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system displays maintenance items with Honda-specific part numbers, fluid types, and service codes
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Honda HCF-2 CVT fluid, Honda part #80292-TBA-A11, Maintenance Minder codes"
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: dp_mw03w9co
+type: design-principle
+title: Success state visibility
+domain: dom_az9ix51b
+intent: Vehicle recognition success should be immediately apparent and celebratory
+anti-patterns:
+  - Subtle or unclear success indicators
+  - Generic confirmation messages
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

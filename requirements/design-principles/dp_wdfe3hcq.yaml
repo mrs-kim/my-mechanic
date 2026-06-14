@@ -1,0 +1,18 @@
+id: dp_wdfe3hcq
+type: design-principle
+title: Progressive disclosure for question guidance
+domain: dom_az9ix51b
+intent: New users should get helpful question suggestions, but experienced users shouldn't be cluttered with them
+anti-patterns:
+  - Always showing quick questions regardless of conversation length
+  - No guidance for new users on what to ask
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: mechanic-chat-interface

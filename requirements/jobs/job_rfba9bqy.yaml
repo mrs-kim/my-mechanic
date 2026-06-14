@@ -1,0 +1,19 @@
+id: job_rfba9bqy
+type: job
+title: Extract service data from receipts
+domain: dom_4s00lafl
+narrative: >-
+  When I scan a service receipt I need the system to automatically identify what services were performed so that I don't
+  have to manually enter all the details
+success-looks-like: System successfully identifies services, costs, and mileage from receipt images and presents them for confirmation
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal showing 'Found 2 services on this receipt' and extracted services
+screen: receipt-modal

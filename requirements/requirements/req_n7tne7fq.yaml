@@ -1,0 +1,17 @@
+id: req_n7tne7fq
+type: requirement
+title: Show scanning progress feedback
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays a scanning animation and 'SEARCHING…' status while looking for a barcode
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: stage===1 condition with scanning animation and SEARCHING status
+screen: garage-scan-screen

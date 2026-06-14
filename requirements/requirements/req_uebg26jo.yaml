@@ -1,0 +1,18 @@
+id: req_uebg26jo
+type: requirement
+title: Display maintenance items by urgency
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: "The system shows maintenance items categorized by status: overdue (red), due soon (amber), and up to date (green)"
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: color-coded maintenance items with overdue, due soon categories
+rationale: Users need to prioritize what requires immediate attention
+screen: maintenance-schedule-screen

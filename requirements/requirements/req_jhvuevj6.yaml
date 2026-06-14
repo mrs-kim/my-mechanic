@@ -1,0 +1,17 @@
+id: req_jhvuevj6
+type: requirement
+title: Receipt processing matches services to vehicle schedule
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system attempts to match scanned receipt services to the specific vehicle's maintenance schedule
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Processing text: 'Matching services to your Honda Civic schedule'"
+screen: receipt-modal

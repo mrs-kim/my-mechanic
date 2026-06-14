@@ -1,0 +1,19 @@
+id: job_flgc3djc
+type: job
+title: Get maintenance guidance for my vehicle
+domain: dom_aa1wa285
+narrative: >-
+  When I have questions about my vehicle's maintenance I need to communicate with a knowledgeable mechanic so that I can
+  get accurate, vehicle-specific advice
+success-looks-like: I can ask questions about my vehicle and receive helpful responses from a mechanic who knows my specific vehicle model
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MY MECHANIC section with chat interface and vehicle-specific header
+screen: mechanic-chat-interface

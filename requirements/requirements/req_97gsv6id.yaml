@@ -1,0 +1,19 @@
+id: req_97gsv6id
+type: requirement
+title: Allow re-scanning of vehicle
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system provides a way to go back and re-scan if the wrong vehicle was detected
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from the back arrow button in the confirmation area
+  ingestion-source: Back arrow button (↺) in the vehicle recognition confirmation
+rationale: Users need to correct mistakes in vehicle identification
+screen: garage-decoded-screen

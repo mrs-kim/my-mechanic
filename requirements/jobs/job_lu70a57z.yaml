@@ -1,0 +1,20 @@
+id: job_lu70a57z
+type: job
+title: Identify vehicle for maintenance tracking
+domain: dom_aa1wa285
+narrative: >-
+  When I want to start tracking maintenance for my vehicle I need to identify it uniquely so that I can get
+  vehicle-specific maintenance schedules and history
+success-looks-like: Vehicle is correctly identified and ready for maintenance tracking setup
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from VIN scanning flow which is prerequisite for maintenance scheduling
+  ingestion-source: VIN scanning interface and detection flow
+screen: garage-scan-screen

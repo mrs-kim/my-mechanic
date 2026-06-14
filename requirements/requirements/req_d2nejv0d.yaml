@@ -1,0 +1,17 @@
+id: req_d2nejv0d
+type: requirement
+title: Receipt modal offers camera capture option
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides an option to take a photo of the receipt using the device camera
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Take a Photo option with camera icon and description 'Use your camera to photograph the receipt now'
+screen: receipt-modal

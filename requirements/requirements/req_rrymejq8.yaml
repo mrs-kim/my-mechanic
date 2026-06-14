@@ -1,0 +1,17 @@
+id: req_rrymejq8
+type: requirement
+title: Service completion tracking
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system tracks completion status of maintenance items with a done state that can be toggled
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: done={done} onDone={(id)=>setDone(d=>({...d,[id]:!d[id]}))}
+screen: maintenance-schedule-screen

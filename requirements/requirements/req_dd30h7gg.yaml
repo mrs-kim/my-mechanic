@@ -1,0 +1,17 @@
+id: req_dd30h7gg
+type: requirement
+title: Display service count summary
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows total number of service visits logged for the vehicle
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'6 visits logged' display in header"
+screen: garage-home-screen

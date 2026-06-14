@@ -1,0 +1,18 @@
+id: req_akcrtu5y
+type: requirement
+title: Display soon-due maintenance items
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system shows maintenance items approaching their due date with amber styling and 'due soon' tags
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tire Rotation labeled as 'due soon' with amber styling
+rationale: Helps users plan ahead for upcoming maintenance
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: req_mvj3pq5k
+type: requirement
+title: Validate odometer input format
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system uses Courier New font for odometer values to ensure consistent numeric display
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Implied by consistent use of Courier New for numeric values
+  ingestion-source: fontFamily:'Courier New' used for mileage inputs and displays
+screen: vehicle-profile-screen

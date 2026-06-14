@@ -1,0 +1,19 @@
+id: req_pp2uj7tk
+type: requirement
+title: Generate vehicle service record reports
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system generates comprehensive vehicle service record reports that include vehicle information, VIN, mileage,
+  ownership history, and complete service log with dates, services performed, mileage, and costs
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VEHICLE SERVICE RECORD header and complete service log table structure
+screen: receipt-modal

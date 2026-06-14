@@ -1,0 +1,19 @@
+id: req_gqwloppc
+type: requirement
+title: Show service source indicators
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: >-
+  The system visually distinguishes between receipt-based entries (amber border/badge) and manual entries (muted
+  styling) in service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Conditional styling based on visit.source with RECEIPT vs MANUAL badges
+screen: vehicle-profile-screen

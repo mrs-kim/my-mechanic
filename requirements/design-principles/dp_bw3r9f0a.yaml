@@ -1,0 +1,17 @@
+id: dp_bw3r9f0a
+type: design-principle
+title: Progressive vehicle identification
+domain: dom_o86dwx7m
+intent: Guide users through vehicle setup with clear steps from scanning to confirmation to profile creation
+anti-patterns:
+  - Jumping directly to profile without confirmation
+  - No way to go back and correct information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high

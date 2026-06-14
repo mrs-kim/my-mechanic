@@ -1,0 +1,19 @@
+id: req_cj11luzc
+type: requirement
+title: Show collapsible list of up-to-date services
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  The system displays a collapsible section showing all services that are currently up to date with mileage remaining
+  information
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: X services up to date section that expands/collapses to show individual items with mileage remaining
+screen: maintenance-schedule-screen

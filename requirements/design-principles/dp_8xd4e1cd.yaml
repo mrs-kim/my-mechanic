@@ -1,0 +1,20 @@
+id: dp_8xd4e1cd
+type: design-principle
+title: Hierarchical information display
+domain: dom_o86dwx7m
+intent: >-
+  Vehicle information should be presented in a clear hierarchy with the most important details (make/model) most
+  prominent
+anti-patterns:
+  - Treating all vehicle details with equal visual weight
+  - Burying critical information in fine print
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

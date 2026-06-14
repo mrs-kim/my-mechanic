@@ -1,0 +1,18 @@
+id: req_nmys0bdn
+type: requirement
+title: Receipt processing capability
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides a modal interface for processing receipts with staged progression
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Receipt modal exists but specific processing functionality not detailed
+  ingestion-source: receiptModal state and simulateReceipt function
+screen: receipt-modal

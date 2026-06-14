@@ -1,0 +1,20 @@
+id: job_o67wqbzw
+type: job
+title: Track maintenance completion status
+domain: dom_aa1wa285
+narrative: >-
+  When I complete maintenance tasks, I need to mark them as done and track their status, so that I can see what's been
+  completed and what still needs attention
+success-looks-like: Completed items show green status and progress bars reflect current maintenance state
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-note: Clear from done/undo functionality and status tracking
+  ingestion-source: MaintCard with done state, progress bars, and DONE/UNDO buttons
+screen: maintenance-schedule-screen

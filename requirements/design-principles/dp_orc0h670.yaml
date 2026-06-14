@@ -1,0 +1,19 @@
+id: dp_orc0h670
+type: design-principle
+title: Camera-first vehicle identification
+domain: dom_az9ix51b
+intent: VIN identification should prioritize quick barcode scanning over manual entry to reduce user effort and input errors
+anti-patterns:
+  - Making manual entry the primary method
+  - Hiding the scanning option
+  - Making scanning difficult to access
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-scan-screen

@@ -1,0 +1,18 @@
+id: dp_mzcy0z02
+type: design-principle
+title: Conversational maintenance guidance
+domain: dom_aa1wa285
+intent: Provide actionable talking points to help users communicate effectively with mechanics
+anti-patterns:
+  - Showing only basic maintenance items without context
+  - Making all maintenance suggestions equally prominent
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

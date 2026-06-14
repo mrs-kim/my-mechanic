@@ -1,0 +1,17 @@
+id: req_y9nmn4gp
+type: requirement
+title: Provide contextual service tips
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system suggests additional inspection items to mention during service visits
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Also mention' section and tips like 'Ask about CVT hesitation'"
+screen: maintenance-schedule-screen

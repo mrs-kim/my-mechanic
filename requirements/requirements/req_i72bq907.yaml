@@ -1,0 +1,17 @@
+id: req_i72bq907
+type: requirement
+title: Task Completion Undo
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System allows users to undo completion of maintenance tasks
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UNDO button appears when task is marked as done
+screen: maintenance-schedule-screen

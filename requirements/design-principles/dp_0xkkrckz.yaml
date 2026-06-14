@@ -1,0 +1,18 @@
+id: dp_0xkkrckz
+type: design-principle
+title: Conversational message styling
+domain: dom_az9ix51b
+intent: Chat messages should feel like a natural conversation with clear visual distinction between user and AI responses
+anti-patterns:
+  - Uniform message styling that doesn't distinguish speakers
+  - Messages that look like system notifications rather than conversation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: mechanic-chat-interface

@@ -1,0 +1,19 @@
+id: job_b6kw355h
+type: job
+title: Plan future maintenance
+domain: dom_az9ix51b
+narrative: >-
+  When I want to prepare for upcoming expenses, I need to see future maintenance milestones so that I can budget and
+  plan ahead
+success-looks-like: I can see maintenance items grouped by mileage milestones with timing information
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Carousel showing milestones at ~54,000 mi, ~65,000 mi, ~72,800 mi
+screen: maintenance-schedule-screen

@@ -1,0 +1,19 @@
+id: dp_ygr2kd13
+type: design-principle
+title: Clear maintenance status communication
+domain: dom_aa1wa285
+intent: Users should immediately understand their vehicle's maintenance quality through visual indicators and summary text
+anti-patterns:
+  - Ambiguous status messages
+  - Missing overall assessment
+  - Technical jargon without explanation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-generation-screen

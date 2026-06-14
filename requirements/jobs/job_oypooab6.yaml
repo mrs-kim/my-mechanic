@@ -1,0 +1,21 @@
+id: job_oypooab6
+type: job
+title: Generate comprehensive service history reports
+domain: dom_aa1wa285
+narrative: >-
+  When I need to review or share my vehicle's maintenance history, I need a complete service record document so that I
+  can verify care quality and make informed decisions
+success-looks-like: >-
+  A professional report showing all service visits, costs, mileage, and verification status with clear summary of
+  vehicle condition
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Vehicle service record document with complete service log, totals, and well-maintained assessment
+screen: maintenance-generation-screen

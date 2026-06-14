@@ -1,0 +1,17 @@
+id: req_cm17zrt1
+type: requirement
+title: Service matching to vehicle
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system matches extracted services to the specific vehicle's maintenance schedule
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: check off everything serviced on your 2019 Honda Civic and Matching services to your Honda Civic schedule
+screen: receipt-modal

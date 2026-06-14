@@ -1,0 +1,19 @@
+id: job_uca3td8y
+type: job
+title: Get maintenance tips and guidance
+domain: dom_aa1wa285
+narrative: >-
+  When I'm reviewing my maintenance schedule, I need detailed tips and explanations about services so that I understand
+  what each service involves and why it's important
+success-looks-like: I can tap on maintenance items to see detailed explanations, tips, and have the option to discuss with a mechanic
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: tip detail panel with explanations and mechanic chat option
+screen: maintenance-schedule-screen

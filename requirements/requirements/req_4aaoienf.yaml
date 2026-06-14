@@ -1,0 +1,19 @@
+id: req_4aaoienf
+type: requirement
+title: Differentiate between timing belts and chains
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system correctly identifies whether an engine uses a timing belt (needs replacement) or timing chain (no
+  replacement needed)
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: timing_belt entry shows chain vs belt distinction for K-series engine
+screen: maintenance-schedule-screen

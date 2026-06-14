@@ -1,0 +1,19 @@
+id: dp_m9bhzqom
+type: design-principle
+title: Expert guidance builds confidence
+domain: dom_4s00lafl
+intent: Professional mechanic insights should make users feel they have expert knowledge about their specific vehicle
+anti-patterns:
+  - Generic advice
+  - Technical jargon without context
+  - Overly clinical presentation
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

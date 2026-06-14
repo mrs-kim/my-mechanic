@@ -1,0 +1,18 @@
+id: req_i2qhsgc5
+type: requirement
+title: Provide odometer reading guidance
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides instructional text to guide users on how to obtain their current mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Check your dashboard odometer for the current reading
+rationale: Users need clear guidance on where to find their odometer reading
+screen: vehicle-profile-screen

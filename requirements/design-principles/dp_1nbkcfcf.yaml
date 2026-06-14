@@ -1,0 +1,18 @@
+id: dp_1nbkcfcf
+type: design-principle
+title: Clear vehicle identification
+domain: dom_o86dwx7m
+intent: Vehicle reports should prominently display vehicle identity with year, make, model, and personal nickname
+anti-patterns:
+  - Showing only VIN or technical identifiers
+  - Burying vehicle identity in dense text
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-generation-screen

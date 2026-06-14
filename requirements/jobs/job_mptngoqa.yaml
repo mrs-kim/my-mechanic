@@ -1,0 +1,19 @@
+id: job_mptngoqa
+type: job
+title: Monitor vehicle health at a glance
+domain: dom_o86dwx7m
+narrative: >-
+  When I want to check my vehicle status I need to quickly see overall health and what needs attention so that I can
+  prioritize maintenance appropriately
+success-looks-like: Health status shows clear urgency levels (overdue/due/soon/good) with specific next actions
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Health card with status messages like "Needs attention", "Service due soon", "Your Civic is in great shape"
+screen: maintenance-schedule-screen

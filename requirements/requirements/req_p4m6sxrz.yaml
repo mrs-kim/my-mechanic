@@ -1,0 +1,17 @@
+id: req_p4m6sxrz
+type: requirement
+title: Show typing indicator during mechanic responses
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system displays an animated typing indicator when the mechanic is preparing a response
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: typing state with animated dots and mechanic avatar
+screen: mechanic-chat-interface

@@ -1,0 +1,18 @@
+id: req_whn0wjzm
+type: requirement
+title: Allow manual service record entry
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides a dashed border button to add past service records manually
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Button is present but functionality not implemented in this chunk
+  ingestion-source: Dashed border div with 'Add a past service record' text
+screen: vehicle-profile-screen

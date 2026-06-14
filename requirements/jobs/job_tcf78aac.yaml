@@ -1,0 +1,19 @@
+id: job_tcf78aac
+type: job
+title: Enter current vehicle mileage
+domain: dom_o86dwx7m
+narrative: >-
+  When I need to track my vehicle's current mileage, I need to input odometer readings so that maintenance schedules can
+  be calculated accurately
+success-looks-like: The system accepts and stores my current odometer reading for maintenance tracking
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: input placeholder 'e.g. 52800' and 'Check your dashboard odometer for the current reading'
+screen: vehicle-profile-screen

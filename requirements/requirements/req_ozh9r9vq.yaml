@@ -1,0 +1,17 @@
+id: req_ozh9r9vq
+type: requirement
+title: Display VIN after successful scan
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: System displays the scanned VIN in courier font format after successful recognition
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN '1HGCV1F38KA012345' displayed in Courier New font
+screen: garage-decoded-screen

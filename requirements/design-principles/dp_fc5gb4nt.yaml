@@ -1,0 +1,18 @@
+id: dp_fc5gb4nt
+type: design-principle
+title: Celebrate successful vehicle recognition
+domain: dom_aa1wa285
+intent: Make users feel confident that their vehicle was correctly identified through clear visual confirmation
+anti-patterns:
+  - Subtle or unclear success indicators
+  - Making users guess if recognition worked
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

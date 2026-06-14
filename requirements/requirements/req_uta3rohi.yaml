@@ -1,0 +1,20 @@
+id: req_uta3rohi
+type: requirement
+title: Track maintenance status by remaining miles
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system calculates and displays remaining miles until each maintenance item is due, with negative values for
+  overdue items
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "remaining: -800 for overdue oil change, remaining: 420 for due tire rotation"
+rationale: Drivers need to know exactly when maintenance is due relative to current mileage
+screen: maintenance-schedule-screen

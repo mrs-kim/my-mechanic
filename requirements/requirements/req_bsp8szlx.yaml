@@ -1,0 +1,17 @@
+id: req_bsp8szlx
+type: requirement
+title: Display ready maintenance schedule
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system shows the completed maintenance schedule when generation is finished
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: maintState==="ready" && <MaintReady />
+screen: maintenance-schedule-screen

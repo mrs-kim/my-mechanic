@@ -1,0 +1,18 @@
+id: dp_bhy3bh3p
+type: design-principle
+title: Visual maintenance status hierarchy
+domain: dom_o86dwx7m
+intent: Make maintenance urgency immediately clear through color coding and visual prominence
+anti-patterns:
+  - Using only text to indicate urgency
+  - Making all maintenance items look the same priority
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_3b28s74s
+type: requirement
+title: Mark services as completed
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system allows users to confirm and mark multiple services as done from a receipt
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: MARK 2 ITEMS AS DONE button
+screen: receipt-modal

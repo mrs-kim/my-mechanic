@@ -1,0 +1,19 @@
+id: req_7ywe2fuu
+type: requirement
+title: Support bidirectional messaging with mechanic
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: >-
+  The system allows users to send messages and receive responses in a chat-like interface with distinct styling for user
+  and bot messages
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: msgs.map with role-based message styling and flexDirection based on user/bot
+screen: mechanic-chat-interface

@@ -1,0 +1,17 @@
+id: req_3nlyfuem
+type: requirement
+title: Provide interactive expandable maintenance tips
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system allows users to click on maintenance tips to expand/collapse additional details with visual feedback
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: onClick handler with activeTip state and expand/collapse arrows
+screen: maintenance-schedule-screen

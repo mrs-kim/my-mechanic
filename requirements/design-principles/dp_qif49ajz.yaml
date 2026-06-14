@@ -1,0 +1,18 @@
+id: dp_qif49ajz
+type: design-principle
+title: Data entry accessibility
+domain: dom_o86dwx7m
+intent: Numerical inputs should be easy to read and verify with clear formatting and appropriate fonts
+anti-patterns:
+  - Using proportional fonts for numbers
+  - Cramped input fields without padding
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

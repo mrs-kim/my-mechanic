@@ -1,0 +1,17 @@
+id: req_7gz1j1ny
+type: requirement
+title: Display completed services separately
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system shows completed services in a collapsible section marked with green checkmarks
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: good.length services up to date with green checkmarks and collapsible interface
+screen: maintenance-schedule-screen

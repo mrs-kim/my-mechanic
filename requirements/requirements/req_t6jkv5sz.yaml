@@ -1,0 +1,17 @@
+id: req_t6jkv5sz
+type: requirement
+title: Show service details as tags
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system displays individual services performed as pill-shaped tags under each visit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Services mapped as pills with background and border styling
+screen: garage-home-screen

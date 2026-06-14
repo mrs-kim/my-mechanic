@@ -1,0 +1,17 @@
+id: req_i8s84kjs
+type: requirement
+title: Display service record period
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system shows the time period covered by service records
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Record Period: Feb 2023 – May 2026 in document header"
+screen: maintenance-generation-screen

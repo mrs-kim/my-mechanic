@@ -1,0 +1,17 @@
+id: req_n00j057g
+type: requirement
+title: Generate manufacturer-specific schedules
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system creates maintenance schedules based on manufacturer documentation and vehicle specifications
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: reading owner's manual specifications and model-specific requirements
+screen: maintenance-generation-screen

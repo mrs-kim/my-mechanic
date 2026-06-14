@@ -1,0 +1,17 @@
+id: req_ttqvl51a
+type: requirement
+title: Extract mileage from receipts
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System identifies and displays mileage information found on receipts with special highlighting
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Amber highlighted section showing 'MILEAGE ON RECEIPT 52,480 mi'
+screen: receipt-modal

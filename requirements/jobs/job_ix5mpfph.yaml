@@ -1,0 +1,19 @@
+id: job_ix5mpfph
+type: job
+title: Set up vehicle profile with current mileage
+domain: dom_o86dwx7m
+narrative: >-
+  When I've scanned my vehicle I need to enter current mileage so that the system can track maintenance based on actual
+  vehicle usage
+success-looks-like: Vehicle is saved to garage with accurate mileage for maintenance scheduling
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Current mileage input field and 'SAVE MY CAR' button
+screen: garage-decoded-screen

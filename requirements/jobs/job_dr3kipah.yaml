@@ -1,0 +1,19 @@
+id: job_dr3kipah
+type: job
+title: View complete vehicle profile
+domain: dom_o86dwx7m
+narrative: >-
+  When I want to see my vehicle details, I need a comprehensive profile view so that I can verify all information is
+  correct
+success-looks-like: All vehicle information is displayed clearly including VIN, specifications, and current mileage
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: GarageProfile component showing vehicle details, VIN, specs
+screen: vehicle-profile-screen

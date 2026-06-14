@@ -1,0 +1,18 @@
+id: req_orqb5jjg
+type: requirement
+title: Capture current vehicle mileage
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system provides an input field for users to enter current odometer reading
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Current mileage input field with placeholder 'e.g. 52800' and instruction to check dashboard odometer
+rationale: Current mileage is essential for calculating maintenance intervals and schedules
+screen: garage-decoded-screen

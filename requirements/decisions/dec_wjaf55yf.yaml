@@ -1,0 +1,19 @@
+id: dec_wjaf55yf
+type: decision
+title: AI guidance verification requirement
+domain: dom_az9ix51b
+outcome: excluded
+rationale: >-
+  The system explicitly states users should verify AI-generated maintenance recommendations with their owner's manual,
+  indicating AI guidance is supplementary rather than authoritative
+revisit-when: When liability and accuracy standards for AI automotive advice are established
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Always verify with your owner's manual, Verify with your owner's manual disclaimers
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_qkdqemzf
+type: requirement
+title: Navigation includes maintenance tab
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The navigation provides a maintenance tab with wrench icon for maintenance-related functions
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Navigation array includes ['maintenance','🔧','Maintenance']
+screen: navigation-tabs

@@ -1,0 +1,17 @@
+id: req_q3vb0pji
+type: requirement
+title: Receipt scanning via camera
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system allows users to take a photo of a receipt using their device camera
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Take a Photo - Use your camera to photograph the receipt now
+screen: receipt-modal

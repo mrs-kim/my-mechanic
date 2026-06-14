@@ -1,0 +1,17 @@
+id: req_uaoo0sv0
+type: requirement
+title: Undo completed maintenance
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: Users can undo marking maintenance as complete, reverting it to its previous state
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UNDO button when item is done
+screen: maintenance-schedule-screen

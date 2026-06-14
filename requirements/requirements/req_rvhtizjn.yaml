@@ -1,0 +1,17 @@
+id: req_rvhtizjn
+type: requirement
+title: Show typing indicator
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: While the mechanic is responding, a typing indicator with animated dots is displayed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Typing state shows animated dots in mechanic message bubble
+screen: mechanic-chat-interface

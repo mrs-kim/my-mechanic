@@ -1,0 +1,17 @@
+id: req_ft3lzemd
+type: requirement
+title: VIN display
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System displays the decoded VIN number in monospace font
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: VIN 1HGCV1F38KA012345 shown in Courier New font
+screen: garage-decoded-screen

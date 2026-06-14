@@ -1,0 +1,18 @@
+id: req_77obp0qv
+type: requirement
+title: Enable report sharing and printing
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system provides share and print buttons in the report view for exporting service history
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Buttons are present but actual share/print functionality not implemented
+  ingestion-source: Share (📤) and Print (🖨) buttons in report header
+screen: maintenance-generation-screen

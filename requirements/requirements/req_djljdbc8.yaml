@@ -1,0 +1,17 @@
+id: req_djljdbc8
+type: requirement
+title: Show maintenance schedule source attribution
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system indicates the source of maintenance schedules (e.g., 'Honda schedule')
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: Honda schedule label at bottom of milestone cards
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_1sqmx0lu
+type: requirement
+title: Receipt generation for maintenance
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System generates receipts for maintenance activities with processing stages
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: simulateReceipt function with processing and results stages
+screen: receipt-modal

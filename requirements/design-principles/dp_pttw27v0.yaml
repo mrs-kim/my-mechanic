@@ -1,0 +1,19 @@
+id: dp_pttw27v0
+type: design-principle
+title: Progressive scanning feedback
+domain: dom_aa1wa285
+intent: Scanning should provide clear visual and textual feedback at each stage to keep users informed of progress
+anti-patterns:
+  - Silent scanning with no feedback
+  - Confusing or ambiguous status messages
+  - No visual indication of scanning area
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-scan-screen

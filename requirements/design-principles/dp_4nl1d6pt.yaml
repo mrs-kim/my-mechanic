@@ -1,0 +1,19 @@
+id: dp_4nl1d6pt
+type: design-principle
+title: Progressive disclosure for maintenance details
+domain: dom_aa1wa285
+intent: Users should be able to get quick overview information while having access to detailed explanations when needed
+anti-patterns:
+  - Information overload on main view
+  - Burying important details
+  - No pathway to additional context
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-schedule-screen

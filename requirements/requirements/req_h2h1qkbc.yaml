@@ -1,0 +1,19 @@
+id: req_h2h1qkbc
+type: requirement
+title: Toggle visibility of completed services
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system allows users to show/hide completed services with an expandable section showing count of up-to-date
+  services
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: showAll toggle for completed services with count display
+screen: maintenance-schedule-screen

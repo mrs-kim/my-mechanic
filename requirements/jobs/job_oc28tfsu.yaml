@@ -1,0 +1,19 @@
+id: job_oc28tfsu
+type: job
+title: Track vehicle maintenance schedule
+domain: dom_az9ix51b
+narrative: >-
+  When I need to know what maintenance my vehicle needs, I need a comprehensive maintenance schedule so that I can stay
+  on top of required services and avoid costly repairs
+success-looks-like: I can see current, upcoming, and future maintenance items with clear status indicators
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Maintenance schedule screen showing different categories of maintenance items
+screen: maintenance-schedule-screen

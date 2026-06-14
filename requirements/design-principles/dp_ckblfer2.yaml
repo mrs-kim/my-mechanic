@@ -1,0 +1,18 @@
+id: dp_ckblfer2
+type: design-principle
+title: Service data provenance clarity
+domain: dom_aa1wa285
+intent: Users should clearly understand the source and reliability of their maintenance data
+anti-patterns:
+  - Mixing receipt-scanned and manually-entered data without clear differentiation
+  - Using identical visual treatment for verified vs unverified data
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

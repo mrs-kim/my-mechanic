@@ -1,0 +1,19 @@
+id: dp_rxqrbs86
+type: design-principle
+title: Confirmation before proceeding
+domain: dom_az9ix51b
+intent: Users should verify the detected VIN is correct before the system uses it for vehicle identification
+anti-patterns:
+  - Automatically proceeding without confirmation
+  - Not showing the detected VIN clearly
+  - Making confirmation optional
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-scan-screen

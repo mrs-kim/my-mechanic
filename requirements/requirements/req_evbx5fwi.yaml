@@ -1,0 +1,17 @@
+id: req_evbx5fwi
+type: requirement
+title: Display overdue maintenance items with visual urgency
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system displays overdue maintenance items (like oil changes) with red visual indicators and 'overdue' labels
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Oil Change with tag:'overdue', col:C.red
+screen: maintenance-schedule-screen

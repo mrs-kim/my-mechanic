@@ -1,0 +1,19 @@
+id: req_acr4oiia
+type: requirement
+title: Show expandable maintenance tips with details
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: >-
+  When a user taps on a maintenance tip, the system expands to show detailed information including description, category
+  tag, and an option to ask the AI mechanic
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Tip detail panel expands when a tip is tapped, with icon, tag, detail text and Ask your mechanic button
+screen: maintenance-schedule-screen

@@ -1,0 +1,18 @@
+id: dp_ap1que2n
+type: design-principle
+title: Transparent AI processing
+domain: dom_4s00lafl
+intent: Users should understand what the system is doing during automated schedule generation
+anti-patterns:
+  - Black box processing without explanation
+  - Generic loading spinners without context
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: maintenance-generation-screen

@@ -1,0 +1,21 @@
+id: job_jepmhg4c
+type: job
+title: Generate manufacturer-specific maintenance schedules
+domain: dom_aa1wa285
+narrative: >-
+  When I need maintenance guidance for my vehicle, I need an automatically generated schedule based on manufacturer
+  specifications so that I follow the correct service intervals for my specific make and model
+success-looks-like: >-
+  A complete maintenance schedule is generated showing all required services with proper intervals based on my vehicle's
+  manufacturer documentation
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda schedule generation and manufacturer documentation lookup
+screen: maintenance-generation-screen

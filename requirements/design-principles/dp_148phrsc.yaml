@@ -1,0 +1,18 @@
+id: dp_148phrsc
+type: design-principle
+title: Highlighted critical information
+domain: dom_4s00lafl
+intent: Use special styling (amber background, borders) to draw attention to important extracted data like mileage
+anti-patterns:
+  - Burying important data in plain text
+  - No visual hierarchy for critical information
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

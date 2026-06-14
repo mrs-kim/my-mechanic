@@ -1,0 +1,17 @@
+id: req_0vtye3er
+type: requirement
+title: Processing state indication
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: The system shows a loading state with spinner and progress message while processing receipts
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Reading your receipt… with spinning animation
+screen: receipt-modal

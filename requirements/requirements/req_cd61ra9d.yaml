@@ -1,0 +1,17 @@
+id: req_cd61ra9d
+type: requirement
+title: Receipt modal closure
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system allows users to close the receipt modal and reset to idle state using the close button
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Close button (✕) that calls setReceiptModal(false) and setReceiptStage('idle')
+screen: receipt-modal

@@ -1,0 +1,21 @@
+id: job_bq6fawa9
+type: job
+title: Track completed maintenance services
+domain: dom_az9ix51b
+narrative: >-
+  When I've just completed a maintenance service, I need to easily record it in my maintenance history so that my
+  schedule stays accurate and up to date
+success-looks-like: >-
+  I can scan my service receipt and the system automatically updates my maintenance records and recalculates what's due
+  next
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Just got a service? Scan your receipt to mark it done
+screen: maintenance-schedule-screen

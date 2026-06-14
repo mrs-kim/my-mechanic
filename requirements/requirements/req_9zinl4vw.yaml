@@ -1,0 +1,17 @@
+id: req_9zinl4vw
+type: requirement
+title: Service categorization display
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system displays performed services as individual tagged categories for each visit
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Services displayed as pills with service names
+screen: vehicle-profile-screen

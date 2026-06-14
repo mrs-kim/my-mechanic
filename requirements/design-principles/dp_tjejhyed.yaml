@@ -1,0 +1,18 @@
+id: dp_tjejhyed
+type: design-principle
+title: Chronological organization with contextual grouping
+domain: dom_az9ix51b
+intent: Service history should flow chronologically while providing temporal context through year groupings
+anti-patterns:
+  - Flat chronological list without temporal grouping
+  - Grouping that breaks chronological flow
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-home-screen

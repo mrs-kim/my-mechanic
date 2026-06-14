@@ -1,0 +1,17 @@
+id: req_a4qpec42
+type: requirement
+title: Receipt processing shows loading state
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: When processing a receipt, the system displays a spinning loader with status text
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Processing stage shows spinning animation and 'Reading your receipt…' text
+screen: receipt-modal

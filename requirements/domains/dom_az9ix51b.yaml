@@ -1,0 +1,18 @@
+id: dom_az9ix51b
+type: domain
+title: AI Mechanic Chat
+description: AI-powered automotive diagnostic assistance and repair guidance specific to the user's vehicle.
+owner-team: TBD — assign after review
+boundary:
+  includes:
+    - mechanic tab
+    - chat interface
+    - CV axle diagnosis
+    - clicking noise
+    - vehicle-specific advice
+  excludes: []
+status:
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"

@@ -1,0 +1,17 @@
+id: req_61enrvul
+type: requirement
+title: VIN display with visual formatting
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system displays the vehicle's VIN number in a monospace font with visual indicators
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 1HGCV1F38KA012345 displayed with square icon and Courier New font
+screen: vehicle-profile-screen

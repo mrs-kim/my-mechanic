@@ -1,0 +1,17 @@
+id: req_bbur0ous
+type: requirement
+title: Include maintenance minder codes
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System references manufacturer maintenance codes when applicable
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Items reference 'Maintenance Minder code A', 'code 3', 'code 4'
+screen: maintenance-schedule-screen

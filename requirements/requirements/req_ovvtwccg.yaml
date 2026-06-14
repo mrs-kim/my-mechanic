@@ -1,0 +1,19 @@
+id: req_ovvtwccg
+type: requirement
+title: Attribute schedules to manufacturer source
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: >-
+  The system indicates which manufacturer's specifications were used to generate the schedule and includes disclaimers
+  about verifying with owner's manual
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Honda schedule attribution and verification disclaimers
+screen: maintenance-schedule-screen

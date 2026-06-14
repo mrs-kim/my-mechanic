@@ -1,0 +1,18 @@
+id: dom_o86dwx7m
+type: domain
+title: Vehicle Management
+description: Managing vehicle profiles, VIN scanning, and vehicle identification through OBD2 or manual entry.
+owner-team: TBD — assign after review
+boundary:
+  includes:
+    - garage tab
+    - VIN scanning
+    - vehicle profile
+    - 2019 Honda Civic
+    - OBD2 scanning
+  excludes: []
+status:
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"

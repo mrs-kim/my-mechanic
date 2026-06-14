@@ -1,0 +1,17 @@
+id: req_oo7c2mb0
+type: requirement
+title: Maintenance Due Date Calculations
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: System calculates and displays when maintenance is due or overdue based on mileage
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Due in X mi / Overdue by X mi calculations
+screen: maintenance-schedule-screen

@@ -1,0 +1,17 @@
+id: req_kl3viho3
+type: requirement
+title: Current mileage tracking and display
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The system tracks and displays the current odometer reading with appropriate formatting and units
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: 52,800 mi displayed with timer icon and formatted display
+screen: vehicle-profile-screen

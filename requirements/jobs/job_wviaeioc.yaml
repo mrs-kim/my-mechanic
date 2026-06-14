@@ -1,0 +1,19 @@
+id: job_wviaeioc
+type: job
+title: Track vehicle maintenance status
+domain: dom_o86dwx7m
+narrative: >-
+  When I own a vehicle I need to track what maintenance is due, overdue, or completed so that I can keep my vehicle in
+  good working condition
+success-looks-like: I can see at a glance which services need attention and which are up to date
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: maintenance schedule screen showing due, overdue, and completed items
+screen: maintenance-schedule-screen

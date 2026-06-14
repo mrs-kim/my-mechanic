@@ -1,0 +1,19 @@
+id: job_43y4ccdk
+type: job
+title: Get contextual maintenance tips
+domain: dom_o86dwx7m
+narrative: >-
+  When I'm reviewing maintenance schedules I need additional tips and reminders so that I can have informed
+  conversations with mechanics
+success-looks-like: I can see expandable tips like 'Check for oil dilution' and 'Ask about CVT hesitation' that provide context
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ALSO MENTION section and tips within milestone cards
+screen: maintenance-schedule-screen

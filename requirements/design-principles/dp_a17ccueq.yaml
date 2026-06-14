@@ -1,0 +1,18 @@
+id: dp_a17ccueq
+type: design-principle
+title: Clear visual hierarchy for vehicle information
+domain: dom_4s00lafl
+intent: Vehicle profile should present information in order of importance with clear visual separation
+anti-patterns:
+  - Cramming all information together
+  - No visual separation between data types
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: vehicle-profile-screen

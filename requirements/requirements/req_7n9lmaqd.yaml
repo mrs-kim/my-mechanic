@@ -1,0 +1,17 @@
+id: req_7n9lmaqd
+type: requirement
+title: AI explains severity and urgency of issues
+domain: dom_az9ix51b
+job: job_q2aoss3j
+behavior: The AI communicates how dangerous a problem is and how quickly it needs attention
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "'Not immediately dangerous but gets worse fast' for CV axle issue"
+screen: mechanic-chat-interface

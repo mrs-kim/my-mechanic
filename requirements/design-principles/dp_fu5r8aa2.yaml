@@ -1,0 +1,19 @@
+id: dp_fu5r8aa2
+type: design-principle
+title: Consistent numeric formatting
+domain: dom_4s00lafl
+intent: Numeric values like mileage and VINs should be displayed in monospace font for clarity and consistency
+anti-patterns:
+  - Using proportional fonts for numeric data
+  - Inconsistent formatting between input and display
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Inferred from consistent use of Courier New for all numeric values
+screen: vehicle-profile-screen

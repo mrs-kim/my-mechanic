@@ -1,0 +1,17 @@
+id: req_ks8dnp3h
+type: requirement
+title: Generate shareable service reports
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system creates a formatted report view of service records that can be shared or printed
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: ReportView component with share and print buttons
+screen: maintenance-generation-screen

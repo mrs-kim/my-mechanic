@@ -1,0 +1,18 @@
+id: req_4y2f3ena
+type: requirement
+title: Extract service details from receipts
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system identifies and displays specific services performed (like 'Oil Change', 'Tire Rotation') from receipt scans
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt showing 'Oil Change — Synthetic 0W-20' and 'Tire Rotation' with checkboxes
+rationale: Users need to confirm which services were actually performed before adding to history
+screen: receipt-modal

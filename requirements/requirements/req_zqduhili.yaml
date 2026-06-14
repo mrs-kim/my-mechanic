@@ -1,0 +1,17 @@
+id: req_zqduhili
+type: requirement
+title: Display comprehensive vehicle specifications
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The system shows vehicle year, make, model, and additional specs like fuel type, drivetrain, body style, and engine
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Year/Make/Model grid and spec tags like 'Gasoline', 'FWD', 'Sedan', '1.5L Turbo'
+screen: vehicle-profile-screen

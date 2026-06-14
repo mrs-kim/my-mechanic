@@ -1,0 +1,19 @@
+id: dp_81cth8qo
+type: design-principle
+title: Guided receipt scanning experience
+domain: dom_aa1wa285
+intent: Receipt scanning should feel effortless and educational, with clear instructions and helpful tips
+anti-patterns:
+  - Technical jargon about OCR or image processing
+  - Overwhelming users with too many options
+  - Leaving users confused about photo quality requirements
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: receipt-modal

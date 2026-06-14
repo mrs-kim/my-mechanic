@@ -1,0 +1,17 @@
+id: req_jr76lpyx
+type: requirement
+title: Indicate record verification status
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: The system marks records as 'RECEIPT' for scanned invoices or 'MANUAL' for owner-entered data
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-source: Footer note mentions records marked RECEIPT were verified from scanned shop invoices, MANUAL entered by owner
+screen: maintenance-generation-screen

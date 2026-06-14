@@ -1,0 +1,19 @@
+id: job_vcbcw9w7
+type: job
+title: Process service receipts to update maintenance records
+domain: dom_o86dwx7m
+narrative: >-
+  When I get service work done on my vehicle I need to easily record what was serviced so that I can keep my maintenance
+  history accurate and up-to-date
+success-looks-like: The system automatically reads my receipt and updates the maintenance schedule with completed services
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal functionality showing automatic receipt reading and service matching
+screen: receipt-modal

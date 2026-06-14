@@ -1,0 +1,18 @@
+id: req_26gaq6vw
+type: requirement
+title: Generate service reports
+domain: dom_aa1wa285
+job: job_awnszsyd
+behavior: Users can access a report view from the service history screen
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: medium
+  ingestion-note: Report button exists but report content not shown in this chunk
+  ingestion-source: Report button with document icon leading to ReportView
+screen: garage-home-screen

@@ -1,0 +1,19 @@
+id: job_lekzfpzs
+type: job
+title: Understand maintenance urgency
+domain: dom_az9ix51b
+narrative: >-
+  When reviewing maintenance needs, I need clear urgency indicators so that I can prioritize what needs immediate
+  attention
+success-looks-like: I can quickly distinguish between overdue, due soon, upcoming, and good status items
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Health card showing urgency levels and color-coded status
+screen: maintenance-schedule-screen

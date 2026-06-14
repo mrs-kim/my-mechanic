@@ -1,0 +1,21 @@
+id: job_rbfqwb6x
+type: job
+title: Track vehicle maintenance through receipts
+domain: dom_o86dwx7m
+narrative: >-
+  When I complete vehicle maintenance I need to scan and process my service receipts so that I can automatically log
+  services and maintain accurate maintenance records
+success-looks-like: >-
+  Receipt is scanned, services are identified and extracted, mileage is captured, and maintenance items are marked as
+  complete in my vehicle's service history
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt scanning interface showing oil change, tire rotation services with mileage 52,480 mi
+screen: receipt-modal

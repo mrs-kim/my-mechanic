@@ -1,0 +1,18 @@
+id: dp_jktmmzz3
+type: design-principle
+title: Technical data should be humanized with expert commentary
+domain: dom_o86dwx7m
+intent: Raw vehicle specifications should be complemented with personalized, conversational expert insights
+anti-patterns:
+  - Displaying only technical specifications
+  - Generic or robotic commentary
+owner-team: design-team
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+screen: garage-decoded-screen

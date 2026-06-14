@@ -1,0 +1,21 @@
+id: job_in0p9knq
+type: job
+title: Track current vehicle mileage
+domain: dom_aa1wa285
+narrative: >-
+  When I need to maintain accurate service records, I need to keep my vehicle's odometer reading current so that
+  maintenance schedules can be calculated correctly
+success-looks-like: >-
+  Vehicle profile always shows the most recent mileage and maintenance intervals are calculated from accurate odometer
+  readings
+out-of-scope: []
+status:
+  legitimacy: proposed
+  lifecycle: active
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: UPDATE MILEAGE section and odometer display in vehicle profile
+screen: vehicle-profile-screen

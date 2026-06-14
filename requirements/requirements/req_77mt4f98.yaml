@@ -1,0 +1,17 @@
+id: req_77mt4f98
+type: requirement
+title: Navigation tabs highlight active selection
+domain: dom_o86dwx7m
+job: job_3k5qzjnq
+behavior: The active navigation tab is visually distinguished with amber color while inactive tabs use muted color
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: "Tab styling: color:tab===id?C.amber:C.muted"
+screen: navigation-tabs

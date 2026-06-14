@@ -1,0 +1,17 @@
+id: req_1xtpytmn
+type: requirement
+title: Process receipt scanning
+domain: dom_4s00lafl
+job: job_0e19myc7
+behavior: System processes scanned receipts through multiple stages to extract service information
+status:
+  legitimacy: proposed
+  lifecycle: active
+  implementation: unbuilt
+meta:
+  created: "2026-06-14"
+  updated: "2026-06-14"
+  authored-by: ingest-agent
+  ingestion-confidence: high
+  ingestion-source: Receipt modal has processing and results stages
+screen: receipt-modal
