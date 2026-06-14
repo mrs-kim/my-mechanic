@@ -187,7 +187,9 @@ Format:
       "source-hint": "..."
     }
   ]
-}`;
+}
+
+If UI regions are provided, add a "screen" field to each record with the slug of the region it belongs to. Omit "screen" if no regions are provided or the record doesn't clearly belong to one.`;
 
 const RECONCILE_SYSTEM = `You are reconciling extracted product requirement records from multiple document chunks.
 
@@ -206,6 +208,102 @@ Rules:
 
 Respond ONLY with JSON in the same format as the input. No preamble. No markdown fences.`;
 
+// ─── Mock region identification ──────────────────────────────────────────────
+
+const REGION_SYSTEM = `You are analyzing UI mock source code (JSX, HTML, etc.) to identify the distinct named screens and UI regions it contains.
+
+A region is a meaningful, named area of the product UI — a screen, a card, a panel, a modal, a section.
+Examples: "Vehicle Profile Screen", "Maintenance Schedule Card", "Service History List", "Add Vehicle Modal"
+
+Rules:
+- Identify regions that are clearly present in the source code
+- Use the component names, comments, and structure to identify them
+- Each region needs a short slug (kebab-case) and a human-readable name
+- Aim for the natural granularity of the mock — screens and major components, not every small element
+- 3-12 regions is typical
+
+Respond ONLY with a JSON array. No preamble. No explanation. No markdown fences.
+
+Format:
+[
+  {
+    "name": "Maintenance Schedule Card",
+    "slug": "maintenance-schedule-card",
+    "signals": ["component names or code patterns that indicate this region"]
+  }
+]`;
+
+/**
+ * Identifies named screens and UI regions in mock source code.
+ *
+ * @param {string} mockSource - Raw source code of the mock file
+ * @returns {Promise<Array<{ name, slug, signals }>>}
+ */
+async function identifyRegions(mockSource) {
+  const response = await callClaude(
+    REGION_SYSTEM,
+    `Identify the UI regions in this mock source:\n\n${mockSource.slice(0, 12000)}`,
+    1000
+  );
+  return parseJson(response);
+}
+
+/**
+ * Writes @region / @end-region annotations into JSX source code.
+ * Inserts markers before the first line containing a region's signal patterns.
+ *
+ * @param {string} source - Original JSX source
+ * @param {Array<{ name, slug, signals }>} regions - Regions to annotate
+ * @returns {string} - Annotated source
+ */
+function annotateJsx(source, regions) {
+  const lines = source.split("\n");
+  const annotated = [...lines];
+  let offset = 0;
+
+  for (const region of regions) {
+    const signals = region.signals || [];
+    // Find first line that mentions any signal or the slug/name
+    const searchTerms = [...signals, region.slug, region.name.toLowerCase()];
+    let insertAt = -1;
+
+    for (let i = 0; i < annotated.length; i++) {
+      const lower = annotated[i].toLowerCase();
+      if (searchTerms.some(s => s.length > 3 && lower.includes(s.toLowerCase()))) {
+        insertAt = i;
+        break;
+      }
+    }
+
+    if (insertAt === -1) continue;
+
+    // Don't double-annotate
+    if (annotated[insertAt - 1]?.includes(`@region ${region.slug}`)) continue;
+
+    // Find matching closing tag depth to place @end-region
+    // Simple heuristic: find the next blank line or top-level closing tag after insertAt
+    let closeAt = annotated.length;
+    for (const nextRegion of regions) {
+      if (nextRegion.slug === region.slug) continue;
+      const nextSignals = [...(nextRegion.signals || []), nextRegion.slug, nextRegion.name.toLowerCase()];
+      for (let i = insertAt + 1; i < annotated.length; i++) {
+        const lower = annotated[i].toLowerCase();
+        if (nextSignals.some(s => s.length > 3 && lower.includes(s.toLowerCase()))) {
+          closeAt = i;
+          break;
+        }
+      }
+      if (closeAt < annotated.length) break;
+    }
+
+    annotated.splice(insertAt + offset, 0, `{/* @region ${region.slug} — ${region.name} */}`);
+    annotated.splice(closeAt + offset + 1, 0, `{/* @end-region ${region.slug} */}`);
+    offset += 2;
+  }
+
+  return annotated.join("\n");
+}
+
 // ─── Pass 1: Domain identification ───────────────────────────────────────────
 
 /**
@@ -214,10 +312,14 @@ Respond ONLY with JSON in the same format as the input. No preamble. No markdown
  * @param {string} documentSummary - Combined text from all documents
  * @returns {Promise<Array<{ title, description, signals }>>}
  */
-async function identifyDomains(documentSummary) {
+async function identifyDomains(documentSummary, existingDomains = []) {
+  const existingContext = existingDomains.length
+    ? `## Existing domains already established in this project\nReuse these where the content fits. Only propose a new domain if the content clearly doesn't belong to any of these.\n${existingDomains.map(d => `- ${d.title}: ${d.description}`).join("\n")}\n\n`
+    : "";
+
   const response = await callClaude(
     DOMAIN_SYSTEM,
-    `Analyze this product documentation and identify the domains:\n\n${documentSummary}`,
+    `${existingContext}Analyze this product documentation and identify the domains:\n\n${documentSummary}`,
     1000
   );
 
@@ -234,11 +336,15 @@ async function identifyDomains(documentSummary) {
  * @param {string} existingGraphSummary - Summary of already-approved records
  * @returns {Promise<Object>} - { jobs, requirements, decisions, design_principles }
  */
-async function extractForDomain(domain, chunk, existingGraphSummary = "") {
+async function extractForDomain(domain, chunk, existingGraphSummary = "", regions = []) {
+  const regionsContext = regions.length
+    ? `\n## UI regions in this mock\nTag each record with the "screen" slug it belongs to.\n${regions.map(r => `- ${r.slug}: ${r.name}`).join("\n")}\n`
+    : "";
   const context = [
     `## Domain being extracted`,
     `Name: ${domain.title}`,
     `Description: ${domain.description}`,
+    regionsContext,
     existingGraphSummary
       ? `\n## Already approved requirements in this domain (do not re-extract these)\n${existingGraphSummary}`
       : "",
@@ -347,6 +453,8 @@ async function summarizeExtraction(domainTitle, records) {
 
 module.exports = {
   identifyDomains,
+  identifyRegions,
+  annotateJsx,
   extractForDomain,
   reconcile,
   summarizeExtraction,

@@ -32,7 +32,7 @@ const readline = require("readline");
 const yaml = require("js-yaml");
 
 const { fetchSources, fetchStdin, summarizeForDomainId } = require("./lib/fetcher");
-const { identifyDomains, extractForDomain, reconcile, summarizeExtraction } = require("./lib/extractor");
+const { identifyDomains, identifyRegions, annotateJsx, extractForDomain, reconcile, summarizeExtraction } = require("./lib/extractor");
 const { Graph } = require("./lib/graph");
 const github = require("./lib/github");
 const { generateId } = require("./lib/ids");
@@ -54,6 +54,8 @@ function parseArgs() {
       args.flags.dryRun = true;
     } else if (arg === "--no-pr") {
       args.flags.noPr = true;
+    } else if (arg === "--mock") {
+      args.flags.mock = true;
     }
   });
   return args;
@@ -156,6 +158,7 @@ function buildJobRecord(extracted, domainId, jobId) {
     },
   };
 
+  if (extracted.screen) record.screen = extracted.screen;
   if (extracted["confidence-note"]) {
     record.meta["ingestion-note"] = extracted["confidence-note"];
   }
@@ -188,6 +191,7 @@ function buildRequirementRecord(extracted, domainId, domainJobId, reqId) {
   };
 
   if (extracted.rationale) record.rationale = extracted.rationale;
+  if (extracted.screen) record.screen = extracted.screen;
   if (extracted["confidence-note"]) {
     record.meta["ingestion-note"] = extracted["confidence-note"];
   }
@@ -216,6 +220,7 @@ function buildDecisionRecord(extracted, domainId, decId) {
     },
   };
 
+  if (extracted.screen) record.screen = extracted.screen;
   if (extracted["confidence-note"]) {
     record.meta["ingestion-note"] = extracted["confidence-note"];
   }
@@ -244,6 +249,7 @@ function buildDesignPrincipleRecord(extracted, domainId, dpId) {
     },
   };
 
+  if (extracted.screen) record.screen = extracted.screen;
   if (extracted["confidence-note"]) {
     record.meta["ingestion-note"] = extracted["confidence-note"];
   }
@@ -379,21 +385,18 @@ async function openDomainPR(domainTitle, files, summary, domainId) {
 
 // ─── Domain processing ────────────────────────────────────────────────────────
 
-async function processDomain(domain, documents, graph, domainId, flags) {
+async function processDomain(domain, documents, graph, domainId, flags, regions = []) {
   console.log(`\n── Extracting: ${domain.title} ─────────────────────────────\n`);
 
-  // Get existing approved records for this domain (don't re-extract)
-  const existingApproved = graph.all("requirement").filter(
-    (r) =>
-      r.domain === domainId &&
-      r.status?.legitimacy === "approved" &&
-      r.status?.lifecycle === "active"
-  );
+  // Get existing records for this domain to avoid re-extracting or duplicating
+  const allForDomain = (type) => graph.all(type).filter((r) => r.domain === domainId);
+  const approved = allForDomain("requirement").filter((r) => r.status?.legitimacy === "approved");
+  const proposed = allForDomain("requirement").filter((r) => r.status?.legitimacy === "proposed");
 
-  const existingGraphSummary =
-    existingApproved.length > 0
-      ? `Existing approved requirements:\n${existingApproved.map((r) => `- ${r.title}`).join("\n")}`
-      : "";
+  const parts = [];
+  if (approved.length) parts.push(`Approved records (do not re-extract):\n${approved.map((r) => `- ${r.title}`).join("\n")}`);
+  if (proposed.length) parts.push(`Proposed records (avoid duplicating unless there is meaningful distinction):\n${proposed.map((r) => `- ${r.title}`).join("\n")}`);
+  const existingGraphSummary = parts.join("\n\n");
 
   // Extract from each document's chunks
   const allExtractions = [];
@@ -405,7 +408,7 @@ async function processDomain(domain, documents, graph, domainId, flags) {
     for (let i = 0; i < doc.chunks.length; i++) {
       process.stdout.write(`    Chunk ${i + 1}/${doc.chunks.length}... `);
       try {
-        const extracted = await extractForDomain(domain, doc.chunks[i], existingGraphSummary);
+        const extracted = await extractForDomain(domain, doc.chunks[i], existingGraphSummary, regions);
         docExtractions.push(extracted);
         const count =
           (extracted.jobs?.length || 0) +
@@ -556,21 +559,51 @@ async function main() {
   } else {
     const summary = summarizeForDomainId(documents);
 
+    const existingDomains = [...graph.records.values()]
+      .filter(r => r.type === "domain")
+      .map(r => ({ title: r.record.title, description: r.record.description }));
+
+    if (existingDomains.length) {
+      console.log(`  ${existingDomains.length} existing domain(s): ${existingDomains.map(d => d.title).join(", ")}`);
+    }
+
     process.stdout.write("  Analyzing documentation... ");
-    domains = await identifyDomains(summary);
+    domains = await identifyDomains(summary, existingDomains);
     console.log(`✓ ${domains.length} domains identified`);
+
+    const existingTitles = new Set(existingDomains.map(d => d.title.toLowerCase()));
+    console.log("\n  Domains:");
+    domains.forEach((d) => {
+      const tag = existingTitles.has(d.title.toLowerCase()) ? "[existing]" : "[new]";
+      console.log(`    ${tag} ${d.title}: ${d.description}`);
+    });
 
     // Interactive review (skip if not a TTY or dry-run)
     if (process.stdin.isTTY && !args.flags.dryRun) {
       domains = await reviewDomains(domains);
     } else {
-      console.log("\n  Proposed domains:");
-      domains.forEach((d) => console.log(`    - ${d.title}: ${d.description}`));
       console.log("\n  (Non-interactive mode — proceeding without confirmation)");
     }
   }
 
   console.log(`\n  Processing ${domains.length} domain(s)\n`);
+
+  // Mock region pass (only when --mock flag is set)
+  let regions = [];
+  let mockSourcePath = null;
+  if (args.flags.mock && sources.length > 0) {
+    // Find the first local file source (skip URLs)
+    mockSourcePath = sources.find(s => !s.startsWith("http") && fs.existsSync(s)) || null;
+    if (mockSourcePath) {
+      console.log("── Identifying mock regions ──────────────────────────────\n");
+      const mockSource = fs.readFileSync(mockSourcePath, "utf8");
+      process.stdout.write("  Analyzing UI regions... ");
+      regions = await identifyRegions(mockSource);
+      console.log(`✓ ${regions.length} regions identified`);
+      regions.forEach(r => console.log(`    ${r.slug}: ${r.name}`));
+      console.log();
+    }
+  }
 
   // Pass 2 + 3: Extract and reconcile per domain
   const results = [];
@@ -588,7 +621,7 @@ async function main() {
       console.log(`  Using existing domain: ${domainId} (${domain.title})`);
     }
 
-    const result = await processDomain(domain, documents, graph, domainId, args.flags);
+    const result = await processDomain(domain, documents, graph, domainId, args.flags, regions);
 
     if (!result) continue;
     results.push(result);
@@ -614,6 +647,17 @@ async function main() {
 
     // Pause between domains to avoid rate limiting
     await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  // Write @region annotations back to the mock file
+  if (args.flags.mock && mockSourcePath && regions.length > 0) {
+    const fs = require("fs");
+    const original = fs.readFileSync(mockSourcePath, "utf8");
+    const annotated = annotateJsx(original, regions);
+    if (annotated !== original) {
+      fs.writeFileSync(mockSourcePath, annotated, "utf8");
+      console.log(`\n✓ Annotations written to ${mockSourcePath}`);
+    }
   }
 
   // Final report
